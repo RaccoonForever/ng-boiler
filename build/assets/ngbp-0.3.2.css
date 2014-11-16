@@ -5830,14 +5830,23 @@ h2 {
 /**
  * Navigation
  */
+#barre_de_navigation {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 .navbar {
   margin-top: 20px;
+  background-color: #768AEF;
 }
-.navbar small {
-  font-size: 60%;
-}
-li.coucou {
-  margin: 10px;
+li.nav_items {
+  margin: 5px;
+  color: black;
+  background-color: #FFFFFF;
+  background: linear-gradient(#ffffff, #9d9797);
+  border-radius: 10px;
+  text-shadow: 0px 1px 0px white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 -1px 0 rgba(255, 255, 255, 0.4);
 }
 /**
  * Footer

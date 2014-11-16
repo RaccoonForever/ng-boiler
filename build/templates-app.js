@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'products/products.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -274,84 +274,23 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
   $templateCache.put("home/home.tpl.html",
     "<h1> Coucou </h1>\n" +
     "\n" +
-    "<div class=\"marketing\">\n" +
-    "  <div class=\"row\">\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-thumbs-up\"></i> Good to Go!</h4>\n" +
-    "      <p>\n" +
-    "        Kickstarts your project quickly, with everything you need, so you can \n" +
-    "        focus on what matters: your app.\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-magic\"></i> Complete Build System</h4>\n" +
-    "      <p>\n" +
-    "        A smart, <a href=\"http://gruntjs.com\">Grunt</a>-based build system \n" +
-    "        designed to save you time and energy.\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-retweet\"></i> Modularization</h4>\n" +
-    "      <p>\n" +
-    "        Supports a structure that maintains separation of concerns while\n" +
-    "        ensuring maximum code reuse.\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "  <div class=\"row\">\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-star\"></i> AngularJS</h4>\n" +
-    "      <p>\n" +
-    "        JavaScript framework that augments browser-based, single-page \n" +
-    "        applications with MVC functionality.\n" +
-    "        <a href=\"http://angularjs.org\">More &raquo;</a>\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-resize-small\"></i> LESS CSS</h4>\n" +
-    "      <p>\n" +
-    "        The dynamic stylesheet language that extends CSS with efficiency.\n" +
-    "        <a href=\"http://lesscss.org\">More &raquo;</a>\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-twitter\"></i> Twitter Bootstrap</h4>\n" +
-    "      <p>\n" +
-    "        Sleek, intuitive, and powerful front-end framework for faster and easier\n" +
-    "        web development.\n" +
-    "        <a href=\"http://getbootstrap.com\">More &raquo;</a>\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "  <div class=\"row\">\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-circle\"></i> Angular UI Bootstrap</h4>\n" +
-    "      <p>\n" +
-    "        Pure AngularJS components for Bootstrap written by the \n" +
-    "        <a href=\"https://github.com/angular-ui?tab=members\">AngularUI Team</a>.\n" +
-    "        <a href=\"http://angular-ui.github.com/bootstrap\">More &raquo;</a>\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-flag\"></i> Font Awesome</h4>\n" +
-    "      <p>\n" +
-    "        The iconic font designed for use with Twitter Bootstrap.\n" +
-    "        <a href=\"http://fortawesome.github.com/Font-Awesome\">\n" +
-    "          More &raquo;\n" +
-    "        </a>\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-xs-12 col-sm-6 col-md-4\">\n" +
-    "      <h4><i class=\"fa fa-asterisk\"></i> Placeholders</h4>\n" +
-    "      <p>\n" +
-    "        Client-side image and text placeholder directives written in pure \n" +
-    "        AngularJS to make designing mock-ups wicked-fast.\n" +
-    "        <a href=\"http://joshdmiller.github.com/angular-placeholders\">\n" +
-    "          More &raquo;\n" +
-    "        </a>\n" +
-    "      </p>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
+    "\n" +
+    "<div> \n" +
+    "	<p> Une première div où l'on va mettre un bandeau avec un slogan </p>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div>\n" +
+    "	<p> Ensuite une seconde div qui servira à mettre les carroussels <p>\n" +
+    "</div>\n" +
+    "\n" +
+    "");
+}]);
+
+angular.module("products/products.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("products/products.tpl.html",
+    "<div class=\"row\">\n" +
+    "  <h1 class=\"page-header\">\n" +
+    "	Coucou produits  </h1>\n" +
     "</div>\n" +
     "\n" +
     "");
