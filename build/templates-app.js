@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'products/products.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -328,5 +328,15 @@ angular.module("products/products.tpl.html", []).run(["$templateCache", function
     "	Coucou produits  </h1>\n" +
     "</div>\n" +
     "\n" +
+    "");
+}]);
+
+angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("useconditions/useconditions.tpl.html",
+    "<div class=\"row\">\n" +
+    "  <h1 class=\"page-header\">\n" +
+    "	Conditions </h1>\n" +
+    "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
+    "</div>\n" +
     "");
 }]);
