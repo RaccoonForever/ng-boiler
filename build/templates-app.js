@@ -272,17 +272,52 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
 
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/home.tpl.html",
-    "<h1> Coucou </h1>\n" +
+    "<div class=\"central\">\n" +
+    "    <h1 class=\"titles\">Bienvenue sur notre site</h1>\n" +
+    "	<div class=\"zone_produits\">\n" +
+    "		<div class=\"imgbackground\" \n" +
+    "			style=\"background-image: url(./assets/images/collier.png); \n" +
+    "				background-repeat:no-repeat;\n" +
+    "				background-size:343px 257px;				\n" +
+    "				margin-left: 213px;\">\n" +
     "\n" +
-    "\n" +
-    "<div> \n" +
-    "	<p> Une première div où l'on va mettre un bandeau avec un slogan </p>\n" +
-    "</div>\n" +
-    "\n" +
-    "<div>\n" +
-    "	<p> Ensuite une seconde div qui servira à mettre les carroussels <p>\n" +
-    "</div>\n" +
-    "\n" +
+    "			<div class=\"transbox\"></div>\n" +
+    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 68px;\">\n" +
+    "				Colliers\n" +
+    "			</p>\n" +
+    "		</div>\n" +
+    "		<div class=\"imgbackground\" \n" +
+    "			style=\"background-image: url(./assets/images/bracelet.png); \n" +
+    "				background-repeat:no-repeat;\n" +
+    "				background-size:343px 257px;				\n" +
+    "				margin-left: 50px;\">\n" +
+    "			<div class=\"transbox\"></div>\n" +
+    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 55px;\">\n" +
+    "				Bracelets\n" +
+    "			</p>\n" +
+    "		</div>\n" +
+    "		<div class=\"imgbackground\" \n" +
+    "			style=\"background-image: url(./assets/images/echarpe.png); \n" +
+    "				background-repeat:no-repeat;\n" +
+    "				background-size:343px 257px;				\n" +
+    "				margin-left: 213px;\">\n" +
+    "			<div class=\"transbox\"></div>\n" +
+    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 59px;\">\n" +
+    "				Echarpes\n" +
+    "			</p>\n" +
+    "		</div>\n" +
+    "		<div class=\"imgbackground\" \n" +
+    "			style=\"background-image: url(./assets/images/chaussette.png); \n" +
+    "				background-repeat:no-repeat;\n" +
+    "				background-size:343px 257px;				\n" +
+    "				margin-left: 50px;\">\n" +
+    "			<div class=\"transbox\"></div>\n" +
+    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 44px;\">\n" +
+    "				Chaussettes\n" +
+    "			</p>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</div> \n" +
     "");
 }]);
 
