@@ -57,7 +57,7 @@ modified by malick
     margin: 10px 0 10px -300px;
     width: 280px; 
     height: 40px; 
-    background: url(../images/Search_bar_2.png);  
+    background: url(../assets/images/Search_bar_2.png);  
 } 
 
 #search_box #s { 

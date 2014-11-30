@@ -5,6 +5,8 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.about',
   'ngBoilerplate.products',
   'ngBoilerplate.useconditions',
+  'ngBoilerplate.login_register',
+  'ngBoilerplate.userspace',
   'ui.router'
 ])
 

@@ -6117,3 +6117,12 @@ div.transbox p {
   position: absolute;
   z-index: 100;
 }
+h2.pagetitle {
+  font-family: Calibri Light, serif;
+  font-style: italic;
+  color: #445469;
+}
+div.buttonsyle {
+  font-family: Calibri Light, serif;
+  font-style: italic;
+}

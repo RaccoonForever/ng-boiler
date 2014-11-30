@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -321,6 +321,113 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "");
 }]);
 
+angular.module("login_register/login_register.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("login_register/login_register.tpl.html",
+    "<div class=\"container\">\n" +
+    " <div class=\"row\">\n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form role=\"form\">\n" +
+    "        <h2 class=\"pagetitle\">Se connecter</h2>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"form-group\">\n" +
+    "            <label for=\"exampleInputEmail1\" class=\"sr-only\">Adresse email</label>\n" +
+    "            <div class=\"input-group\">\n" +
+    "              <span class=\"input-group-addon\"><i class=\"fa fa-user fa-fw\"></i></span>\n" +
+    "              <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n" +
+    "                placeholder=\"adresse mail\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "           <div class=\"form-group\">\n" +
+    "            <label for=\"exampleInputPassword1\" class=\"sr-only\">Mot de passe</label>\n" +
+    "            <div class=\"input-group\">\n" +
+    "              <span class=\"input-group-addon\"><i class=\"fa fa-lock fa-fw\"></i></span>\n" +
+    "              <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\"\n" +
+    "                placeholder=\"mot de passe\">\n" +
+    "            </div>\n" +
+    "            <a href=\"#\" class=\"pull-right small\">Mot de passe?</a>\n" +
+    "          </div>\n" +
+    "            \n" +
+    "        <div class=\"checkbox\">\n" +
+    "            <label>\n" +
+    "            <input type=\"checkbox\"> Se souvenir de moi\n" +
+    "            </label>\n" +
+    "            <hr class=\"colorgraph\">\n" +
+    "          </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\"><input type=\"submit\" value=\"Se connecter\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\n" +
+    "              background: rgb(25, 176, 25);border: none;\"></div>\n" +
+    "        </div>    \n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"row\">\n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form role=\"form\">\n" +
+    "        <h2 class=\"pagetitle\">S'inscrire</h2>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"text\" name=\"first_name\" id=\"first_name\" class=\"form-control input-lg\" placeholder=\"Prénom\" tabindex=\"1\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"text\" name=\"last_name\" id=\"last_name\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <input type=\"text\" name=\"display_name\" id=\"display_name\" class=\"form-control input-lg\" placeholder=\"Nom d'utilisateur\" tabindex=\"3\">\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <input type=\"email\" name=\"email\" id=\"email\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\">\n" +
+    "        </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"password\" name=\"password\" id=\"password\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-12 .col-sm-6 .col-md-8\" id=\"buttonstyle\">\n" +
+    "            En cliquant sur <strong class=\"label label-primary\">S'inscrire</strong>, Vous acceptez les <a href=\"#/useconditions\" data-toggle=\"modal\" data-target=\"#t_and_c_m\">  Conditions Générales d'utilisation</a> du site\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\"><input type=\"submit\" value=\"S'inscrire\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\"></div>\n" +
+    "        </div>\n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <!-- Modal -->\n" +
+    "  <div class=\"modal fade\" id=\"t_and_c_m\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n" +
+    "    <div class=\"modal-dialog\">\n" +
+    "      <div class=\"modal-content\">\n" +
+    "        <div class=\"modal-header\">\n" +
+    "          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>\n" +
+    "          <h4 class=\"modal-title\" id=\"myModalLabel\">Terms & Conditions</h4>\n" +
+    "        </div>\n" +
+    "        <div class=\"modal-footer\">\n" +
+    "          <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">I Agree</button>\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "      <!-- /.modal-content -->\n" +
+    "    </div>\n" +
+    "    <!-- /.modal-dialog -->\n" +
+    "  </div>\n" +
+    "  <!-- /.modal -->\n" +
+    "</div>");
+}]);
+
 angular.module("products/products.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("products/products.tpl.html",
     "<div class=\"row\">\n" +
@@ -339,4 +446,62 @@ angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache"
     "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
     "</div>\n" +
     "");
+}]);
+
+angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("userspace/userspace.tpl.html",
+    "<div class=\"container\">\n" +
+    "    <br>\n" +
+    "\n" +
+    "    <div class=\"row-fluid\">\n" +
+    "        <div class=\"span12\" id=\"content\"><div><div id=\"details\" class=\"span7\"><div><p><img src=\"./assets/images/arthur.jpg\" width=\"133\" height=\"195,5\"></p>\n" +
+    "<h3>Arthur Clerc-Gherardi</h3>\n" +
+    "<h4>Rynn69270</h4>\n" +
+    "<br>\n" +
+    "        <table class=\"table table-striped\">\n" +
+    "            \n" +
+    "            <tbody><tr>\n" +
+    "                <td>Nom </td>\n" +
+    "                <td><i class=\"icon-user\"></i> <a href=\"#\">Clerc-Gherardi</a></td>\n" +
+    "            </tr>\n" +
+    "            \n" +
+    "                \n" +
+    "            <tr>\n" +
+    "                <td>Prénom </td>\n" +
+    "                <td><i class=\"icon-user\"></i> <a href=\"#\">Arthur</a></td>\n" +
+    "            </tr>\n" +
+    "                \n" +
+    "            <tr>\n" +
+    "                <td>Nom d'utilisateur </td>\n" +
+    "                <td><i class=\"icon-user\"></i> <a href=\"#\">Rynn69270</a></td>\n" +
+    "            </tr>\n" +
+    "                \n" +
+    "            <tr>\n" +
+    "                <td>Numéro de téléphone:</td>\n" +
+    "                <td><i class=\"icon-home\"></i> 781-000-0006</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "                <td>Email:</td>\n" +
+    "                <td><i class=\"icon-envelope\"></i> <a href=\"mailto:arthur@gmail.com\">arthur@gmail.com</a></td>\n" +
+    "            </tr>\n" +
+    "        </tbody></table>\n" +
+    "\n" +
+    "</div></div>\n" +
+    "<div class=\"span5\">\n" +
+    "    <div id=\"reports\" class=\"well\">\n" +
+    "        <h3 class=\"modal-header\">Achats</h3>\n" +
+    "\n" +
+    "        <div class=\"alert alert-info no-reports\" style=\"display: block;\">\n" +
+    "            Vous n'avez pas encore effectué d'achat\n" +
+    "        </div>\n" +
+    "    <ul class=\"nav nav-list\"></ul></div>\n" +
+    "</div>\n" +
+    "</div></div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <hr>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "</div>");
 }]);
