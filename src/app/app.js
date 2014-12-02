@@ -12,6 +12,8 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.colliers',
   'ngBoilerplate.chaussettes',
   'ngBoilerplate.bracelets',
+  'ngBoilerplate.offres',
+
   'ui.router'
 ])
 
