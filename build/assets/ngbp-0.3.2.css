@@ -5807,10 +5807,26 @@ modified by malick
   padding-top: 30px;
 }
 /* Logo Zone */
+.zone_logo {
+  width: 700px;
+  float: left;
+}
 /*Client Zone */
 .zone_client {
-  float: right;
-  margin-top: -130px;
+  margin: 30px 0 20px 50px;
+  float: left;
+}
+#mon-espace {
+  margin-left: 10px;
+  float: left;
+}
+#signin {
+  margin-left: 10px;
+  float: left;
+}
+#panier {
+  margin-left: 10px;
+  float: left;
 }
 #search_box {
   float: left;
@@ -5835,38 +5851,6 @@ modified by malick
 }
 #secnav {
   float: right;
-}
-#language {
-  float: left;
-  margin: 90px 0 0 220px;
-}
-table,
-td,
-th {
-  border: none;
-}
-td {
-  font-family: Calibri Light, serif;
-  font-style: italic;
-  color: #44546A;
-  width: 100px;
-  margin: 0px auto;
-  height: 10px;
-  text-align: center;
-}
-td a {
-  text-decoration: none;
-  font-size: 1.1em;
-  color: #445469;
-  padding-bottom: 3px;
-}
-#signin {
-  margin: 75px 0 0 60px;
-  float: left;
-}
-#panier {
-  margin: 73px 0 0 30px;
-  float: left;
 }
 .line {
   width: 1200px;

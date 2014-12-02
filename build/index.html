@@ -24,7 +24,11 @@
     <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="src/app/about/about.js"></script>
     <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/bracelets/bracelets.js"></script>
+    <script type="text/javascript" src="src/app/chaussettes/chaussettes.js"></script>
     <script type="text/javascript" src="src/app/clm/products.js"></script>
+    <script type="text/javascript" src="src/app/colliers/colliers.js"></script>
+    <script type="text/javascript" src="src/app/echarpes/echarpes.js"></script>
     <script type="text/javascript" src="src/app/home/home.js"></script>
     <script type="text/javascript" src="src/app/livraison/livraison.js"></script>
     <script type="text/javascript" src="src/app/login_register/login_register.js"></script>
@@ -53,22 +57,22 @@
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
             </div>
             <div class="zone_client">
-                <div id="language">
-				<table style=" width:200px; height:35px; font-size:18px;">
-					<tr>
-						<td> <a href="#"> English </a> </td>
-                        <td> <a href="#"> Français </a></td>
-					<tr>
-				</table>
+                <div id="mon-espace">
+					<nav class="navtext">
+						<ul class="social">
+							<li><a href="#/useconditions"/>Mon espace</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div id="signin">
+					<a href="#/login_register"><img src="./assets/images/signin.png" alt="signin" style="width:180px;"></a>
+				</div>
+				<div id="panier">
+					<a href="#/login_register"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
+				</div>
 			</div>
-			<div id="signin">
-                <a href="#/login_register"><img src="./assets/images/signin.png" alt="signin" style="width:180px;"></a>
-			</div>
-			<div id="panier">
-                <a href="#/login_register"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
-			</div>
+
                 
-            </div>
         </div>
         <div class="items">
            <div class="line" style="margin-top:17px";></div>
@@ -76,9 +80,10 @@
                 <nav class="navtext">
                     <ul class="social">
                         <li style="margin-left:30px"><a href="#/useconditions"/>Offres</a></li>
-                        <li style="margin-left:30px"><a href="#/userspace"/>Mon espace</a></li>
-                        <li style="margin-left:30px"><a href="#/products"/>Item3</a></li>
-                        <li style="margin-left:30px"><a href="#/livraison"/>Item4</a></li>
+                        <li style="margin-left:30px"><a href="#/userspace"/>Bracelets</a></li>
+                        <li style="margin-left:30px"><a href="#/products"/>Colliers</a></li>
+                        <li style="margin-left:30px"><a href="#/colliers"/>Echarpes</a></li>
+						<li style="margin-left:30px"><a href="#/colliers"/>Chaussettes</a></li>
                     </ul>
                 </nav>
         </div> 

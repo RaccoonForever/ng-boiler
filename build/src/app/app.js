@@ -8,6 +8,10 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.login_register',
   'ngBoilerplate.userspace',
   'ngBoilerplate.livraison',
+  'ngBoilerplate.echarpes',
+  'ngBoilerplate.colliers',
+  'ngBoilerplate.chaussettes',
+  'ngBoilerplate.bracelets',
   'ui.router'
 ])
 
