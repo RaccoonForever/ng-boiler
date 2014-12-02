@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'clm/products.tpl.html', 'home/home.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -270,6 +270,138 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "");
 }]);
 
+angular.module("clm/products.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("clm/products.tpl.html",
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "\n" +
+    "        <div class=\"row\">\n" +
+    "\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <p class=\"lead\">Catégories</p>\n" +
+    "                <div class=\"list-group\">\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Bracelets</a>\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Chaussettes</a>\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Colliers</a>\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Echarpes</a>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "\n" +
+    "                <div class=\"row carousel-holder\">\n" +
+    "\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+    "                            <ol class=\"carousel-indicators\">\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n" +
+    "                            </ol>\n" +
+    "                            <div class=\"carousel-inner\">\n" +
+    "                                <div class=\"item active\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
+    "                            </a>\n" +
+    "                            <a class=\"right carousel-control\" href=\"#carousel-example-generic\" data-slide=\"next\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "");
+}]);
+
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/home.tpl.html",
     "<div class=\"central\">\n" +
@@ -438,7 +570,6 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
 
 angular.module("products/products.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("products/products.tpl.html",
-    "\n" +
     "<div class=\"productsbody\">\n" +
     "<div class=\"container\">\n" +
     "\n" +
@@ -563,12 +694,10 @@ angular.module("products/products.tpl.html", []).run(["$templateCache", function
     "\n" +
     "    </div>\n" +
     "    <!-- /.container -->\n" +
-    "    \n" +
-    "<!-- jQuery -->\n" +
-    "    <script src=\"js/jquery.js\"></script>\n" +
-    "    <!-- Bootstrap Core JavaScript -->\n" +
-    "    <script src=\"js/bootstrap.min.js\"></script>\n" +
-    "</div>");
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache", function($templateCache) {
