@@ -1,4 +1,47 @@
+<!--
 <div class="row">
   <h1 class="page-header">
 	Conditions </h1>
+<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>
+</div>
+-->
+
+<div id="my_carousel" class="carousel slide" data-ride="carousel">
+<!-- Bulles -->
+<ol class="carousel-indicators">
+<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
+<li data-target="#my_carousel" data-slide-to="1"></li>
+<li data-target="#my_carousel" data-slide-to="2"></li>
+</ol>
+<!-- Slides -->
+<div class="carousel-inner">
+<!-- Page 1 -->
+<div class="item active">  
+<div class="carousel-page">
+<img src="/images/bootstrap.png" class="img-responsive" style="margin:0px auto;" />
+</div> 
+<div class="carousel-caption">Page 1 de présentation</div>
+</div>   
+<!-- Page 2 -->
+<div class="item"> 
+<div class="carousel-page"><img src="/images/twitter-bootstrap.jpg" class="img-responsive img-rounded" 
+style="margin:0px auto;"  /></div> 
+<div class="carousel-caption">Page 2 de présentation</div>
+</div>  
+<!-- Page 3 -->
+<div class="item">  
+<div class="carousel-page">
+<img src="/images/tablette.png" class="img-responsive img-rounded" 
+style="margin:0px auto;max-height:100%;"  />
+</div>  
+<div class="carousel-caption">Page 2 de présentation</div>
+</div>     
+</div>
+<!-- Contrôles -->
+<a class="left carousel-control" href="#my_carousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#my_carousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
 </div>

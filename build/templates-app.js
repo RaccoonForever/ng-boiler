@@ -430,21 +430,175 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
 
 angular.module("products/products.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("products/products.tpl.html",
-    "<div class=\"row\">\n" +
-    "  <h1 class=\"page-header\">\n" +
-    "	Coucou produits  </h1>\n" +
-    "</div>\n" +
+    "<head>\n" +
     "\n" +
-    "");
+    "    <meta charset=\"utf-8\">\n" +
+    "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
+    "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
+    "    <meta name=\"description\" content=\"\">\n" +
+    "    <meta name=\"author\" content=\"\">\n" +
+    "\n" +
+    "    <title>Shop Homepage - Start Bootstrap Template</title>\n" +
+    "\n" +
+    "    <!-- Bootstrap Core CSS -->\n" +
+    "    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n" +
+    "\n" +
+    "    <!-- Custom CSS -->\n" +
+    "    <link href=\"css/shop-homepage.css\" rel=\"stylesheet\">\n" +
+    "\n" +
+    "    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n" +
+    "    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n" +
+    "    <!--[if lt IE 9]>\n" +
+    "        <script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n" +
+    "        <script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n" +
+    "    <![endif]-->\n" +
+    "\n" +
+    "</head>\n" +
+    "\n" +
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "\n" +
+    "        <div class=\"row\">\n" +
+    "\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <p class=\"lead\">Catégories</p>\n" +
+    "                <div class=\"list-group\">\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Bracelets</a>\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Chaussettes</a>\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Colliers</a>\n" +
+    "                    <a href=\"#\" class=\"list-group-item\">Echarpes</a>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "\n" +
+    "                <div class=\"row carousel-holder\">\n" +
+    "\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+    "                            <ol class=\"carousel-indicators\">\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n" +
+    "                            </ol>\n" +
+    "                            <div class=\"carousel-inner\">\n" +
+    "                                <div class=\"item active\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
+    "                            </a>\n" +
+    "                            <a class=\"right carousel-control\" href=\"#carousel-example-generic\" data-slide=\"next\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "    \n" +
+    "<!-- jQuery -->\n" +
+    "    <script src=\"js/jquery.js\"></script>\n" +
+    "\n" +
+    "    <!-- Bootstrap Core JavaScript -->\n" +
+    "    <script src=\"js/bootstrap.min.js\"></script>\n" +
+    "</div>");
 }]);
 
 angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("useconditions/useconditions.tpl.html",
+    "\n" +
     "<div class=\"row\">\n" +
     "  <h1 class=\"page-header\">\n" +
     "	Conditions </h1>\n" +
     "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
     "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
     "");
 }]);
 
@@ -455,34 +609,34 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "\n" +
     "    <div class=\"row-fluid\">\n" +
     "        <div class=\"span12\" id=\"content\"><div><div id=\"details\" class=\"span7\"><div><p><img src=\"./assets/images/arthur.jpg\" width=\"133\" height=\"195,5\"></p>\n" +
-    "<h3>Arthur Clerc-Gherardi</h3>\n" +
-    "<h4>Rynn69270</h4>\n" +
+    "<h3>Rynn69270</h3>\n" +
+    "<h4>Arthur Clerc-Gherardi</h4>\n" +
     "<br>\n" +
     "        <table class=\"table table-striped\">\n" +
     "            \n" +
     "            <tbody><tr>\n" +
     "                <td>Nom </td>\n" +
-    "                <td><i class=\"icon-user\"></i> <a href=\"#\">Clerc-Gherardi</a></td>\n" +
+    "                <td><i class=\"\"></i> <a href=\"#\">Clerc-Gherardi</a></td>\n" +
     "            </tr>\n" +
     "            \n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Prénom </td>\n" +
-    "                <td><i class=\"icon-user\"></i> <a href=\"#\">Arthur</a></td>\n" +
+    "                <td><i class=\"\"></i> <a href=\"#\">Arthur</a></td>\n" +
     "            </tr>\n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Nom d'utilisateur </td>\n" +
-    "                <td><i class=\"icon-user\"></i> <a href=\"#\">Rynn69270</a></td>\n" +
+    "                <td><i class=\"fa fa-user\"></i> <a href=\"#\">Rynn69270</a></td>\n" +
     "            </tr>\n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Numéro de téléphone:</td>\n" +
-    "                <td><i class=\"icon-home\"></i> 781-000-0006</td>\n" +
+    "                <td><i class=\"fa fa-mobile\"></i> 06-xx-xx-xx-xx</td>\n" +
     "            </tr>\n" +
     "            <tr>\n" +
     "                <td>Email:</td>\n" +
-    "                <td><i class=\"icon-envelope\"></i> <a href=\"mailto:arthur@gmail.com\">arthur@gmail.com</a></td>\n" +
+    "                <td><i class=\"fa fa-envelope\"></i> <a href=\"mailto:arthur@gmail.com\">arthur@gmail.com</a></td>\n" +
     "            </tr>\n" +
     "        </tbody></table>\n" +
     "\n" +

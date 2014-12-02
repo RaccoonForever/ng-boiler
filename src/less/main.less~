@@ -11,6 +11,8 @@
  */
 
 @import '../../vendor/bootstrap/less/bootstrap.less';
+@import '../../vendor/bootstrap/less/glyphicons.less';
+
 
 
 /**
@@ -300,4 +302,6 @@ li.nav_items {
  */
 
 @import '../app/home/home.less';
+@import '../app/login_register/login_register.tpl.less';
+@import '../app/products/products.tpl.less';
 
