@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -321,6 +321,14 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "");
 }]);
 
+angular.module("livraison/livraison.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("livraison/livraison.tpl.html",
+    "<div>\n" +
+    "<h1>Livraison</h1>\n" +
+    "</div>\n" +
+    "");
+}]);
+
 angular.module("login_register/login_register.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("login_register/login_register.tpl.html",
     "<div class=\"container\">\n" +
@@ -430,30 +438,6 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
 
 angular.module("products/products.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("products/products.tpl.html",
-    "<head>\n" +
-    "\n" +
-    "    <meta charset=\"utf-8\">\n" +
-    "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
-    "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
-    "    <meta name=\"description\" content=\"\">\n" +
-    "    <meta name=\"author\" content=\"\">\n" +
-    "\n" +
-    "    <title>Shop Homepage - Start Bootstrap Template</title>\n" +
-    "\n" +
-    "    <!-- Bootstrap Core CSS -->\n" +
-    "    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n" +
-    "\n" +
-    "    <!-- Custom CSS -->\n" +
-    "    <link href=\"css/shop-homepage.css\" rel=\"stylesheet\">\n" +
-    "\n" +
-    "    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n" +
-    "    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n" +
-    "    <!--[if lt IE 9]>\n" +
-    "        <script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n" +
-    "        <script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n" +
-    "    <![endif]-->\n" +
-    "\n" +
-    "</head>\n" +
     "\n" +
     "<div class=\"productsbody\">\n" +
     "<div class=\"container\">\n" +
@@ -582,7 +566,6 @@ angular.module("products/products.tpl.html", []).run(["$templateCache", function
     "    \n" +
     "<!-- jQuery -->\n" +
     "    <script src=\"js/jquery.js\"></script>\n" +
-    "\n" +
     "    <!-- Bootstrap Core JavaScript -->\n" +
     "    <script src=\"js/bootstrap.min.js\"></script>\n" +
     "</div>");
