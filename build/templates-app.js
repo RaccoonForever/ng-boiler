@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'clm/products.tpl.html', 'home/home.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -270,138 +270,6 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "");
 }]);
 
-angular.module("clm/products.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("clm/products.tpl.html",
-    "<div class=\"productsbody\">\n" +
-    "<div class=\"container\">\n" +
-    "\n" +
-    "        <div class=\"row\">\n" +
-    "\n" +
-    "            <div class=\"col-md-3\">\n" +
-    "                <p class=\"lead\">Catégories</p>\n" +
-    "                <div class=\"list-group\">\n" +
-    "                    <a href=\"#\" class=\"list-group-item\">Bracelets</a>\n" +
-    "                    <a href=\"#\" class=\"list-group-item\">Chaussettes</a>\n" +
-    "                    <a href=\"#\" class=\"list-group-item\">Colliers</a>\n" +
-    "                    <a href=\"#\" class=\"list-group-item\">Echarpes</a>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <div class=\"col-md-9\">\n" +
-    "\n" +
-    "                <div class=\"row carousel-holder\">\n" +
-    "\n" +
-    "                    <div class=\"col-md-12\">\n" +
-    "                        <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
-    "                            <ol class=\"carousel-indicators\">\n" +
-    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n" +
-    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n" +
-    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n" +
-    "                            </ol>\n" +
-    "                            <div class=\"carousel-inner\">\n" +
-    "                                <div class=\"item active\">\n" +
-    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
-    "                                </div>\n" +
-    "                                <div class=\"item\">\n" +
-    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
-    "                                </div>\n" +
-    "                                <div class=\"item\">\n" +
-    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
-    "                                </div>\n" +
-    "                            </div>\n" +
-    "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n" +
-    "                                <span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
-    "                            </a>\n" +
-    "                            <a class=\"right carousel-control\" href=\"#carousel-example-generic\" data-slide=\"next\">\n" +
-    "                                <span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <div class=\"row\">\n" +
-    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
-    "                        <div class=\"thumbnail\">\n" +
-    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
-    "                            <div class=\"caption\">\n" +
-    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
-    "                                <h4><a href=\"#\">Produit X</a>\n" +
-    "                                </h4>\n" +
-    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"ratings\">\n" +
-    "                                <p class=\"pull-right\">31 avis</p>\n" +
-    "                                <p>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "\n" +
-    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
-    "                        <div class=\"thumbnail\">\n" +
-    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
-    "                            <div class=\"caption\">\n" +
-    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
-    "                                <h4><a href=\"#\">Produit X</a>\n" +
-    "                                </h4>\n" +
-    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"ratings\">\n" +
-    "                                <p class=\"pull-right\">6 avis</p>\n" +
-    "                                <p>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "\n" +
-    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
-    "                        <div class=\"thumbnail\">\n" +
-    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
-    "                            <div class=\"caption\">\n" +
-    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
-    "                                <h4><a href=\"#\">Produit X</a>\n" +
-    "                                </h4>\n" +
-    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"ratings\">\n" +
-    "                                <p class=\"pull-right\">8 avis</p>\n" +
-    "                                <p>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
-    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "\n" +
-    "                   \n" +
-    "                </div>\n" +
-    "\n" +
-    "            </div>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "    </div>\n" +
-    "    <!-- /.container -->\n" +
-    "\n" +
-    "</div>\n" +
-    "\n" +
-    "");
-}]);
-
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/home.tpl.html",
     "<div class=\"central\">\n" +
@@ -453,11 +321,197 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "");
 }]);
 
+angular.module("infoslivraison/infoslivraison.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("infoslivraison/infoslivraison.tpl.html",
+    "<div class=\"container\">\n" +
+    " <div class=\"row\">\n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form role=\"form\">\n" +
+    "        <h2 class=\"pagetitle\">Identifiez-vous pour poursuivre</h2>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"form-group\">\n" +
+    "            <label for=\"exampleInputEmail1\" class=\"sr-only\">Adresse email</label>\n" +
+    "            <div class=\"input-group\">\n" +
+    "              <span class=\"input-group-addon\"><i class=\"fa fa-user fa-fw\"></i></span>\n" +
+    "              <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n" +
+    "                placeholder=\"adresse mail\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "           <div class=\"form-group\">\n" +
+    "            <label for=\"exampleInputPassword1\" class=\"sr-only\">Mot de passe</label>\n" +
+    "            <div class=\"input-group\">\n" +
+    "              <span class=\"input-group-addon\"><i class=\"fa fa-lock fa-fw\"></i></span>\n" +
+    "              <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\"\n" +
+    "                placeholder=\"mot de passe\">\n" +
+    "            </div>\n" +
+    "            <a href=\"#\" class=\"pull-right small\">Mot de passe?</a>\n" +
+    "          </div>\n" +
+    "            \n" +
+    "        <div class=\"checkbox\">\n" +
+    "            <label>\n" +
+    "            <input type=\"checkbox\"> Se souvenir de moi\n" +
+    "            </label>\n" +
+    "            <hr class=\"colorgraph\">\n" +
+    "          </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\"><input type=\"submit\" value=\"Valider\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\n" +
+    "              background: rgb(25, 176, 25);border: none;\"></div>\n" +
+    "        </div>    \n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"row\">\n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form role=\"form\">\n" +
+    "        <h2 class=\"pagetitle\">Vous êtes nouveau client sur Pmart?</h2>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"text\" name=\"first_name\" id=\"first_name\" class=\"form-control input-lg\" placeholder=\"Prénom\" tabindex=\"1\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"text\" name=\"last_name\" id=\"last_name\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <input type=\"text\" name=\"display_name\" id=\"display_name\" class=\"form-control input-lg\" placeholder=\"Nom d'utilisateur\" tabindex=\"3\">\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <input type=\"email\" name=\"email\" id=\"email\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\">\n" +
+    "        </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"password\" name=\"password\" id=\"password\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\">\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-12 .col-sm-6 .col-md-8\" id=\"buttonstyle\">\n" +
+    "            En cliquant sur <strong class=\"label label-primary\">Créer un nouveau compte</strong>, Vous acceptez les <a href=\"#/useconditions\" data-toggle=\"modal\" data-target=\"#t_and_c_m\">  Conditions Générales d'utilisation</a> du site\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\"><input type=\"submit\" value=\"Créer un nouveau compte\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\"></div>\n" +
+    "        </div>\n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <!-- Modal -->\n" +
+    "  <div class=\"modal fade\" id=\"t_and_c_m\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n" +
+    "    <div class=\"modal-dialog\">\n" +
+    "      <div class=\"modal-content\">\n" +
+    "        <div class=\"modal-header\">\n" +
+    "          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>\n" +
+    "          <h4 class=\"modal-title\" id=\"myModalLabel\">Terms & Conditions</h4>\n" +
+    "        </div>\n" +
+    "        <div class=\"modal-footer\">\n" +
+    "          <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">I Agree</button>\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "      <!-- /.modal-content -->\n" +
+    "    </div>\n" +
+    "    <!-- /.modal-dialog -->\n" +
+    "  </div>\n" +
+    "  <!-- /.modal -->\n" +
+    "</div>\n" +
+    "");
+}]);
+
 angular.module("livraison/livraison.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("livraison/livraison.tpl.html",
-    "<div>\n" +
-    "<h1>Livraison</h1>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"container\" style=\"margin-top: 5%;\">\n" +
+    "\n" +
+    "<div class=\"resume\">\n" +
+    "<div class=\"row\">\n" +
+    "  <div class=\"col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8\">\n" +
+    "    <div class=\"panel panel-default\">\n" +
+    "      <div class=\"panel-heading resume-heading\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-lg-12\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "              <figure>\n" +
+    "                <img class=\"normaldelivery\" alt=\"\" src=\"./assets/images/livraison.gif\" width=\"100.75\" height=\"92.625\">\n" +
+    "              </figure>\n" +
+    "              \n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-6\">\n" +
+    "              <ul class=\"list-group\">\n" +
+    "                <li class=\"list-group-item\">Normal</li>\n" +
+    "                <li class=\"list-group-item\">Livraison à domicile</li>\n" +
+    "                <li class=\"list-group-item\">Livraison entre le 08.12 et le 15.12</li>\n" +
+    "              </ul>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-3\" style=\"padding-top: 3%;\"><p class=\"price\"><strong>4.99€</strong></p><input type=\"submit\" value=\"Valider\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"background: rgb(25, 176, 25);border: none;\"></div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "      \n" +
+    "    \n" +
+    "   \n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "  </div>\n" +
     "</div>\n" +
+    "    \n" +
+    "</div>\n" +
+    "    \n" +
+    "<div class=\"resume\">\n" +
+    "<div class=\"row\">\n" +
+    "  <div class=\"col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8\">\n" +
+    "    <div class=\"panel panel-default\">\n" +
+    "      <div class=\"panel-heading resume-heading\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-lg-12\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "              <figure>\n" +
+    "                <img class=\"followdelivery\" alt=\"\" src=\"./assets/images/logo_livraison72h.png\" width=\"91.6\" height=\"64.2\">\n" +
+    "              </figure>\n" +
+    "              \n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-6\">\n" +
+    "              <ul class=\"list-group\">\n" +
+    "                <li class=\"list-group-item\">Suivi</li>\n" +
+    "                <li class=\"list-group-item\">Livraison à domicile</li>\n" +
+    "                <li class=\"list-group-item\">Livraison entre le 08.12 et le 10.12</li>\n" +
+    "              </ul>\n" +
+    "          \n" +
+    "            </div>\n" +
+    "              <div class=\"col-md-3\" style=\"padding-top: 3%;\"><p class=\"price\"><strong>4.99€</strong></p><input type=\"submit\" value=\"Valider\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"background: rgb(25, 176, 25);border: none;\"></div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "      \n" +
+    "    \n" +
+    "   \n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "    \n" +
+    "</div>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
     "");
 }]);
 

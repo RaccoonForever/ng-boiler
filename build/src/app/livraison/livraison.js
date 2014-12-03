@@ -13,7 +13,7 @@ angular.module( 'ngBoilerplate.livraison', [
         templateUrl: 'livraison/livraison.tpl.html'
       }
     },
-    data:{ pageTitle: 'Login or Register' }
+    data:{ pageTitle: 'Livraison' }
   });
 })
 

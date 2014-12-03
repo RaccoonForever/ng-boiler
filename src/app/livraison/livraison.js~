@@ -1,23 +1,23 @@
-angular.module( 'ngBoilerplate.login_register', [
+angular.module( 'ngBoilerplate.livraison', [
   'ui.router',
   'placeholders',
   'ui.bootstrap'
 ])
 
 .config(function config( $stateProvider ) {
-  $stateProvider.state( 'login_register', {
-    url: '/login_register',
+  $stateProvider.state( 'livraison', {
+    url: '/livraison',
     views: {
       "main": {
-        controller: 'LogRegCtrl',
-        templateUrl: 'login_register/login_register.tpl.html'
+        controller: 'LivCtrl',
+        templateUrl: 'livraison/livraison.tpl.html'
       }
     },
     data:{ pageTitle: 'Login or Register' }
   });
 })
 
-.controller( 'LogRegCtrl', function ProductsCtrl( $scope ) {
+.controller( 'LivCtrl', function ProductsCtrl( $scope ) {
 })
 
 ;

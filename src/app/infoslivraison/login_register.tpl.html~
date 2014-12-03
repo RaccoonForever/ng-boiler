@@ -1,0 +1,270 @@
+<div class="entry-content">
+                            <p></p><div class="login_form_l"><h3>S'authentifier</h3>			<div class="login_form_box">
+            					<form name="loginform" id="loginform" action="http://ushare.alveoo.fr/login/" method="post">
+                    	<input type="hidden" name="action" value="login">                         
+				    <div class="form_row clearfix">
+					 <label>Nom d'utilisateur <span class="indicates">*</span> </label>
+					 <input type="text" name="log" id="user_login" value="" size="20" class="textfield">
+					 <span id="user_loginInfo"></span> </div>
+				    <div class="form_row clearfix">
+					 <label> Mot de passe <span class="indicates">*</span> </label>
+					 <input type="password" name="pwd" id="user_pass" class="textfield" value="" size="20">
+					 <span id="user_passInfo"></span> </div>
+					  <input type="hidden" name="redirect_to" value="http://ushare.alveoo.fr/senregistrer/">
+					<input type="hidden" name="testcookie" value="1">
+				    <div class="form_row rember clearfix">
+					 <label>
+						<input name="rememberme" type="checkbox" id="rememberme" value="forever" class="fl">
+						Se souvenir de moi dans cet ordinateur 
+					 </label>	
+					 <a href="javascript:void(0);showhide_forgetpw();" class="forgot_password">Mot de passe oublié?</a>
+				    </div>
+				    <!-- <a  href="javascript:void(0);" onclick="chk_form_login();" class="highlight_button fl login" >Sign In</a>-->
+					
+					<div class="form_row ">
+				    <input class="b_signin_n" type="submit" value="Se connecter" name="submit">
+				    </div>  
+							
+			  </form>
+              			</div>
+			<!-- Enable social media(gigya plugin) if activated-->         
+						<!--End of plugin code-->
+						
+			
+			<div id="lostpassword_form" style="display:none;">
+				<h3>Mot de passe oublié</h3>
+				<form name="lostpasswordform" id="lostpasswordform" action="http://ushare.alveoo.fr/login/" method="post">
+                    	<input type="hidden" name="action" value="lostpassword">
+					<div class="form_row clearfix">
+					<label> E-mail: </label>
+					<input type="text" name="user_login" id="user_login_email" onkeypress="forget_email_validate();" value="" size="20" class="textfield">
+                         <span id="forget_user_email_error" class="message_error2"></span>
+										</div>
+					<input type="hidden" name="pwdredirect_to" value="http://ushare.alveoo.fr/senregistrer/">
+					<input type="submit" name="get_new_password" onclick="return forget_email_validate();" value="Obtenir un nouveau mot de passe" class="b_signin_n ">
+				</form>
+			</div>
+			<script type="text/javascript">
+				function showhide_forgetpw()
+				{
+					if(document.getElementById('lostpassword_form').style.display=='none')
+					{
+						document.getElementById('lostpassword_form').style.display = 'block';
+					}else
+					{
+						document.getElementById('lostpassword_form').style.display = 'none';
+					}	
+				}
+				
+				function forget_email_validate(){
+					var email = document.getElementById('user_login_email');
+					var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+					
+					if(email.value==''){
+						document.getElementById('forget_user_email_error').innerHTML='please enter E-mail';
+						email.focus;
+						return false;
+					}else if (!filter.test(email.value)) {						
+						document.getElementById('forget_user_email_error').innerHTML='Veuillez fournir une adresse email valide';
+						email.focus;
+						return false;
+					}else
+					{
+						document.getElementById('forget_user_email_error').innerHTML='';
+						return true;
+					}
+				}
+			</script>
+		</div><div id="sign_up">  
+  <div class="registration_form_box">
+    <h3>S'inscrire maintenant </h3>
+     
+    <form name="userform" id="userform" action="http://ushare.alveoo.fr/login/" method="post" enctype="multipart/form-data">  
+        <input type="hidden" name="reg_redirect_link" value="http://ushare.alveoo.fr/senregistrer/">
+			<input type="hidden" name="user_email_already_exist" id="user_email_already_exist" value="">
+	   <input type="hidden" name="user_fname_already_exist" id="user_fname_already_exist" value="">
+        <input type="hidden" name="action" id="user_action" value="register">
+	  
+      		<div class="form_row clearfix"><label>E-mail <span class="indicates">*</span> </label><input name="user_email" type="text" id="user_email" size="25" class="textfield" value=""><span id="user_email_error"></span><span class="message_note"></span></div><div class="form_row clearfix"><label>Nom d'utilisateur <span class="indicates">*</span> </label><input name="user_fname" type="text" id="user_fname" size="25" class="textfield" value=""><span id="user_fname_error"></span><span class="message_note"></span></div>		      <input type="submit" name="registernow" value="S'inscrire maintenant" class="b_registernow" id="registernow_form">
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function()
+{
+var userform = jQuery("#userform"); 
+
+	var user_email = jQuery("#user_email"); 
+	
+	var user_email_error = jQuery("#user_email_error"); 
+	
+		function validate_user_email()
+		{
+				if(jQuery("#user_email").val() == "")
+			
+			{
+				user_email.addClass("error");
+				user_email_error.text("please enter E-mail");
+				user_email_error.removeClass("available_tick");
+				user_email_error.addClass("message_error2");
+				return false;
+			}
+			else
+			
+			if(jQuery("#user_email").val() != "")
+			{
+				var a = jQuery("#user_email").val();
+				var emailReg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+				if(jQuery("#user_email").val() == "") { user_email.addClass("error");
+					user_email_error.text("Indiquer s'il vous pla�t votre adresse e-mail");
+					user_email_error.addClass("message_error2");
+				return false; } else if(!emailReg.test(jQuery("#user_email").val().replace(/\s+$/,""))) { user_email.addClass("error");
+					user_email_error.text("Indiquer s'il vous pla�t votre adresse e-mail");
+					user_email_error.addClass("message_error2");
+					return false;
+				} else {
+				chkemail();
+				var chk_email = document.getElementById("user_email_already_exist").value;
+					if(chk_email > 0)
+					{
+						user_email.removeClass("error");
+						user_email_error.text("");
+						user_email_error.removeClass("message_error2");
+						return true;
+					}
+					else{
+						return false;
+					}
+				}
+			}
+			{
+				user_email.removeClass("error");
+				user_email_error.text("");
+				user_email_error.removeClass("message_error2");
+				return true;
+			}
+		}
+		user_email.blur(validate_user_email); user_email.keyup(validate_user_email); 
+	var user_fname = jQuery("#user_fname"); 
+	
+	var user_fname_error = jQuery("#user_fname_error"); 
+	
+		function validate_user_fname()
+		{
+				if(jQuery("#user_fname").val() == "")
+			
+			{
+				user_fname.addClass("error");
+				user_fname_error.text("please enter Nom d'utilisateur");
+				user_fname_error.removeClass("available_tick");
+				user_fname_error.addClass("message_error2");
+				return false;
+			}
+			else
+			
+			if(jQuery("#user_fname").val() != "")
+			{
+				var a = jQuery("#user_fname").val();
+				var userLength = jQuery("#user_fname").val().length;
+				if(jQuery("#user_fname").val() == "") { user_fname.addClass("error");
+						user_fname_error.text("please enter Nom d'utilisateur");
+						user_fname_error.addClass("message_error2");
+						
+				}else if(jQuery("#user_fname").val().match(/\ /)){ user_fname.addClass("error");
+					user_fname_error.text("Usernames should not contain space.");
+					user_fname_error.addClass("message_error2");
+					return false;
+				}else if(userLength < 4 ){ user_fname.addClass("error");
+					user_fname_error.text("Le nom d'utilisateur doit comporter au minimum 4 caracteres");
+					user_fname_error.addClass("message_error2");
+					return false;
+				}else
+				{
+					chkname();
+					var chk_fname = document.getElementById("user_fname_already_exist").value;
+					if(chk_fname > 0)
+					{
+						user_fname.removeClass("error");
+						user_fname_error.text("");
+						user_fname_error.removeClass("message_error2");
+						return true;
+					}
+					else{
+						return false;
+					}
+				}
+			}{
+				user_fname.removeClass("error");
+				user_fname_error.text("");
+				user_fname_error.removeClass("message_error2");
+				return true;
+			}
+		}
+		user_fname.blur(validate_user_fname); user_fname.keyup(validate_user_fname); var pwd = jQuery("#pwd"); 
+	
+	var pwd_error = jQuery("#pwdInfo"); 
+	
+		function validate_pwd()
+		{
+				if(jQuery("#pwd").val() == "")
+			
+			{
+				pwd.addClass("error");
+				pwd_error.text("please enter password");
+				pwd_error.addClass("message_error2");
+				return false;
+			}
+			else{
+				pwd.removeClass("error");
+				pwd_error.text("");
+				pwd_error.removeClass("message_error2");
+				return true;
+			}
+		}
+		pwd.blur(validate_pwd);
+		pwd.keyup(validate_pwd); 
+		var cpwd = jQuery("#cpwd"); 
+	
+	var cpwd_error = jQuery("#cpwdInfo"); 
+	
+		function validate_cpwd()
+		{
+				if(jQuery("#cpwd").val() == "")
+			
+			{
+				cpwd.addClass("error");
+				cpwd_error.text("please enter confirm password");
+				cpwd_error.addClass("message_error2");
+				return false;
+			} else if(jQuery("#cpwd").val() != jQuery("#pwd").val()) {
+				cpwd.addClass("error");
+				cpwd_error.text("Please confirm your password");
+				cpwd_error.addClass("message_error2");
+				return false;
+			}
+			else{
+				cpwd.removeClass("error");
+				cpwd_error.text("");
+				cpwd_error.removeClass("message_error2");
+				return true;
+			}
+		}
+		cpwd.blur(validate_cpwd);
+		cpwd.keyup(validate_cpwd);
+			
+userform.submit(function()
+{
+	if(validate_user_email() & validate_user_fname() & validate_pwd() & validate_cpwd())
+	{
+		return true
+	}
+	else
+	{
+		return false;
+	}
+});
+
+});</script>
+<p></p>
+                          </div>

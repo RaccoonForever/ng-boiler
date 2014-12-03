@@ -8,6 +8,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.login_register',
   'ngBoilerplate.userspace',
   'ngBoilerplate.livraison',
+  'ngBoilerplate.infoslivraison',
   'ui.router'
 ])
 
