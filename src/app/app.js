@@ -9,6 +9,11 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.userspace',
   'ngBoilerplate.livraison',
   'ngBoilerplate.infoslivraison',
+  'ngBoilerplate.echarpes',
+  'ngBoilerplate.colliers',
+  'ngBoilerplate.chaussettes',
+  'ngBoilerplate.bracelets',
+  'ngBoilerplate.offres',
   'ui.router'
 ])
 

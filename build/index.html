@@ -24,10 +24,15 @@
     <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="src/app/about/about.js"></script>
     <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/bracelets/bracelets.js"></script>
+    <script type="text/javascript" src="src/app/chaussettes/chaussettes.js"></script>
+    <script type="text/javascript" src="src/app/colliers/colliers.js"></script>
+    <script type="text/javascript" src="src/app/echarpes/echarpes.js"></script>
     <script type="text/javascript" src="src/app/home/home.js"></script>
     <script type="text/javascript" src="src/app/infoslivraison/infoslivraison.js"></script>
     <script type="text/javascript" src="src/app/livraison/livraison.js"></script>
     <script type="text/javascript" src="src/app/login_register/login_register.js"></script>
+    <script type="text/javascript" src="src/app/offres/offres.js"></script>
     <script type="text/javascript" src="src/app/products/products.js"></script>
     <script type="text/javascript" src="src/app/useconditions/useconditions.js"></script>
     <script type="text/javascript" src="src/app/userspace/userspace.js"></script>
@@ -53,33 +58,34 @@
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
             </div>
             <div class="zone_client">
-                <div id="language">
-				<table style=" width:200px; height:35px; font-size:18px;">
-					<tr>
-						<td> <a href="#"> English </a> </td>
-                        <td> <a href="#"> Français </a></td>
-					<tr>
-				</table>
+                <div id="mon-espace">
+					<nav class="navtext">
+						<ul class="social">
+							<li><a href="#/useconditions"/>Mon espace</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div id="signin">
+					<a href="#/login_register"><img src="./assets/images/signin.png" alt="signin" style="width:180px;"></a>
+				</div>
+				<div id="panier">
+					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
+				</div>
 			</div>
-			<div id="signin">
-                <a href="#/login_register"><img src="./assets/images/signin.png" alt="signin" style="width:180px;"></a>
-			</div>
-			<div id="panier">
-                <a href="#/login_register"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
-			</div>
+
                 
-            </div>
         </div>
         <div class="items">
            <div class="line" style="margin-top:17px";></div>
             <div class="navigationbar" style="float:left">
                 <nav class="navtext">
                     <ul class="social">
-                        <li style="margin-left:30px"><a href="#/useconditions"/>Offres</a></li>
-                        <li style="margin-left:30px"><a href="#/userspace"/>Mon espace</a></li>
-                        <li style="margin-left:30px"><a href="#/products"/>Item3</a></li>
-                        <li style="margin-left:30px"><a href="#/infoslivraison"/>Item4</a></li>
-                        <li style="margin-left:30px"><a href="#/livraison"/>Item5</a></li>
+                        <li style="margin-left:30px"><a href="#/offres"/>Offres</a></li>
+                        <li style="margin-left:30px"><a href="#/bracelets"/>Bracelets</a></li>
+                        <li style="margin-left:30px"><a href="#/colliers"/>Colliers</a></li>
+                        <li style="margin-left:30px"><a href="#/echarpes"/>Echarpes</a></li>
+			<li style="margin-left:30px"><a href="#/chaussettes"/>Chaussettes</a></li>
+
                     </ul>
                 </nav>
         </div> 
@@ -93,7 +99,7 @@
                 </div>                                                                                                                         
 				<nav class="navtext">
 					<ul class="social">
-						 <li><a href="#">Recherche avancée</a></li>
+						 <li><a href="#/infoslivraison">Recherche avancée</a></li>
 					</ul>    
 				</nav>
     	   </div>
@@ -115,7 +121,7 @@
 		  
 		  <div style="clear:both; text-align:center; margin-top:50px;">
 			  <p>
-				(c) 2013 Projet E-COM Polytech' Grenoble par FREBY, FALL, GUO, GINOUX et CLERC-GHERARDI.      
+				(c) 2014 Projet E-COM Polytech' Grenoble par FREBY, FALL, GUO, GINOUX et CLERC-GHERARDI.      
 			  </p>
 		  </div>
 		</div>

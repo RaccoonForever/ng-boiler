@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -270,52 +270,542 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "");
 }]);
 
+angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("bracelets/bracelets.tpl.html",
+    "\n" +
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "		<p style=\"font-family:Edwardian Script;\n" +
+    "			src: url(../assets/fonts/ITCEDSCR.TTF);\n" +
+    "			font-style:italic; \n" +
+    "			font-size:60px; \n" +
+    "			text-align:center; \n" +
+    "			color:#44546A;\">Bracelets</p>\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div class=\"list-group\">\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par prix- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "	\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Type de vendeur - </option>\n" +
+    "						<option value=\"\"> Particulier </option>\n" +
+    "						<option value=\"\"> Professionel </option>\n" +
+    "					</select>\n" +
+    "			\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Couleur - </option>\n" +
+    "						<option value=\"\"> Rouge </option>\n" +
+    "						<option value=\"\"> Vert </option>\n" +
+    "					</select>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "    \n" +
+    "<!-- jQuery -->\n" +
+    "    <script src=\"js/jquery.js\"></script>\n" +
+    "    <!-- Bootstrap Core JavaScript -->\n" +
+    "    <script src=\"js/bootstrap.min.js\"></script>\n" +
+    "</div>");
+}]);
+
+angular.module("chaussettes/chaussettes.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("chaussettes/chaussettes.tpl.html",
+    "\n" +
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "		<p style=\"font-family:Edwardian Script;\n" +
+    "			src: url(../assets/fonts/ITCEDSCR.TTF);\n" +
+    "			font-style:italic; \n" +
+    "			font-size:60px; \n" +
+    "			text-align:center; \n" +
+    "			color:#44546A;\">Chaussettes</p>\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "\n" +
+    "                <div class=\"list-group\">\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par prix- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "	\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Type de vendeur - </option>\n" +
+    "						<option value=\"\"> Particulier </option>\n" +
+    "						<option value=\"\"> Professionel </option>\n" +
+    "					</select>\n" +
+    "			\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Couleur - </option>\n" +
+    "						<option value=\"\"> Rouge </option>\n" +
+    "						<option value=\"\"> Vert </option>\n" +
+    "					</select>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "    \n" +
+    "<!-- jQuery -->\n" +
+    "    <script src=\"js/jquery.js\"></script>\n" +
+    "    <!-- Bootstrap Core JavaScript -->\n" +
+    "    <script src=\"js/bootstrap.min.js\"></script>\n" +
+    "</div>");
+}]);
+
+angular.module("colliers/colliers.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("colliers/colliers.tpl.html",
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "		<p style=\"font-family:Edwardian Script;\n" +
+    "			src: url(../assets/fonts/ITCEDSCR.TTF);\n" +
+    "			font-style:italic; \n" +
+    "			font-size:60px; \n" +
+    "			text-align:center; \n" +
+    "			color:#44546A;\">Colliers</p>\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div class=\"list-group\">\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par prix- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "	\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Type de vendeur - </option>\n" +
+    "						<option value=\"\"> Particulier </option>\n" +
+    "						<option value=\"\"> Professionel </option>\n" +
+    "					</select>\n" +
+    "			\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Couleur - </option>\n" +
+    "						<option value=\"\"> Rouge </option>\n" +
+    "						<option value=\"\"> Vert </option>\n" +
+    "					</select>\n" +
+    "					\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "									<div class=\"myButton\">\n" +
+    "										<a href=\"#\" class=\"myButton\">turquoise</a>\n" +
+    "									</div>\n" +
+    "                            </div>\n" +
+    "							\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "    \n" +
+    "<!-- jQuery -->\n" +
+    "    <script src=\"js/jquery.js\"></script>\n" +
+    "    <!-- Bootstrap Core JavaScript -->\n" +
+    "    <script src=\"js/bootstrap.min.js\"></script>\n" +
+    "</div>");
+}]);
+
+angular.module("echarpes/echarpes.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("echarpes/echarpes.tpl.html",
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "		<p style=\"font-family:Edwardian Script;\n" +
+    "			src: url(../assets/fonts/ITCEDSCR.TTF);\n" +
+    "			font-style:italic; \n" +
+    "			font-size:60px; \n" +
+    "			text-align:center; \n" +
+    "			color:#44546A;\">Echarpes</p>\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par prix- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "	\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Type de vendeur - </option>\n" +
+    "						<option value=\"\"> Particulier </option>\n" +
+    "						<option value=\"\"> Professionel </option>\n" +
+    "					</select>\n" +
+    "			\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Couleur - </option>\n" +
+    "						<option value=\"\"> Rouge </option>\n" +
+    "						<option value=\"\"> Vert </option>\n" +
+    "					</select>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "    \n" +
+    "<!-- jQuery -->\n" +
+    "    <script src=\"js/jquery.js\"></script>\n" +
+    "    <!-- Bootstrap Core JavaScript -->\n" +
+    "    <script src=\"js/bootstrap.min.js\"></script>\n" +
+    "</div>");
+}]);
+
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/home.tpl.html",
     "<div class=\"central\">\n" +
     "    <h1 class=\"titles\">Bienvenue sur notre site</h1>\n" +
     "	<div class=\"zone_produits\">\n" +
-    "		<div class=\"imgbackground\" \n" +
-    "			style=\"background-image: url(./assets/images/collier.png); \n" +
-    "				background-repeat:no-repeat;\n" +
-    "				background-size:343px 257px;				\n" +
-    "				margin-left: 213px;\">\n" +
-    "\n" +
-    "			<div class=\"transbox\"></div>\n" +
-    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 68px;\">\n" +
-    "				Colliers\n" +
-    "			</p>\n" +
-    "		</div>\n" +
-    "		<div class=\"imgbackground\" \n" +
-    "			style=\"background-image: url(./assets/images/bracelet.png); \n" +
-    "				background-repeat:no-repeat;\n" +
-    "				background-size:343px 257px;				\n" +
-    "				margin-left: 50px;\">\n" +
-    "			<div class=\"transbox\"></div>\n" +
-    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 55px;\">\n" +
-    "				Bracelets\n" +
-    "			</p>\n" +
-    "		</div>\n" +
-    "		<div class=\"imgbackground\" \n" +
-    "			style=\"background-image: url(./assets/images/echarpe.png); \n" +
-    "				background-repeat:no-repeat;\n" +
-    "				background-size:343px 257px;				\n" +
-    "				margin-left: 213px;\">\n" +
-    "			<div class=\"transbox\"></div>\n" +
-    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 59px;\">\n" +
-    "				Echarpes\n" +
-    "			</p>\n" +
-    "		</div>\n" +
-    "		<div class=\"imgbackground\" \n" +
-    "			style=\"background-image: url(./assets/images/chaussette.png); \n" +
-    "				background-repeat:no-repeat;\n" +
-    "				background-size:343px 257px;				\n" +
-    "				margin-left: 50px;\">\n" +
-    "			<div class=\"transbox\"></div>\n" +
-    "			<p class=\"productstitle\" style=\"margin:-77px 0 0 44px;\">\n" +
-    "				Chaussettes\n" +
-    "			</p>\n" +
-    "		</div>\n" +
+    "		<a href=\"#/colliers\"/>\n" +
+    "			<div class=\"imgbackground\" \n" +
+    "				style=\"background-image: url(./assets/images/collier.png); \n" +
+    "					background-repeat:no-repeat;\n" +
+    "					background-size:343px 257px;				\n" +
+    "					margin-left: 213px;\">\n" +
+    "				\n" +
+    "				<div class=\"transbox\"></div>\n" +
+    "				<p class=\"productstitle\" style=\"margin:-77px 0 0 68px;\">\n" +
+    "					Colliers\n" +
+    "				</p>\n" +
+    "			</div>\n" +
+    "		</a>\n" +
+    "		<a href=\"#/bracelets\"/>\n" +
+    "			<div class=\"imgbackground\" \n" +
+    "				style=\"background-image: url(./assets/images/bracelet.png); \n" +
+    "					background-repeat:no-repeat;\n" +
+    "					background-size:343px 257px;				\n" +
+    "					margin-left: 50px;\">\n" +
+    "				<div class=\"transbox\"></div>\n" +
+    "				<p class=\"productstitle\" style=\"margin:-77px 0 0 55px;\">\n" +
+    "					Bracelets\n" +
+    "				</p>\n" +
+    "			</div>\n" +
+    "		</a>\n" +
+    "		<a href=\"#/echarpes\"/>\n" +
+    "			<div class=\"imgbackground\" \n" +
+    "				style=\"background-image: url(./assets/images/echarpe.png); \n" +
+    "					background-repeat:no-repeat;\n" +
+    "					background-size:343px 257px;				\n" +
+    "					margin-left: 213px;\">\n" +
+    "				<div class=\"transbox\"></div>\n" +
+    "				<p class=\"productstitle\" style=\"margin:-77px 0 0 59px;\">\n" +
+    "					Echarpes\n" +
+    "				</p>\n" +
+    "			</div>\n" +
+    "		</a>\n" +
+    "		<a href=\"#/chaussettes\"/>\n" +
+    "			<div class=\"imgbackground\" \n" +
+    "				style=\"background-image: url(./assets/images/chaussette.png); \n" +
+    "					background-repeat:no-repeat;\n" +
+    "					background-size:343px 257px;				\n" +
+    "					margin-left: 50px;\">\n" +
+    "				<div class=\"transbox\"></div>\n" +
+    "				<p class=\"productstitle\" style=\"margin:-77px 0 0 44px;\">\n" +
+    "					Chaussettes\n" +
+    "				</p>\n" +
+    "			</div>\n" +
+    "		</a>\n" +
     "	</div>\n" +
     "</div> \n" +
     "");
@@ -620,6 +1110,161 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "  </div>\n" +
     "  <!-- /.modal -->\n" +
     "</div>");
+}]);
+
+angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("offres/offres.tpl.html",
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "				<p style=\"font-family:Edwardian Script;\n" +
+    "					src: url(../assets/fonts/ITCEDSCR.TTF);\n" +
+    "					font-style:italic; \n" +
+    "					font-size:60px; \n" +
+    "					text-align:center; \n" +
+    "					color:#44546A;\">Nos Offres</p>\n" +
+    "                <div class=\"list-group\">\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par promotion- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "					\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par prix- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "	\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Type de vendeur - </option>\n" +
+    "						<option value=\"\"> Particulier </option>\n" +
+    "						<option value=\"\"> Professionel </option>\n" +
+    "					</select>\n" +
+    "			\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Couleur - </option>\n" +
+    "						<option value=\"\"> Rouge </option>\n" +
+    "						<option value=\"\"> Vert </option>\n" +
+    "					</select>\n" +
+    "					\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "\n" +
+    "                <div class=\"row carousel-holder\">\n" +
+    "\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+    "                            <ol class=\"carousel-indicators\">\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n" +
+    "                            </ol>\n" +
+    "                            <div class=\"carousel-inner\">\n" +
+    "                                <div class=\"item active\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
+    "                            </a>\n" +
+    "                            <a class=\"right carousel-control\" href=\"#carousel-example-generic\" data-slide=\"next\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("products/products.tpl.html", []).run(["$templateCache", function($templateCache) {

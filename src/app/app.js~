@@ -8,6 +8,16 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.login_register',
   'ngBoilerplate.userspace',
   'ngBoilerplate.livraison',
+<<<<<<< HEAD
+  'ngBoilerplate.infoslivraison',
+=======
+  'ngBoilerplate.echarpes',
+  'ngBoilerplate.colliers',
+  'ngBoilerplate.chaussettes',
+  'ngBoilerplate.bracelets',
+  'ngBoilerplate.offres',
+
+>>>>>>> 011f90d7aee43d3238b6907b97d9eef81ef5f731
   'ui.router'
 ])
 
