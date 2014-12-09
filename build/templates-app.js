@@ -314,6 +314,9 @@ angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", functi
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">31 avis</p>\n" +
@@ -336,6 +339,9 @@ angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", functi
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">6 avis</p>\n" +
@@ -358,6 +364,9 @@ angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", functi
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">8 avis</p>\n" +
@@ -434,6 +443,9 @@ angular.module("chaussettes/chaussettes.tpl.html", []).run(["$templateCache", fu
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "										<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">31 avis</p>\n" +
@@ -456,6 +468,9 @@ angular.module("chaussettes/chaussettes.tpl.html", []).run(["$templateCache", fu
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "										<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">6 avis</p>\n" +
@@ -478,6 +493,9 @@ angular.module("chaussettes/chaussettes.tpl.html", []).run(["$templateCache", fu
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">8 avis</p>\n" +
@@ -557,7 +575,7 @@ angular.module("colliers/colliers.tpl.html", []).run(["$templateCache", function
     "                                </h4>\n" +
     "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
     "									<div class=\"myButton\">\n" +
-    "										<a href=\"#\" class=\"myButton\">turquoise</a>\n" +
+    "										<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
     "									</div>\n" +
     "                            </div>\n" +
     "							\n" +
@@ -582,6 +600,9 @@ angular.module("colliers/colliers.tpl.html", []).run(["$templateCache", function
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "									<div class=\"myButton\">\n" +
+    "										<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "									</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">6 avis</p>\n" +
@@ -604,6 +625,9 @@ angular.module("colliers/colliers.tpl.html", []).run(["$templateCache", function
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "									<div class=\"myButton\">\n" +
+    "											<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "									</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">8 avis</p>\n" +
@@ -677,6 +701,9 @@ angular.module("echarpes/echarpes.tpl.html", []).run(["$templateCache", function
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">31 avis</p>\n" +
@@ -699,6 +726,9 @@ angular.module("echarpes/echarpes.tpl.html", []).run(["$templateCache", function
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">6 avis</p>\n" +
@@ -721,6 +751,9 @@ angular.module("echarpes/echarpes.tpl.html", []).run(["$templateCache", function
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">8 avis</p>\n" +
@@ -1194,6 +1227,9 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">31 avis</p>\n" +
@@ -1216,6 +1252,9 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">6 avis</p>\n" +
@@ -1238,6 +1277,9 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "                                <h4><a href=\"#\">Produit X</a>\n" +
     "                                </h4>\n" +
     "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
     "                            </div>\n" +
     "                            <div class=\"ratings\">\n" +
     "                                <p class=\"pull-right\">8 avis</p>\n" +
@@ -1310,7 +1352,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "				<span>Quantité:</span>\n" +
     "				<input type=\"text\" style=\"width:20px; text-align:center;\" value=\"1\"/>\n" +
     "				</div>\n" +
-    "				<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "				<a href=\"#\" style=\"margin:10px 0 0 0; font-size:20px; padding:5px 15px;\" class=\"myButton\">Ajouter au panier</a>\n" +
     "			</div>\n" +
     "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
     "			<div class=\"productinfos\">\n" +
