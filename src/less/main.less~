@@ -43,12 +43,29 @@ modified by malick
 
 
 /* Logo Zone */
-
+.zone_logo{
+	width:700px;
+	float:left;
+}
 
 /*Client Zone */
 .zone_client {
-    float: right;
-    margin-top: -130px;
+	margin: 30px 0 20px 50px;
+	float:left;
+}
+
+#mon-espace{
+	margin-left:10px;
+	float:left;
+}
+
+#signin{
+	margin-left:10px;
+	float:left
+}
+#panier{
+	margin-left:10px;
+	float:left
 }
 
 #search_box { 
@@ -61,7 +78,6 @@ modified by malick
 } 
 
 #search_box #s { 
-    
     float: left; 
     padding: 0; 
     margin: 11px 0 0 16px; 
@@ -80,38 +96,9 @@ modified by malick
 #secnav {
 float: right;
 }
-#language{
-	float:left;
-	margin: 90px 0 0 220px; 
-}
-table,td,th{
-	border:none;
-}
-td{
-	font-family:Calibri Light, serif; 
-	font-style: italic;
-	color:#44546A;
-	width: 100px;
-	margin:0px auto;
-	height:10px;
-	text-align:center;
-}
 
-td a {
-    text-decoration: none;
-    font-size: 1.1em;
-    color: #445469;
-    padding-bottom: 3px;
-}
 
-#signin{
-	margin: 75px 0 0 60px;
-	float:left
-}
-#panier{
-	margin: 73px 0 0 30px;
-	float:left
-}
+
 
 
 .line{
@@ -302,5 +289,8 @@ li.nav_items {
 @import '../app/home/home.less';
 @import '../app/login_register/login_register.tpl.less';
 @import '../app/products/products.tpl.less';
-@import '../app/products/livraison.tpl.less';
+@import '../app/livraison/livraison.tpl.less';
+@import '../app/productpage/productpage.tpl.less';
+@import '../app/userprofile_edit/userprofile_edit.tpl.less';
+@import '../app/userprofile_edit/userspace.tpl.less';
 

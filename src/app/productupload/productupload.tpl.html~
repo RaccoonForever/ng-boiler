@@ -1,0 +1,76 @@
+<div class="container" style="padding-top: 60px;">
+  <h2 class="pagetitle">Créer le produit</h2>
+  <hr class="colorgraph">
+  <div class="row">
+    <!-- edition du formulaire -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+    <!--
+      <div class="alert alert-info alert-dismissable">
+        <a class="panel-close close" data-dismiss="alert">×</a> 
+        <i class="fa fa-coffee"></i>
+        This is an <strong>.alert</strong>. Use this to show important messages to the user.
+      </div>
+    -->
+      <h3 class="formtitle">Informations personnelles</h3>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Prénom :</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Arthur" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Nom :</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Clerc-Gherardi" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Nom d'utilisateur :</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Rynn69270" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Numéro de téléphone :</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="06-xx-xx-xx-xx" type="text">
+          </div>
+        </div>
+         <div class="form-group">
+          <label class="col-lg-3 control-label">Email :</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="arthur@gmail.com" type="text">
+          </div>
+        </div>
+         <div class="form-group">
+          <label class="col-lg-3 control-label">Adresse :</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="2 Rue de Catane 38000 Grenoble" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Mot de passe:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 control-label">Confirmer mot de passe:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <input class="btn btn-primary" value="Sauvegarder" type="button">
+            <span></span>
+            <input class="btn btn-default" value="Annuler" type="reset">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -2,29 +2,28 @@
     <br>
 
     <div class="row-fluid">
+        <div class="span12" id="content"><div><div id="details" class="span7"><div><p><img src="./assets/images/arthur.jpg" width="133" height="195,5"></p>
 <h3>Rynn69270</h3>
 <h4>Arthur Clerc-Gherardi</h4>
-<a href="#/userprofile_edit">modifier mon profil</a>
-<br>
-<a href="#/productupload">charger un produit</a>
+<a href="#">modifier mon profil</a>
 <br>
 <br>
         <table class="table table-striped">
             
             <tbody><tr>
                 <td>Nom </td>
-                <td><i class=""></i> <a>Clerc-Gherardi</a></td>
+                <td><i class=""></i> <a href="#">Clerc-Gherardi</a></td>
             </tr>
             
                 
             <tr>
                 <td>Prénom </td>
-                <td><i class=""></i> <a>Arthur</a></td>
+                <td><i class=""></i> <a href="#">Arthur</a></td>
             </tr>
                 
             <tr>
                 <td>Nom d'utilisateur </td>
-                <td><i class="fa fa-user"></i> <a>Rynn69270</a></td>
+                <td><i class="fa fa-user"></i> <a href="#">Rynn69270</a></td>
             </tr>
                 
             <tr>
@@ -33,11 +32,7 @@
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><i class="fa fa-envelope"></i> <a>arthur@gmail.com</a></td>
-            </tr>
-         <tr>
-                <td>Adresse:</td>
-                <td><i class="fa fa-home"></i> <a>2 Rue de Catane 38000 Grenoble</a></td>
+                <td><i class="fa fa-envelope"></i> <a href="mailto:arthur@gmail.com">arthur@gmail.com</a></td>
             </tr>
         </tbody></table>
 

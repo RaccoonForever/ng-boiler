@@ -15,6 +15,8 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.bracelets',
   'ngBoilerplate.offres',
   'ngBoilerplate.productpage',
+  'ngBoilerplate.userprofile_edit',
+  'ngBoilerplate.productupload',
   'ui.router'
 ])
 
