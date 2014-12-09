@@ -1,7 +1,10 @@
 <div class="container">
  <div class="row">
+ 
+ 
+ 
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-      <form role="form">
+      <form name="ConnectForm" role="form" ng-controller="LoginCtrl">
         <h2 class="pagetitle">Se connecter</h2>
         <hr class="colorgraph">
         <div class="row">
@@ -9,18 +12,18 @@
             <label for="exampleInputEmail1" class="sr-only">Adresse email</label>
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-              <input type="email" class="form-control" id="exampleInputEmail1"
-                placeholder="adresse mail">
+              <input type="email" name="inputemail" class="form-control" id="exampleInputEmail1"
+                placeholder="Adresse mail" ng-model="email" required>
             </div>
           </div>
            <div class="form-group">
             <label for="exampleInputPassword1" class="sr-only">Mot de passe</label>
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-              <input type="password" class="form-control" id="exampleInputPassword1"
-                placeholder="mot de passe">
+              <input type="password" name="inputmdp" class="form-control" id="exampleInputPassword1"
+                placeholder="Mot de passe" ng-model="mdp" required>
             </div>
-            <a href="#" class="pull-right small">Mot de passe?</a>
+            <a href="#" class="pull-right small">Mot de passe perdu ?</a>
           </div>
             
         <div class="checkbox">
@@ -30,44 +33,48 @@
             <hr class="colorgraph">
           </div>
         <div class="row">
-          <div class="col-xs-6 col-md-6"><input type="submit" value="Se connecter" class="btn btn-primary btn-block btn-lg" tabindex="7"  style="margin-left: 50%;
-              background: rgb(25, 176, 25);border: none;"></div>
+          <div class="col-xs-6 col-md-6">
+		  <input type="submit" value="Se connecter" class="btn btn-primary btn-block btn-lg" tabindex="7"  style="margin-left: 50%;
+              background: rgb(25, 176, 25);border: none;" ng-click="loginClick()">
+		  </div>
         </div>    
       </form>
     </div>
   </div>
+  
+  
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-      <form role="form">
+      <form role="form" name="SignForm" ng-controller="SignCtrl">
         <h2 class="pagetitle">S'inscrire</h2>
         <hr class="colorgraph">
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
-              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Prénom" tabindex="1">
+              <input type="text" name="first_name" id="first_name" ng-model="person.first_name" class="form-control input-lg" tabindex="1" required>
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
-              <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Nom" tabindex="2">
+              <input type="text" name="last_name" id="last_name" ng-model="person.last_name" class="form-control input-lg" placeholder="Nom" tabindex="2" required>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Nom d'utilisateur" tabindex="3">
+          <input type="text" name="display_name" id="display_name" ng-model="person.user_name" class="form-control input-lg" placeholder="Nom d'utilisateur" tabindex="3" required>
         </div>
         <div class="form-group">
-          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Addresse mail" tabindex="4">
+          <input type="text" name="email" id="email" ng-model="person.mail" class="form-control input-lg" placeholder="Addresse mail" tabindex="4" required>
         </div>
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
-              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Mot de passe" tabindex="5">
+              <input type="password" name="password" id="password" ng-model="person.mdp1" class="form-control input-lg" placeholder="Mot de passe" tabindex="5" required>
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
-              <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirmer le mot de passe" tabindex="6">
+              <input type="password" name="password_confirmation" id="password_confirmation" ng-model="person.mdp2" class="form-control input-lg" placeholder="Confirmer le mot de passe" tabindex="6" required>
             </div>
           </div>
         </div>
@@ -78,11 +85,23 @@
         </div>
         <hr class="colorgraph">
         <div class="row">
-          <div class="col-xs-6 col-md-6"><input type="submit" value="S'inscrire" class="btn btn-primary btn-block btn-lg" tabindex="7"  style="margin-left: 50%;"></div>
+          <div class="col-xs-6 col-md-6">
+			<input type="submit" value="S'inscrire" class="btn btn-primary btn-block btn-lg" ng-click="signClick()" tabindex="7"  style="margin-left: 50%;"></div>
         </div>
       </form>
     </div>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!-- Modal -->
   <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -100,4 +119,5 @@
     <!-- /.modal-dialog -->
   </div>
   <!-- /.modal -->
+</div>
 </div>

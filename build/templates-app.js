@@ -1009,8 +1009,11 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
   $templateCache.put("login_register/login_register.tpl.html",
     "<div class=\"container\">\n" +
     " <div class=\"row\">\n" +
+    " \n" +
+    " \n" +
+    " \n" +
     "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
-    "      <form role=\"form\">\n" +
+    "      <form name=\"ConnectForm\" role=\"form\" ng-controller=\"LoginCtrl\">\n" +
     "        <h2 class=\"pagetitle\">Se connecter</h2>\n" +
     "        <hr class=\"colorgraph\">\n" +
     "        <div class=\"row\">\n" +
@@ -1018,18 +1021,18 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "            <label for=\"exampleInputEmail1\" class=\"sr-only\">Adresse email</label>\n" +
     "            <div class=\"input-group\">\n" +
     "              <span class=\"input-group-addon\"><i class=\"fa fa-user fa-fw\"></i></span>\n" +
-    "              <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n" +
-    "                placeholder=\"adresse mail\">\n" +
+    "              <input type=\"email\" name=\"inputemail\" class=\"form-control\" id=\"exampleInputEmail1\"\n" +
+    "                placeholder=\"Adresse mail\" ng-model=\"email\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "           <div class=\"form-group\">\n" +
     "            <label for=\"exampleInputPassword1\" class=\"sr-only\">Mot de passe</label>\n" +
     "            <div class=\"input-group\">\n" +
     "              <span class=\"input-group-addon\"><i class=\"fa fa-lock fa-fw\"></i></span>\n" +
-    "              <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\"\n" +
-    "                placeholder=\"mot de passe\">\n" +
+    "              <input type=\"password\" name=\"inputmdp\" class=\"form-control\" id=\"exampleInputPassword1\"\n" +
+    "                placeholder=\"Mot de passe\" ng-model=\"mdp\" required>\n" +
     "            </div>\n" +
-    "            <a href=\"#\" class=\"pull-right small\">Mot de passe?</a>\n" +
+    "            <a href=\"#\" class=\"pull-right small\">Mot de passe perdu ?</a>\n" +
     "          </div>\n" +
     "            \n" +
     "        <div class=\"checkbox\">\n" +
@@ -1039,44 +1042,48 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "            <hr class=\"colorgraph\">\n" +
     "          </div>\n" +
     "        <div class=\"row\">\n" +
-    "          <div class=\"col-xs-6 col-md-6\"><input type=\"submit\" value=\"Se connecter\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\n" +
-    "              background: rgb(25, 176, 25);border: none;\"></div>\n" +
+    "          <div class=\"col-xs-6 col-md-6\">\n" +
+    "		  <input type=\"submit\" value=\"Se connecter\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\n" +
+    "              background: rgb(25, 176, 25);border: none;\" ng-click=\"loginClick()\">\n" +
+    "		  </div>\n" +
     "        </div>    \n" +
     "      </form>\n" +
     "    </div>\n" +
     "  </div>\n" +
+    "  \n" +
+    "  \n" +
     "  <div class=\"row\">\n" +
     "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
-    "      <form role=\"form\">\n" +
+    "      <form role=\"form\" name=\"SignForm\" ng-controller=\"SignCtrl\">\n" +
     "        <h2 class=\"pagetitle\">S'inscrire</h2>\n" +
     "        <hr class=\"colorgraph\">\n" +
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"text\" name=\"first_name\" id=\"first_name\" class=\"form-control input-lg\" placeholder=\"Prénom\" tabindex=\"1\">\n" +
+    "              <input type=\"text\" name=\"first_name\" id=\"first_name\" ng-model=\"person.first_name\" class=\"form-control input-lg\" tabindex=\"1\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"text\" name=\"last_name\" id=\"last_name\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\">\n" +
+    "              <input type=\"text\" name=\"last_name\" id=\"last_name\" ng-model=\"person.last_name\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <input type=\"text\" name=\"display_name\" id=\"display_name\" class=\"form-control input-lg\" placeholder=\"Nom d'utilisateur\" tabindex=\"3\">\n" +
+    "          <input type=\"text\" name=\"display_name\" id=\"display_name\" ng-model=\"person.user_name\" class=\"form-control input-lg\" placeholder=\"Nom d'utilisateur\" tabindex=\"3\" required>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <input type=\"email\" name=\"email\" id=\"email\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\">\n" +
+    "          <input type=\"text\" name=\"email\" id=\"email\" ng-model=\"person.mail\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\" required>\n" +
     "        </div>\n" +
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"password\" name=\"password\" id=\"password\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\">\n" +
+    "              <input type=\"password\" name=\"password\" id=\"password\" ng-model=\"person.mdp1\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\">\n" +
+    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" ng-model=\"person.mdp2\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </div>\n" +
@@ -1087,11 +1094,23 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "        </div>\n" +
     "        <hr class=\"colorgraph\">\n" +
     "        <div class=\"row\">\n" +
-    "          <div class=\"col-xs-6 col-md-6\"><input type=\"submit\" value=\"S'inscrire\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\"></div>\n" +
+    "          <div class=\"col-xs-6 col-md-6\">\n" +
+    "			<input type=\"submit\" value=\"S'inscrire\" class=\"btn btn-primary btn-block btn-lg\" ng-click=\"signClick()\" tabindex=\"7\"  style=\"margin-left: 50%;\"></div>\n" +
     "        </div>\n" +
     "      </form>\n" +
     "    </div>\n" +
     "  </div>\n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
     "  <!-- Modal -->\n" +
     "  <div class=\"modal fade\" id=\"t_and_c_m\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n" +
     "    <div class=\"modal-dialog\">\n" +
@@ -1109,6 +1128,7 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "    <!-- /.modal-dialog -->\n" +
     "  </div>\n" +
     "  <!-- /.modal -->\n" +
+    "</div>\n" +
     "</div>");
 }]);
 
