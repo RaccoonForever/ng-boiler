@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -1262,6 +1262,84 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "    <!-- /.container -->\n" +
     "\n" +
+    "</div>\n" +
+    "\n" +
+    "");
+}]);
+
+angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("productpage/productpage.tpl.html",
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "        <div class=\"row\">\n" +
+    "			<div class=\"productimages\">\n" +
+    "				<img class=\"mainproductimage\" src=\"http://placehold.it/480x270\" alt=\"\">\n" +
+    "				<img class=\"subproductimage\" style=\"margin-left:10px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
+    "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
+    "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
+    "			</div>\n" +
+    "			<div class=\"productintro\">\n" +
+    "				<h1>Product name</h1>\n" +
+    "				<div class=\"ratings\">\n" +
+    "					<p class=\"pull-right\" style=\"margin-right:320px;\">31 avis</p>\n" +
+    "					<p>\n" +
+    "						<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "						<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "						<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "						<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "						<span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "					</p>\n" +
+    "				</div>\n" +
+    "				<div class=\"priceinfo\">\n" +
+    "					<span>Prix:</span>\n" +
+    "					<span class=\"importantinfo\">14.99€</span>\n" +
+    "				</div>\n" +
+    "				<div class=\"priceinfo\">\n" +
+    "					<span>Information de livraison:</span>\n" +
+    "					<span class=\"importantinfo\">Gratuit</span>\n" +
+    "				</div>\n" +
+    "				<div class=\"priceinfo\">\n" +
+    "					<span>Nom de vendeur:</span>\n" +
+    "					<span class=\"importantinfo\">Malick</span>\n" +
+    "				</div>\n" +
+    "				<div class=\"priceinfo\">\n" +
+    "					<span>Type de vendeur:</span>\n" +
+    "					<span class=\"importantinfo\">Particulier</span>\n" +
+    "				</div>\n" +
+    "				<div>\n" +
+    "				<span>Quantité:</span>\n" +
+    "				<input type=\"text\" style=\"width:20px; text-align:center;\" value=\"1\"/>\n" +
+    "				</div>\n" +
+    "				<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "			</div>\n" +
+    "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
+    "			<div class=\"productinfos\">\n" +
+    "				<h2>Product information</h2>\n" +
+    "				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "			</div>\n" +
+    "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
+    "			<div class=\"commentaire\">\n" +
+    "				<div class=\"importantinfo\">\n" +
+    "					<span>Commentaires:</span>\n" +
+    "					<span class=\"col\">31 avis</span>\n" +
+    "				</div>\n" +
+    "				<div class=\"usercommentaire\">\n" +
+    "					\n" +
+    "					<div class=\"ratings\">\n" +
+    "						<p>\n" +
+    "							<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "							<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "							<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "							<span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "							<span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "						</p>\n" +
+    "					</div>\n" +
+    "				</div>\n" +
+    "			</div>\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
     "</div>\n" +
     "\n" +
     "");

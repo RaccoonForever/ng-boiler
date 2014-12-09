@@ -6161,3 +6161,70 @@ img.followdelivery {
 img.normaldelivery {
   margin-top: 20%;
 }
+.productimages {
+  float: left;
+  margin: 0 0 0 50px;
+  width: 500px;
+  /*	border: 1px solid #DADADA;	*/
+}
+.mainproductimage {
+  float: left;
+  margin: 10px 10px 0 10px;
+}
+.subproductimage {
+  margin: 20px 0 20px 0;
+  float: left;
+}
+.productintro {
+  float: left;
+  width: 500px;
+  margin: 0 0 0 30px;
+  /*	border: 1px solid #DADADA;	*/
+  font-weight: bold;
+}
+.priceinfo {
+  margin: 10px 0 10px 0;
+}
+.priceinfo .importantinfo {
+  color: #356201;
+}
+.myButton {
+  margin: 10px 0 0 0;
+  background-color: #366373;
+  border-radius: 8px;
+  display: inline-block;
+  color: #ffffff;
+  font-family: Calibri Light;
+  font-size: 20px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+.myButton:hover {
+  background-color: #010303;
+  text-decoration: none;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+.productinfos {
+  clear: both;
+  margin: 20px 0 0 0;
+}
+typedevendeur {
+  float: left;
+  text-style: bold;
+}
+.commentaire {
+  margin: 20px 0 0 0;
+}
+.commentaire .usercommentaire .username {
+  font-style: bold;
+}
+.commentaire .importantinfo {
+  font-size: 20px;
+  font-style: bold;
+}
+.commentaire .importantinfo .col {
+  color: #FFCC00;
+}
