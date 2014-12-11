@@ -1556,58 +1556,27 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "    -->\n" +
     "      <form class=\"form-horizontal\" role=\"form\">\n" +
     "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Prénom :</label>\n" +
+    "          <label class=\"col-lg-3 control-label\">Nom :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
     "            <input class=\"form-control\" value=\"Arthur\" type=\"text\">\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Nom :</label>\n" +
-    "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"Clerc-Gherardi\" type=\"text\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Description :</label>\n" +
+    "          <div class=\"col-md-8\">\n" +
+    "         <textarea class=\"form-control\" id=\"message\" name=\"message\" placeholder=\"Enter your massage for us here. We will get back to you within 2 business days.\" rows=\"7\">              </textarea>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Nom d'utilisateur :</label>\n" +
+    "          <label class=\"col-lg-3 control-label\">Prix :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
     "            <input class=\"form-control\" value=\"Rynn69270\" type=\"text\">\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Numéro de téléphone :</label>\n" +
-    "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"06-xx-xx-xx-xx\" type=\"text\">\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "         <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Email :</label>\n" +
-    "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"arthur@gmail.com\" type=\"text\">\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "         <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Adresse :</label>\n" +
-    "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"2 Rue de Catane 38000 Grenoble\" type=\"text\">\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-md-3 control-label\">Mot de passe:</label>\n" +
-    "          <div class=\"col-md-8\">\n" +
-    "            <input class=\"form-control\" value=\"11111122333\" type=\"password\">\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-md-3 control-label\">Confirmer mot de passe:</label>\n" +
-    "          <div class=\"col-md-8\">\n" +
-    "            <input class=\"form-control\" value=\"11111122333\" type=\"password\">\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"form-group\">\n" +
     "          <label class=\"col-md-3 control-label\"></label>\n" +
     "          <div class=\"col-md-8\">\n" +
-    "            <input class=\"btn btn-primary\" value=\"Sauvegarder\" type=\"button\">\n" +
+    "            <input class=\"btn btn-primary\" value=\"Créer le produit\" type=\"button\">\n" +
     "            <span></span>\n" +
     "            <input class=\"btn btn-default\" value=\"Annuler\" type=\"reset\">\n" +
     "          </div>\n" +
