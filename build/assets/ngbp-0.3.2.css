@@ -5852,6 +5852,10 @@ modified by malick
 #secnav {
   float: right;
 }
+#langues {
+  margin-left: 86%;
+  margin-top: -6.5%;
+}
 .line {
   width: 1200px;
   height: 1px;
@@ -6100,6 +6104,10 @@ div.transbox p {
   color: #000000;
   position: absolute;
   z-index: 100;
+}
+div.langues {
+  margin-left: 88%;
+  margin-top: -6.5%;
 }
 h2.pagetitle {
   font-family: Calibri Light, serif;

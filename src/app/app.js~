@@ -16,6 +16,8 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.offres',
   'ngBoilerplate.productpage',
   'ngBoilerplate.userprofile_edit',
+  'ngBoilerplate.productupload',
+  'pascalprecht.translate',
   'ui.router'
 ])
 
@@ -35,4 +37,9 @@ angular.module( 'ngBoilerplate', [
 })
 
 ;
+
+
+
+
+
 

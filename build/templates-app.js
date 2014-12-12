@@ -1564,7 +1564,7 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Description :</label>\n" +
     "          <div class=\"col-md-8\">\n" +
-    "         <textarea class=\"form-control\" id=\"message\" name=\"message\" placeholder=\"Enter your massage for us here. We will get back to you within 2 business days.\" rows=\"7\">              </textarea>\n" +
+    "         <textarea class=\"form-control\" id=\"message\" name=\"message\" placeholder=\"\" rows=\"7\">              </textarea>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
