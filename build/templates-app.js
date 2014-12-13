@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'useconditions/useconditions.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -1353,23 +1353,23 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "					</p>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Prix:</span>\n" +
+    "					<span>Prix :</span>\n" +
     "					<span class=\"importantinfo\">14.99€</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Information de livraison:</span>\n" +
+    "					<span>Information de livraison :</span>\n" +
     "					<span class=\"importantinfo\">Gratuit</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Nom de vendeur:</span>\n" +
+    "					<span>Nom de vendeur :</span>\n" +
     "					<span class=\"importantinfo\">Malick</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Type de vendeur:</span>\n" +
+    "					<span>Type de vendeur :</span>\n" +
     "					<span class=\"importantinfo\">Particulier</span>\n" +
     "				</div>\n" +
     "				<div>\n" +
-    "				<span>Quantité:</span>\n" +
+    "				<span>Quantité :</span>\n" +
     "				<input type=\"text\" style=\"width:20px; text-align:center;\" value=\"1\"/>\n" +
     "				</div>\n" +
     "				<a href=\"#\" style=\"margin:10px 0 0 0; font-size:20px; padding:5px 15px;\" class=\"myButton\">Ajouter au panier</a>\n" +
@@ -1539,6 +1539,55 @@ angular.module("products/products.tpl.html", []).run(["$templateCache", function
     "");
 }]);
 
+angular.module("productupload/productupload.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("productupload/productupload.tpl.html",
+    "<div class=\"container\" style=\"padding-top: 60px;\">\n" +
+    "  <h2 class=\"pagetitle\">Créer le produit</h2>\n" +
+    "  <hr class=\"colorgraph\">\n" +
+    "  <div class=\"row\">\n" +
+    "    <!-- edition du formulaire -->\n" +
+    "    <div class=\"col-md-8 col-sm-6 col-xs-12 personal-info\">\n" +
+    "    <!--\n" +
+    "      <div class=\"alert alert-info alert-dismissable\">\n" +
+    "        <a class=\"panel-close close\" data-dismiss=\"alert\">×</a> \n" +
+    "        <i class=\"fa fa-coffee\"></i>\n" +
+    "        This is an <strong>.alert</strong>. Use this to show important messages to the user.\n" +
+    "      </div>\n" +
+    "    -->\n" +
+    "      <form class=\"form-horizontal\" role=\"form\">\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Nom :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"Arthur\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Description :</label>\n" +
+    "          <div class=\"col-md-8\">\n" +
+    "         <textarea class=\"form-control\" id=\"message\" name=\"message\" placeholder=\"\" rows=\"7\">              </textarea>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Prix :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"Rynn69270\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-md-3 control-label\"></label>\n" +
+    "          <div class=\"col-md-8\">\n" +
+    "            <input class=\"btn btn-primary\" value=\"Créer le produit\" type=\"button\">\n" +
+    "            <span></span>\n" +
+    "            <input class=\"btn btn-default\" value=\"Annuler\" type=\"reset\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "");
+}]);
+
 angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("useconditions/useconditions.tpl.html",
     "\n" +
@@ -1553,32 +1602,116 @@ angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache"
     "");
 }]);
 
+angular.module("userprofile_edit/userprofile_edit.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("userprofile_edit/userprofile_edit.tpl.html",
+    "<div class=\"container\" style=\"padding-top: 60px;\">\n" +
+    "  <h2 class=\"pagetitle\">Editer profil</h2>\n" +
+    "  <hr class=\"colorgraph\">\n" +
+    "  <div class=\"row\">\n" +
+    "    <!-- edition du formulaire -->\n" +
+    "    <div class=\"col-md-8 col-sm-6 col-xs-12 personal-info\">\n" +
+    "    <!--\n" +
+    "      <div class=\"alert alert-info alert-dismissable\">\n" +
+    "        <a class=\"panel-close close\" data-dismiss=\"alert\">×</a> \n" +
+    "        <i class=\"fa fa-coffee\"></i>\n" +
+    "        This is an <strong>.alert</strong>. Use this to show important messages to the user.\n" +
+    "      </div>\n" +
+    "    -->\n" +
+    "      <h3 class=\"formtitle\">Informations personnelles</h3>\n" +
+    "      <form class=\"form-horizontal\" role=\"form\">\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Prénom :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"Arthur\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Nom :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"Clerc-Gherardi\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Nom d'utilisateur :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"Rynn69270\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Numéro de téléphone :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"06-xx-xx-xx-xx\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "         <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Email :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"arthur@gmail.com\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "         <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Adresse :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <input class=\"form-control\" value=\"2 Rue de Catane 38000 Grenoble\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-md-3 control-label\">Mot de passe:</label>\n" +
+    "          <div class=\"col-md-8\">\n" +
+    "            <input class=\"form-control\" value=\"11111122333\" type=\"password\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-md-3 control-label\">Confirmer mot de passe:</label>\n" +
+    "          <div class=\"col-md-8\">\n" +
+    "            <input class=\"form-control\" value=\"11111122333\" type=\"password\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-md-3 control-label\"></label>\n" +
+    "          <div class=\"col-md-8\">\n" +
+    "            <input class=\"btn btn-primary\" value=\"Sauvegarder\" type=\"button\">\n" +
+    "            <span></span>\n" +
+    "            <input class=\"btn btn-default\" value=\"Annuler\" type=\"reset\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "");
+}]);
+
 angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("userspace/userspace.tpl.html",
     "<div class=\"container\">\n" +
     "    <br>\n" +
     "\n" +
     "    <div class=\"row-fluid\">\n" +
-    "        <div class=\"span12\" id=\"content\"><div><div id=\"details\" class=\"span7\"><div><p><img src=\"./assets/images/arthur.jpg\" width=\"133\" height=\"195,5\"></p>\n" +
     "<h3>Rynn69270</h3>\n" +
     "<h4>Arthur Clerc-Gherardi</h4>\n" +
+    "<a href=\"#/userprofile_edit\">modifier mon profil</a>\n" +
+    "<br>\n" +
+    "<a href=\"#/productupload\">charger un produit</a>\n" +
+    "<br>\n" +
     "<br>\n" +
     "        <table class=\"table table-striped\">\n" +
     "            \n" +
     "            <tbody><tr>\n" +
     "                <td>Nom </td>\n" +
-    "                <td><i class=\"\"></i> <a href=\"#\">Clerc-Gherardi</a></td>\n" +
+    "                <td><i class=\"\"></i> <a>Clerc-Gherardi</a></td>\n" +
     "            </tr>\n" +
     "            \n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Prénom </td>\n" +
-    "                <td><i class=\"\"></i> <a href=\"#\">Arthur</a></td>\n" +
+    "                <td><i class=\"\"></i> <a>Arthur</a></td>\n" +
     "            </tr>\n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Nom d'utilisateur </td>\n" +
-    "                <td><i class=\"fa fa-user\"></i> <a href=\"#\">Rynn69270</a></td>\n" +
+    "                <td><i class=\"fa fa-user\"></i> <a>Rynn69270</a></td>\n" +
     "            </tr>\n" +
     "                \n" +
     "            <tr>\n" +
@@ -1587,7 +1720,11 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "            </tr>\n" +
     "            <tr>\n" +
     "                <td>Email:</td>\n" +
-    "                <td><i class=\"fa fa-envelope\"></i> <a href=\"mailto:arthur@gmail.com\">arthur@gmail.com</a></td>\n" +
+    "                <td><i class=\"fa fa-envelope\"></i> <a>arthur@gmail.com</a></td>\n" +
+    "            </tr>\n" +
+    "         <tr>\n" +
+    "                <td>Adresse:</td>\n" +
+    "                <td><i class=\"fa fa-home\"></i> <a>2 Rue de Catane 38000 Grenoble</a></td>\n" +
     "            </tr>\n" +
     "        </tbody></table>\n" +
     "\n" +

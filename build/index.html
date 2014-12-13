@@ -36,7 +36,9 @@
     <script type="text/javascript" src="src/app/offres/offres.js"></script>
     <script type="text/javascript" src="src/app/productpage/productpage.js"></script>
     <script type="text/javascript" src="src/app/products/products.js"></script>
+    <script type="text/javascript" src="src/app/productupload/productupload.js"></script>
     <script type="text/javascript" src="src/app/useconditions/useconditions.js"></script>
+    <script type="text/javascript" src="src/app/userprofile_edit/userprofile_edit.js"></script>
     <script type="text/javascript" src="src/app/userspace/userspace.js"></script>
     <script type="text/javascript" src="src/common/plusOne/plusOne.js"></script>
     <script type="text/javascript" src="templates-common.js"></script>
@@ -47,7 +49,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	
+      
+      <!-- Angular Translate-->
+<script src="../vendor/angular-translate/angular-translate.js"></script>
     <!-- it's stupid to have to load it here, but this is for the +1 button -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
       { "parsetags": "explicit" }
@@ -58,17 +62,23 @@
         <div class="banniere_haut">
             <div class="zone_logo">
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
+                <div id="langues">
+                    <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="38" height="25" style="margin-right: 10px;"></a>
+                    <a href="#"><img src="./assets/images/drapeau_anglais.jpg" width="38" height="25"></a>
+                </div>	
             </div>
+            
+
             <div class="zone_client">
                 <div id="mon-espace">
 					<nav class="navtext">
 						<ul class="social">
-							<li><a href="#/useconditions"/>Mon espace</a></li>
+							<li><a href="#/userspace"/>Mon espace</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div style="float:left; font-style:italic;">
-					<a href="#" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton">Se connecter</a>
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton">Se connecter</a>
 				</div>
 				<div id="panier">
 					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
@@ -85,9 +95,8 @@
                         <li style="margin-left:30px"><a href="#/offres"/>Offres</a></li>
                         <li style="margin-left:30px"><a href="#/bracelets"/>Bracelets</a></li>
                         <li style="margin-left:30px"><a href="#/colliers"/>Colliers</a></li>
-                        <li style="margin-left:30px"><a href="#/echarpes"/>Echarpes</a></li>
-						<li style="margin-left:30px"><a href="#/chaussettes"/>Chaussettes</a></li>
-
+                        <li style="margin-left:30px"><a href="#/productpage"/>Echarpes</a></li>
+			             <li style="margin-left:30px"><a href="#/userspace"/>Chaussettes</a></li>
                     </ul>
                 </nav>
         </div> 

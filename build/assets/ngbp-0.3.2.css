@@ -5852,6 +5852,10 @@ modified by malick
 #secnav {
   float: right;
 }
+#langues {
+  margin-left: 86%;
+  margin-top: -6.5%;
+}
 .line {
   width: 1200px;
   height: 1px;
@@ -6101,6 +6105,10 @@ div.transbox p {
   position: absolute;
   z-index: 100;
 }
+div.langues {
+  margin-left: 88%;
+  margin-top: -6.5%;
+}
 h2.pagetitle {
   font-family: Calibri Light, serif;
   font-style: italic;
@@ -6227,4 +6235,19 @@ typedevendeur {
 }
 .commentaire .importantinfo .col {
   color: #FFCC00;
+}
+h2.pagetitle {
+  font-family: Calibri Light, serif;
+  font-style: italic;
+  color: #445469;
+}
+h3.formtitle {
+  margin-top: 0%;
+  padding-bottom: 2%;
+  color: #445469;
+}
+h2.pagetitle {
+  font-family: Calibri Light, serif;
+  font-style: italic;
+  color: #445469;
 }
