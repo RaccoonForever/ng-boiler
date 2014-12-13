@@ -1093,30 +1093,30 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"text\" name=\"first_name\" id=\"first_name\" ng-model=\"person.first_name\" class=\"form-control input-lg\" tabindex=\"1\" required>\n" +
+    "              <input type=\"text\" name=\"first_name\" id=\"first_name\" ng-model=\"users.first_name\" class=\"form-control input-lg\" placeholder=\"Prenom\" tabindex=\"1\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"text\" name=\"last_name\" id=\"last_name\" ng-model=\"person.last_name\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\" required>\n" +
+    "              <input type=\"text\" name=\"last_name\" id=\"last_name\" ng-model=\"users.last_name\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <input type=\"text\" name=\"display_name\" id=\"display_name\" ng-model=\"person.user_name\" class=\"form-control input-lg\" placeholder=\"Nom d'utilisateur\" tabindex=\"3\" required>\n" +
+    "          <input type=\"text\" name=\"display_name\" id=\"display_name\" ng-model=\"users.user_name\" class=\"form-control input-lg\" placeholder=\"Nom d'utilisateur\" tabindex=\"3\" required>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <input type=\"text\" name=\"email\" id=\"email\" ng-model=\"person.mail\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\" required>\n" +
+    "          <input type=\"email\" name=\"email\" id=\"email\" ng-model=\"users.mail\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\" required>\n" +
     "        </div>\n" +
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"password\" name=\"password\" id=\"password\" ng-model=\"person.mdp1\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\" required>\n" +
+    "              <input type=\"password\" name=\"password\" id=\"password\" ng-model=\"users.mdp1\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" ng-model=\"person.mdp2\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\" required>\n" +
+    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" ng-model=\"users.mdp2\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\" required>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </div>\n" +
