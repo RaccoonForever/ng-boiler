@@ -1640,12 +1640,6 @@ angular.module("userprofile_edit/userprofile_edit.tpl.html", []).run(["$template
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <label class=\"col-lg-3 control-label\">Nom d'utilisateur :</label>\n" +
-    "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"Rynn69270\" type=\"text\">\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Numéro de téléphone :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
     "            <input class=\"form-control\" value=\"06-xx-xx-xx-xx\" type=\"text\">\n" +
@@ -1697,8 +1691,7 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "    <br>\n" +
     "\n" +
     "    <div class=\"row-fluid\">\n" +
-    "<h3>Rynn69270</h3>\n" +
-    "<h4>Arthur Clerc-Gherardi</h4>\n" +
+    "<h3>{{firstname}} {{lastname}}</h3>\n" +
     "<a href=\"#/userprofile_edit\">modifier mon profil</a>\n" +
     "<br>\n" +
     "<a href=\"#/productupload\">charger un produit</a>\n" +
@@ -1708,31 +1701,26 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "            \n" +
     "            <tbody><tr>\n" +
     "                <td>Nom </td>\n" +
-    "                <td><i class=\"\"></i> <a>Clerc-Gherardi</a></td>\n" +
+    "                <td><i class=\"\"></i> <a>{{firstname}}</a></td>\n" +
     "            </tr>\n" +
     "            \n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Prénom </td>\n" +
-    "                <td><i class=\"\"></i> <a>Arthur</a></td>\n" +
-    "            </tr>\n" +
-    "                \n" +
-    "            <tr>\n" +
-    "                <td>Nom d'utilisateur </td>\n" +
-    "                <td><i class=\"fa fa-user\"></i> <a>Rynn69270</a></td>\n" +
+    "                <td><i class=\"\"></i> <a>{{lastname}}</a></td>\n" +
     "            </tr>\n" +
     "                \n" +
     "            <tr>\n" +
     "                <td>Numéro de téléphone:</td>\n" +
-    "                <td><i class=\"fa fa-mobile\"></i> 06-xx-xx-xx-xx</td>\n" +
+    "                <td><i class=\"fa fa-mobile\"></i> {{numphone}}</td>\n" +
     "            </tr>\n" +
     "            <tr>\n" +
     "                <td>Email:</td>\n" +
-    "                <td><i class=\"fa fa-envelope\"></i> <a>arthur@gmail.com</a></td>\n" +
+    "                <td><i class=\"fa fa-envelope\"></i> <a>{{email}}</a></td>\n" +
     "            </tr>\n" +
     "         <tr>\n" +
     "                <td>Adresse:</td>\n" +
-    "                <td><i class=\"fa fa-home\"></i> <a>2 Rue de Catane 38000 Grenoble</a></td>\n" +
+    "                <td><i class=\"fa fa-home\"></i> <a>{{adress}}</a></td>\n" +
     "            </tr>\n" +
     "        </tbody></table>\n" +
     "\n" +
