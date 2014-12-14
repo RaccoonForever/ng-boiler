@@ -1615,7 +1615,15 @@ angular.module("userprofile_edit/userprofile_edit.tpl.html", []).run(["$template
     "      </div>\n" +
     "    -->\n" +
     "      <h3 class=\"formtitle\">Informations personnelles</h3>\n" +
+    "     \n" +
     "      <form class=\"form-horizontal\" role=\"form\">\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Statut :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "                <input type=\"radio\" name=\"group1\" value=\"Particulier\" checked> Particulier<br>\n" +
+    "                <input type=\"radio\" name=\"group1\" value=\"Professionnel\"> Professionnel <br>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Prénom :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
@@ -1688,7 +1696,14 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "<br>\n" +
     "        <table class=\"table table-striped\">\n" +
     "            \n" +
-    "            <tbody><tr>\n" +
+    "            <tbody>\n" +
+    "            \n" +
+    "            <tr>\n" +
+    "                <td>Statut </td>\n" +
+    "                <td><i class=\"\"></i> <a>{{statut}}</a></td>\n" +
+    "            </tr>  \n" +
+    "                \n" +
+    "            <tr>\n" +
     "                <td>Nom </td>\n" +
     "                <td><i class=\"\"></i> <a>{{firstname}}</a></td>\n" +
     "            </tr>\n" +
