@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -1324,6 +1324,17 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "</div>\n" +
     "\n" +
     "");
+}]);
+
+angular.module("partials/notifications.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("partials/notifications.tpl.html",
+    "<div id=\"notifications\" ng-controller=\"NotificationsCtrl\">\n" +
+    "    <ul>\n" +
+    "        <li ng-repeat=\"notif in notifications\">\n" +
+    "            <span ng-bind=\"notif.text\"></span>\n" +
+    "        </li>\n" +
+    "    </ul>\n" +
+    "</div>");
 }]);
 
 angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", function($templateCache) {
