@@ -17,7 +17,7 @@ angular.module( 'ngBoilerplate.login_register', [
   });
 })
 
-.controller( 'LoginCtrl', function ( $scope, UserService, UserService2, $resource) {
+.controller( 'LoginCtrl', function ( $scope, UserService) {
 		
 		console.log("LoginCtrl Instancié");
 		$scope.UserService = UserService;
@@ -25,57 +25,28 @@ angular.module( 'ngBoilerplate.login_register', [
 			if ($scope.ConnectForm.$valid) {
 				var url = $scope.email;
 				console.log("Connect Form Valid ");
-				UserService.get(url).
-					success(function(data) {
-						var res = angular.toJson(data);
-						console.log(res);
-					});
+				
+				var res = checkMail(url, $scope.mdp,UserService);
+				
+				
+				/* EXEMPLE UTILISATION GET avec NGRESOURCE
 				var resService2 = UserService2.get({mail: $scope.email});
 				resService2.$promise.then( function(result) {
 					console.log(result);
-				});
-				
-				
-				
+				});*/
 			}
 		};
 })
 
-.controller( 'SignCtrl', function ( $scope, $timeout, UserService, UserService2, $resource ) {
+.controller( 'SignCtrl', function ( $scope, UserService, UserService2 ) {
 
 		console.log("SignCtrl Instancié");
 		$scope.UserService = UserService;
 		$scope.signClick = function() {
 			if ($scope.SignForm.$valid) {
-				console.log($scope.users.mail);
-				/*UserService.post($scope.users).
-					success( function(data) {
-						var res = angular.toJson(data);
-						console.log("Service HTTP : "res);
-					});*/
-				var resService3 = UserService2.post($scope.users);
-				resService3.$promise.then( function(result) {
-					console.log("POST USERS RESSOURCE");
-					console.log(result);
-				});
-				
-				var resService2 = $resource('http://localhost:8080/ecom/users/sign/find/:mail').get({mail: $scope.users.mail});
-				resService2.$promise.then( function(result) {
-					console.log("GET USERS RESSOURCE : ");
-					console.log(angular.toJson(result));
-				});
-				
-				var resService1 = UserService2.get({mail: $scope.users.mail});
-				resService1.$promise.then( function(result) {
-					console.log("GET STRING RESSOURCE : ");
-					console.log(result);
-				});
-				
-				
-				
+				console.log($scope.users.mailU);
+				signIn($scope.users.mailU, $scope.users, UserService, UserService2);
 			}
-			console.log("Bouton cliqué");
-			
 		};
 })
 
@@ -83,8 +54,11 @@ angular.module( 'ngBoilerplate.login_register', [
 .factory('UserService', function ($http) {
 	var url = "users/sign";
 	return {
-		get: function(ur) {
-			return $http.get(url+"/"+ur);
+		get: function(ur,mdp) {
+			return $http.get(url+"/"+ur+"/"+mdp);
+		},
+		getUserExist : function(ur){
+			return $http.get(url+"/find/"+ur);
 		},
 		post: function() {
 			return $http.post(url);
@@ -99,9 +73,45 @@ angular.module( 'ngBoilerplate.login_register', [
 		post: { method: 'POST' },
 		del: { method: 'DELETE', params: {mail: '@mail'} }
     });
-})
+});
 
-;
+function checkMail(url, mdp, service){
+	service.get(url,mdp).
+		success(function(data) {
+			var res = angular.toJson(data); 
+			if (res.localeCompare("\"true\"") === 0)
+				{
+					console.log("MAIL + MDP ACCORDING");
+					return 1;
+				}
+			else
+				{	console.log("MAIL + MDP NOT ACCORDING");
+					return 0;
+				}  
+		}).
+		error(function(data, status, headers, config) {
+			return -1;
+		});
+}
+
+function signIn(url, users, serviceHTTP, serviceRessource){
+	serviceHTTP.getUserExist(url).
+		success(function(data) {
+			var res = angular.toJson(data);
+			console.log("Resultat comparaison : " +res);
+			if (res.localeCompare("\"true\"") === 0) {
+				// User already exists
+				return -1;
+			} else {
+				//Let's post the user to the BD
+				serviceRessource.post(users).$promise.then( function(result) {
+					console.log("POST USERS RESSOURCE");
+					console.log(result);
+				});
+				return 1;
+			}
+		});
+}
 
 
 
