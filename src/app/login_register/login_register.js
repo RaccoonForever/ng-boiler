@@ -17,7 +17,7 @@ angular.module( 'ngBoilerplate.login_register', [
   });
 })
 
-.controller( 'LoginCtrl', function ( $scope, UserService) {
+.controller( 'LoginCtrl', function ( $scope, UserService, ServiceLog, notification) {
 		
 		console.log("LoginCtrl Instancié");
 		$scope.UserService = UserService;
@@ -26,7 +26,7 @@ angular.module( 'ngBoilerplate.login_register', [
 				var url = $scope.email;
 				console.log("Connect Form Valid ");
 				
-				var res = checkMail(url, $scope.mdp,UserService);
+				var res = checkMail(url, $scope.mdp,UserService,ServiceLog, notification);
 				
 				
 				/* EXEMPLE UTILISATION GET avec NGRESOURCE
@@ -38,7 +38,7 @@ angular.module( 'ngBoilerplate.login_register', [
 		};
 })
 
-.controller( 'SignCtrl', function ( $scope, UserService, UserService2 ) {
+.controller( 'SignCtrl', function ( $scope, UserService, UserService2, ServiceLog ) {
 
 		console.log("SignCtrl Instancié");
 		$scope.UserService = UserService;
@@ -75,13 +75,15 @@ angular.module( 'ngBoilerplate.login_register', [
     });
 });
 
-function checkMail(url, mdp, service){
+function checkMail(url, mdp, service, ServiceLog, notification){
 	service.get(url,mdp).
 		success(function(data) {
 			var res = angular.toJson(data); 
 			if (res.localeCompare("\"true\"") === 0)
 				{
 					console.log("MAIL + MDP ACCORDING");
+					ServiceLog.setUser(url);
+					notification.add("Logged IN", 5);
 					return 1;
 				}
 			else

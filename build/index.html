@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <ng-include src="'partials/notifications.tpl.html'"></ng-include>
   <head>
     <title ng-bind="pageTitle"></title>
 
@@ -34,6 +35,7 @@
     <script type="text/javascript" src="src/app/livraison/livraison.js"></script>
     <script type="text/javascript" src="src/app/login_register/login_register.js"></script>
     <script type="text/javascript" src="src/app/offres/offres.js"></script>
+    <script type="text/javascript" src="src/app/partials/notif.js"></script>
     <script type="text/javascript" src="src/app/productpage/productpage.js"></script>
     <script type="text/javascript" src="src/app/products/products.js"></script>
     <script type="text/javascript" src="src/app/productupload/productupload.js"></script>
@@ -117,7 +119,7 @@
             
              <div class="line"></div>
         </div>
-
+	
     <div class="container" ui-view="main"></div>
 
 	<footer class="footer">
