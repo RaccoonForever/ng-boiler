@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -268,6 +268,83 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "</div>\n" +
     "\n" +
     "");
+}]);
+
+angular.module("advance_research/advance_research.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("advance_research/advance_research.tpl.html",
+    "<div class=\"container\">\n" +
+    " <div class=\"row\">\n" +
+    " \n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form name=\"ConnectForm\" role=\"form\" ng-controller=\"LoginCtrl\">\n" +
+    "        <h2 class=\"pagetitle\">Recherche Avancée</h2>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"form-group\">\n" +
+    "            <div class=\"research-field\">\n" +
+    "			<input placeholder=\"- Mots clés -\" class=\"form-control\">\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Type d'article - </option>\n" +
+    "				<option value=\"\"> - Bracelet - </option>\n" +
+    "				<option value=\"\"> - Collier - </option>\n" +
+    "				<option value=\"\"> - Chaussette - </option>\n" +
+    "				<option value=\"\"> - Echarpe - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Trier par promotion - </option>\n" +
+    "				<option value=\"\"> - Avec offre - </option>\n" +
+    "				<option value=\"\"> - Sans offre - </option>\n" +
+    "				<option value=\"\"> - Tous - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Intervalle de prix - </option>\n" +
+    "				<option value=\"\"> -  0 - 10 euros - </option>\n" +
+    "				<option value=\"\"> - 10 - 20 euros - </option>\n" +
+    "				<option value=\"\"> - 20 - 50 euros - </option>\n" +
+    "				<option value=\"\"> - plus que 50 euros - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Trier par color - </option>\n" +
+    "				<option value=\"\"> - Rouge - </option>\n" +
+    "				<option value=\"\"> - Vert - </option>\n" +
+    "				<option value=\"\"> - Bleu - </option>\n" +
+    "				<option value=\"\"> - Jeune - </option>\n" +
+    "				<option value=\"\"> - Autre - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Type de vendeur - </option>\n" +
+    "				<option value=\"\"> - Particulier - </option>\n" +
+    "				<option value=\"\"> - Professionel - </option>\n" +
+    "			</select>            \n" +
+    "			\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\">\n" +
+    "		  <input type=\"submit\" value=\"Rechercher!\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%; margin-top:30px;\n" +
+    "              background: rgb(25, 176, 25);border: none;\" ng-click=\"loginClick()\">\n" +
+    "		  </div>\n" +
+    "        </div>    \n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "\n" +
+    "</div>\n" +
+    "</div>");
 }]);
 
 angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", function($templateCache) {

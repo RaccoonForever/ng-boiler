@@ -17,6 +17,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.productpage',
   'ngBoilerplate.userprofile_edit',
   'ngBoilerplate.productupload',
+  'ngBoilerplate.advance_research',
   'notif',
   'ui.router'
 ])
