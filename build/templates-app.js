@@ -280,18 +280,15 @@ angular.module("advance_research/advance_research.tpl.html", []).run(["$template
     "        <h2 class=\"pagetitle\">Recherche Avancée</h2>\n" +
     "        <hr class=\"colorgraph\"> </hr>\n" +
     "        <div class=\"row\">\n" +
-    "          <div class=\"form-group\">\n" +
+    "          <div class=\"form-group\" ng-controller=\"ResearchCtrl\">\n" +
     "            <div class=\"research-field\">\n" +
-    "			<!--<input placeholder=\"- Mots clés -\" class=\"form-control\">-->\n" +
-    "			<select name=\"s1\" onchange=\"chg(document.f1.s1,document.f1.s2)\" style=\"margin-top:20px;\" class=\"form-control\">\n" +
-    "				<option value=\"\"> - Type d'article - </option>\n" +
-    "				<option value=\"\"> - Bracelet - </option>\n" +
-    "				<option value=\"\"> - Collier - </option>\n" +
-    "				<option value=\"\"> - Chaussette - </option>\n" +
-    "				<option value=\"\"> - Echarpe - </option>\n" +
+    "			<select name=\"s1\" style=\"margin-top:20px;\" class=\"form-control\"\n" +
+    "				ng-model=\"selectedParentItem\"                        \n" +
+    "                ng-options=\"p.displayName for p in parentItems\">  \n" +
     "			</select>\n" +
-    "			<select name=\"s2\" class=\"form-control\" style=\"margin-top:20px;\">\n" +
-    "				<option value=\"default\"> - Taille d'article - </option>\n" +
+    "			<select name=\"s2\" class=\"form-control\" style=\"margin-top:20px;\"\n" +
+    "				ng-model=\"selectedChildItem\"                     \n" +
+    "                ng-options=\"c.displayName for c in filteredArray | filter:{parentId: selectedParentItem.id}\">\n" +
     "			</select>\n" +
     "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
     "				<option value=\"\"> - Intervalle de prix - </option>\n" +
@@ -328,72 +325,6 @@ angular.module("advance_research/advance_research.tpl.html", []).run(["$template
     "</div>\n" +
     "\n" +
     "\n" +
-    "<script>\n" +
-    "//创建对象，数据，值，文本\n" +
-    "function obj(aData,aValue,aText){\n" +
-    "	this.Data=aData;\n" +
-    "	this.Value=aValue;\n" +
-    "	this.Text=aText;\n" +
-    "}\n" +
-    "//设置选项数据数组，可以添加多个参数为\"源地址,选择值，选择文本\"\n" +
-    "var Set_data=new Array(\n" +
-    "	new obj('chaussette','chaussette','- Taille et Modèle de mobile -'),\n" +
-    "	new obj('chaussette','3.5','3.5 pouce pour Iphone4/4s'),\n" +
-    "	new obj('chaussette','4.5','4.5 pouce pour Iphone5/5s'),\n" +
-    "	new obj('chaussette','5.5','5.5 pouce pour Galaxy S5'),\n" +
-    "	new obj('chaussette','6.5','6.5 pouce pour Galaxy NOTE'),\n" +
-    "	new obj('chaussette','7','7 pouce pour Galaxy TAB'),\n" +
-    "	new obj('bracelet','bracelet','- Taille bracelet -'),\n" +
-    "	new obj('bracelet','S','S'),\n" +
-    "	new obj('bracelet','M','M'),\n" +
-    "	new obj('bracelet','L','L'),\n" +
-    "	new obj('bracelet','XL','XL'),\n" +
-    "	new obj('bracelet','XXL','XXL'),\n" +
-    "	new obj('écharpe','écharpe','- Taille écharpe -'),\n" +
-    "	new obj('écharpe','S','S'),\n" +
-    "	new obj('écharpe','M','M'),\n" +
-    "	new obj('écharpe','L','L'),\n" +
-    "	new obj('écharpe','XL','XL'),\n" +
-    "	new obj('écharpe','XXL','XXL'),\n" +
-    "	new obj('collier','collier','- Taille collier -'),\n" +
-    "	new obj('collier','S','S'),\n" +
-    "	new obj('collier','M','M'),\n" +
-    "	new obj('collier','L','L'),\n" +
-    "	new obj('collier','XL','XL'),\n" +
-    "	new obj('collier','XXL','XXL')\n" +
-    "	\n" +
-    "	\n" +
-    "	);\n" +
-    "//该函数接受两个参数——两个下拉菜单\n" +
-    "function chg(parent,child){\n" +
-    "	//以父菜单的选中选项的值，子菜单，和选项数数据组为参数调用chg函数\n" +
-    "	chgComitem(parent.options[parent.selectedIndex].value,child,Set_data);\n" +
-    "}\n" +
-    "function chgComitem(parentValue,child,objs){ //改变子菜单\n" +
-    "	//1.以子菜单为参数调用函数\n" +
-    "	DelAllComitem(child);\n" +
-    "	//2.遍历所有的选项数据\n" +
-    "	for(i=0;i<objs.length;i++){\n" +
-    "		//如果选项数据的Data与父菜单选中值一样的话\n" +
-    "		if (objs[i].Data==parentValue)\n" +
-    "			//3.以子菜单，选项数据的值，选项数据的文本作为参数调用AddComitem\n" +
-    "			AddComitem(child,objs[i].Value,objs[i].Text);		\n" +
-    "	}\n" +
-    "}\n" +
-    "//1.删除子菜单的所有元素\n" +
-    "function DelAllComitem(aList){   \n" +
-    "	//传入的是select元素，让options全为null\n" +
-    "	for(i=aList.options.length-1;i>=0;i--)\n" +
-    "	aList.options[i]=null;\n" +
-    "}\n" +
-    "//3.添加子菜单的元素\n" +
-    "function AddComitem(aList,aValue,aText){\n" +
-    "	//用传入的文本和值来创建option\n" +
-    "	var aOption=new Option(aText,aValue);\n" +
-    "	//插入option（注：length属性比最大下标大1）\n" +
-    "	aList.options[aList.options.length]=aOption;\n" +
-    "}\n" +
-    "</script>\n" +
     "");
 }]);
 
@@ -1563,6 +1494,10 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "               <div class=\"priceinfo\">\n" +
     "                    <span>Couleurs :</span>\n" +
     "					<span class=\"importantinfo\">bleu,rouge,vert</span>\n" +
+    "                </div>\n" +
+    "                <div class=\"priceinfo\">\n" +
+    "                    <span>Taille :</span>\n" +
+    "					<span class=\"importantinfo\">S,M,L,</span>\n" +
     "                </div>\n" +
     "				 <!--<div>\n" +
     "				<span>Quantité :</span>\n" +
