@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'panier/panier.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -1460,6 +1460,103 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "</div>\n" +
     "\n" +
     "");
+}]);
+
+angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("panier/panier.tpl.html",
+    "<div class=\"container\">\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-sm-12 col-md-10 col-md-offset-1\">\n" +
+    "            <table class=\"table table-hover\">\n" +
+    "                <thead>\n" +
+    "                    <tr>\n" +
+    "                        <th>Product</th>\n" +
+    "                        <th>Quantity</th>\n" +
+    "                        <th class=\"text-center\">Price</th>\n" +
+    "                        <th class=\"text-center\">Total</th>\n" +
+    "                        <th> </th>\n" +
+    "                    </tr>\n" +
+    "                </thead>\n" +
+    "                <tbody>\n" +
+    "                    <tr>\n" +
+    "                        <td class=\"col-sm-8 col-md-6\">\n" +
+    "                        <div class=\"media\">\n" +
+    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png\" style=\"width: 72px; height: 72px;\"> </a>\n" +
+    "                            <div class=\"media-body\">\n" +
+    "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
+    "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
+    "                                <span>Status: </span><span class=\"text-success\"><strong>In Stock</strong></span>\n" +
+    "                            </div>\n" +
+    "                        </div></td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1\" style=\"text-align: center\">\n" +
+    "                        <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" value=\"3\">\n" +
+    "                        </td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1 text-center\"><strong>$4.87</strong></td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1 text-center\"><strong>$14.61</strong></td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1\">\n" +
+    "                        <button type=\"button\" class=\"btn btn-danger\">\n" +
+    "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "                        </button></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td class=\"col-md-6\">\n" +
+    "                        <div class=\"media\">\n" +
+    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png\" style=\"width: 72px; height: 72px;\"> </a>\n" +
+    "                            <div class=\"media-body\">\n" +
+    "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
+    "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
+    "                                <span>Status: </span><span class=\"text-warning\"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>\n" +
+    "                            </div>\n" +
+    "                        </div></td>\n" +
+    "                        <td class=\"col-md-1\" style=\"text-align: center\">\n" +
+    "                        <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" value=\"2\">\n" +
+    "                        </td>\n" +
+    "                        <td class=\"col-md-1 text-center\"><strong>$4.99</strong></td>\n" +
+    "                        <td class=\"col-md-1 text-center\"><strong>$9.98</strong></td>\n" +
+    "                        <td class=\"col-md-1\">\n" +
+    "                        <button type=\"button\" class=\"btn btn-danger\">\n" +
+    "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "                        </button></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td><h5>Subtotal</h5></td>\n" +
+    "                        <td class=\"text-right\"><h5><strong>$24.59</strong></h5></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td><h5>Estimated shipping</h5></td>\n" +
+    "                        <td class=\"text-right\"><h5><strong>$6.94</strong></h5></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td><h3>Total</h3></td>\n" +
+    "                        <td class=\"text-right\"><h3><strong>$31.53</strong></h3></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>\n" +
+    "                        <button type=\"button\" class=\"btn btn-default\">\n" +
+    "                            <span class=\"glyphicon glyphicon-shopping-cart\"></span> Continue Shopping\n" +
+    "                        </button></td>\n" +
+    "                        <td>\n" +
+    "                        <button type=\"button\" class=\"btn btn-success\">\n" +
+    "                            Checkout <span class=\"glyphicon glyphicon-play\"></span>\n" +
+    "                        </button></td>\n" +
+    "                    </tr>\n" +
+    "                </tbody>\n" +
+    "            </table>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>");
 }]);
 
 angular.module("partials/notifications.tpl.html", []).run(["$templateCache", function($templateCache) {
