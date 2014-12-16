@@ -2057,6 +2057,8 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "                <td><i class=\"fa fa-home\"></i> <a>{{adress}}</a></td>\n" +
     "            </tr>\n" +
     "        </tbody></table>\n" +
+    "        \n" +
+    "        <button type=\"button\" class=\"btn btn-danger\" style=\"margin-bottom: 15px;\">Supprimer votre compte</button>\n" +
     "\n" +
     "</div></div>\n" +
     "<div class=\"span5\">\n" +
