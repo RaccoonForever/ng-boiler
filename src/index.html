@@ -26,9 +26,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ 
       
-      <!-- Angular Translate-->
-<script src="../vendor/angular-translate/angular-translate.js"></script>
+      <!-- Translation -->
+<script src="./app/translation.js"></script>
+
+
     <!-- it's stupid to have to load it here, but this is for the +1 button -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
       { "parsetags": "explicit" }
@@ -40,8 +43,12 @@
             <div class="zone_logo">
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
                 <div id="langues">
+                    <!--
                     <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="38" height="25" style="margin-right: 10px;"></a>
                     <a href="#"><img src="./assets/images/drapeau_anglais.jpg" width="38" height="25"></a>
+                    -->
+                    <button ng-click="changeLanguage('fr')" translate="BUTTON_TEXT_FR">Français</button>
+                    <button ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN">Anglais</button>
                 </div>	
             </div>
             
@@ -50,12 +57,12 @@
                 <div id="mon-espace">
 					<nav class="navtext">
 						<ul class="social">
-							<li><a href="#/userspace"/>Mon espace</a></li>
+							<li><a href="#/userspace" translate="MONESPACE"/>Mon espace</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div style="float:left; font-style:italic;">
-					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton">Se connecter</a>
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" translate="SECONNECTER">Se connecter</a>
 				</div>
 				<div id="panier">
 					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	

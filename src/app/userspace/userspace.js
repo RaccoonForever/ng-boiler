@@ -41,7 +41,7 @@ angular.module( 'ngBoilerplate.userspace', [
     
 })
 
-.factory('UserService', function ($http) {
+.factory('Malick', function ($http) {
 	var url = "users/sign";
 	return {
 		get: function(ur) {

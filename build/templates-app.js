@@ -1328,13 +1328,18 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
 
 angular.module("partials/notifications.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("partials/notifications.tpl.html",
-    "<div id=\"notifications\" ng-controller=\"NotificationsCtrl\">\n" +
-    "    <ul>\n" +
+    "\n" +
+    "<div class=\"bs-example\">\n" +
+    "    <div class=\"alert alert-success\" ng-controller=\"NotificationsCtrl\">\n" +
+    "	<ul class=\"alert_ul\">\n" +
     "        <li ng-repeat=\"notif in notifications\">\n" +
-    "            <span ng-bind=\"notif.text\"></span>\n" +
-    "        </li>\n" +
-    "    </ul>\n" +
-    "</div>");
+    "        <a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>\n" +
+    "        <span ng-bind=\"notif.text\">TEXTE</span>\n" +
+    "	</li>\n" +
+    "	</ul>\n" +
+    "    </div>\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -1349,7 +1354,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
     "			</div>\n" +
     "			<div class=\"productintro\">\n" +
-    "				<h1>Product name</h1>\n" +
+    "				<h1>{{product_name}}</h1>\n" +
     "				<div class=\"ratings\">\n" +
     "					<p class=\"pull-right\" style=\"margin-right:320px;\">31 avis</p>\n" +
     "					<p>\n" +
@@ -1362,24 +1367,25 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
     "					<span>Prix :</span>\n" +
-    "					<span class=\"importantinfo\">14.99€</span>\n" +
+    "					<span class=\"importantinfo\">{{prix}}</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Information de livraison :</span>\n" +
-    "					<span class=\"importantinfo\">Gratuit</span>\n" +
+    "					<span>Nom du vendeur :</span>\n" +
+    "					<span class=\"importantinfo\">{{sellername}}</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Nom de vendeur :</span>\n" +
-    "					<span class=\"importantinfo\">Malick</span>\n" +
+    "					<span>Type du vendeur :</span>\n" +
+    "					<span class=\"importantinfo\">{{sellertype}}</span>\n" +
     "				</div>\n" +
-    "				<div class=\"priceinfo\">\n" +
-    "					<span>Type de vendeur :</span>\n" +
-    "					<span class=\"importantinfo\">Particulier</span>\n" +
-    "				</div>\n" +
-    "				<div>\n" +
+    "               <div class=\"priceinfo\">\n" +
+    "                    <span>Couleurs :</span>\n" +
+    "					<span class=\"importantinfo\">bleu,rouge,vert</span>\n" +
+    "                </div>\n" +
+    "				 <!--<div>\n" +
     "				<span>Quantité :</span>\n" +
     "				<input type=\"text\" style=\"width:20px; text-align:center;\" value=\"1\"/>\n" +
     "				</div>\n" +
+    "                -->\n" +
     "				<a href=\"#\" style=\"margin:10px 0 0 0; font-size:20px; padding:5px 15px;\" class=\"myButton\">Ajouter au panier</a>\n" +
     "			</div>\n" +
     "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
@@ -1566,7 +1572,7 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Nom :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"Arthur\" type=\"text\">\n" +
+    "            <input class=\"form-control\" value=\"\" type=\"text\">\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
@@ -1578,7 +1584,24 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Prix :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"Rynn69270\" type=\"text\">\n" +
+    "            <input class=\"form-control\" value=\"\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "         <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Couleurs :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"bleu\">Bleu\n" +
+    "        </label>\n" +
+    "        <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"rouge\">Rouge\n" +
+    "        </label>\n" +
+    "        <label class=\"btn btn-default active\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"vert\" checked=\"\">Vert\n" +
+    "        </label>\n" +
+    "           <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"other\">Multicolore ou autre\n" +
+    "        </label>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
