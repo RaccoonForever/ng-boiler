@@ -26,9 +26,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ 
       
-      <!-- Angular Translate-->
-<script src="../vendor/angular-translate/angular-translate.js"></script>
+      <!-- Translation -->
+<script src="./app/translation.js"></script>
+
+
     <!-- it's stupid to have to load it here, but this is for the +1 button -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
       { "parsetags": "explicit" }
@@ -41,7 +44,12 @@
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
                 <div id="langues">
                     <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="38" height="25" style="margin-right: 10px;"></a>
+                   <!-- <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="32" height="22" style="margin-right: 10px;"></a> -->
                     <a href="#"><img src="./assets/images/drapeau_anglais.jpg" width="38" height="25"></a>
+                    <!--
+                    <button ng-click="changeLanguage('fr')" translate="BUTTON_TEXT_FR">Français</button>
+                    <button ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN">Anglais</button>
+                    -->
                 </div>	
             </div>
             
@@ -50,12 +58,12 @@
                 <div id="mon-espace">
 					<nav class="navtext">
 						<ul class="social">
-							<li><a href="#/userspace"/>Mon espace</a></li>
+							<li><a href="#/userspace" translate="MONESPACE"/>Mon espace</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div style="float:left; font-style:italic;">
-					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" ng-show="!isLoggedIn">Se connecter</a>
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" ng-show="!isLoggedIn" translate="SECONNECTER">Se connecter</a>
 				</div>
 				<div id="panier">
 					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
@@ -81,13 +89,13 @@
             <div id="secnav">
                 <div id="search_box">
 					<form id="search_form" method="post" action="#"> 
-						<input type="text" id="s" value="Search" class="swap_value" /> 
+						<input type="text" id="s" placeholder="Search" class="swap_value" /> 
 						<input type="image" id="go" src="./assets/images/Search_bar_btn.png" alt="Search" title="Search" style="width: 23px; height: 22px;"/> 
 					</form>
                 </div>                                                                                                                         
 				<nav class="navtext" style="margin-left: -30px;">
 					<ul class="social">
-						 <li><a href="#/infoslivraison">Recherche avancée</a></li>
+						 <li><a href="#/advance_research">Recherche avancée</a></li>
 					</ul>    
 				</nav>
     	   </div>
@@ -101,10 +109,10 @@
 	  <div class="container">
 		<div class="footer-inner">
 		  <ul class="social">
-			<li><a target="_blank" href="http://gplus.to/joshdmiller">Conditions d'expédition</a></li>
-			<li><a target="_blank" href="http://twitter.com/joshdmiller">Conditions d'utilisation</a></li>
-			<li><a target="_blank" href="http://linkedin.com/in/joshdmiller">Mentions légales</a></li>
-			<li><a target="_blank" href="http://github.com/ngbp/ngbp">Nous contacter</a></li>
+			<li><a target="_blank" href="#/expeditionconditions">Conditions d'expédition</a></li>
+			<li><a target="_blank" href="#/useconditions">Conditions d'utilisation</a></li>
+			<li><a target="_blank" href="#/legalinformation">Mentions légales</a></li>
+			<li><a target="_blank" href="#/contactus">Nous contacter</a></li>
 		  </ul>
 		  
 		  <div style="clear:both; text-align:center; margin-top:50px;">

@@ -5808,12 +5808,12 @@ modified by malick
 }
 /* Logo Zone */
 .zone_logo {
-  width: 700px;
+  width: 750px;
   float: left;
 }
 /*Client Zone */
 .zone_client {
-  margin: 30px 0 20px 50px;
+  margin: 30px 0 20px 0;
   float: left;
 }
 #mon-espace {
@@ -5999,6 +5999,15 @@ li.nav_items {
 .footer .social li a:visited:hover {
   color: #000000;
 }
+.contactus {
+  width: 500px;
+  margin: 0px auto;
+  border: 3px solid #D5D5D5;
+}
+.contactus .inside {
+  width: 300px;
+  margin: 0px auto;
+}
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
  * all the submodules and components we are using. 
@@ -6118,6 +6127,15 @@ div.buttonsyle {
   font-family: 'Glyphicons Halflings';
   src: url('../assets/fonts/glyphicons-halflings-regular.eot');
   src: url('../assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+.resultat-recherche {
+  font-size: 20px;
+  font-family: Calibri Light;
+  margin-bottom: 5px;
+  color: #000066;
+}
+.resultat-recherche .resultat-param {
+  color: #CC6600;
 }
 div.productsbody {
   padding-top: 30px;
@@ -6242,8 +6260,19 @@ h3.formtitle {
   padding-bottom: 2%;
   color: #445469;
 }
+.research-field {
+  margin: 10px 0 0 0;
+}
 h2.pagetitle {
   font-family: Calibri Light, serif;
   font-style: italic;
   color: #445469;
+}
+div.bs-example {
+  margin: 20px;
+  width: 45%;
+  float: right;
+}
+ul.alert_ul {
+  list-style: none;
 }

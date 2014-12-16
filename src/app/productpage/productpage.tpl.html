@@ -8,7 +8,7 @@
 				<img class="subproductimage" style="margin-left:24px;" src="http://placehold.it/144x81" alt="">
 			</div>
 			<div class="productintro">
-				<h1>Product name</h1>
+				<h1>{{product_name}}</h1>
 				<div class="ratings">
 					<p class="pull-right" style="margin-right:320px;">31 avis</p>
 					<p>
@@ -21,24 +21,25 @@
 				</div>
 				<div class="priceinfo">
 					<span>Prix :</span>
-					<span class="importantinfo">14.99€</span>
+					<span class="importantinfo">{{prix}}</span>
 				</div>
 				<div class="priceinfo">
-					<span>Information de livraison :</span>
-					<span class="importantinfo">Gratuit</span>
+					<span>Nom du vendeur :</span>
+					<span class="importantinfo">{{sellername}}</span>
 				</div>
 				<div class="priceinfo">
-					<span>Nom de vendeur :</span>
-					<span class="importantinfo">Malick</span>
+					<span>Type du vendeur :</span>
+					<span class="importantinfo">{{sellertype}}</span>
 				</div>
-				<div class="priceinfo">
-					<span>Type de vendeur :</span>
-					<span class="importantinfo">Particulier</span>
-				</div>
-				<div>
+               <div class="priceinfo">
+                    <span>Couleurs :</span>
+					<span class="importantinfo">bleu,rouge,vert</span>
+                </div>
+				 <!--<div>
 				<span>Quantité :</span>
 				<input type="text" style="width:20px; text-align:center;" value="1"/>
 				</div>
+                -->
 				<a href="#" style="margin:10px 0 0 0; font-size:20px; padding:5px 15px;" class="myButton">Ajouter au panier</a>
 			</div>
 			<div class="line" style="width:1100px;"></div>
@@ -53,7 +54,7 @@
 					<span class="col">31 avis</span>
 				</div>
 				<div class="usercommentaire">
-					
+					<span class="username"> Malick </span>
 					<div class="ratings">
 						<p>
 							<span class="glyphicon glyphicon-star"></span>
@@ -63,6 +64,8 @@
 							<span class="glyphicon glyphicon-star-empty"></span>
 						</p>
 					</div>
+					<span> 16/12/2014 </span>
+					<p>Oh! That's good!.</p>
 				</div>
 			</div>
         </div>

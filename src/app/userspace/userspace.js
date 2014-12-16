@@ -22,6 +22,7 @@ angular.module( 'ngBoilerplate.userspace', [
     
     console.log("UseSpaceCtrl Instancié");
         //$scope.UserService = UserService;
+        $scope.statut = "Particulier";
         $scope.firstname = "Arthur";
         $scope.lastname = "Clerc-Gherardi";
         $scope.numphone = "06-99-05-00-10";
@@ -41,6 +42,7 @@ angular.module( 'ngBoilerplate.userspace', [
 })
 
 .factory('FactoryMalick', function ($http) {
+
 	var url = "users/sign";
 	return {
 		get: function(ur) {

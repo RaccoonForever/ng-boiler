@@ -9,7 +9,7 @@ angular.module( 'ngBoilerplate.productpage', [
     url: '/productpage',
     views: {
       "main": {
-        controller: 'ProductsCtrl',
+        controller: 'ProductsPageCtrl',
         templateUrl: 'productpage/productpage.tpl.html'
       }
     },
@@ -17,7 +17,28 @@ angular.module( 'ngBoilerplate.productpage', [
   });
 })
 
-.controller( 'ProductsCtrl', function ProductsCtrl( $scope ) {
+.controller( 'ProductsPageCtrl', function ProductsPageCtrl( $scope ) {
+  console.log("UseSpaceCtrl Instancié");
+        //$scope.UserService = UserService;
+        $scope.product_name="Product name";
+        $scope.prix = "16.99€";
+        $scope.sellername = "Clerc-Gherardi";
+        $scope.sellertype = "Particulier";
 })
+
+
+
+.factory('UserService', function ($http) {
+	var url = "users/sign";
+	return {
+		get: function(ur) {
+			return $http.get(url+"/show_products/"+ur);
+		},
+		post: function() {
+			return $http.post(url);
+		}
+		};
+	})
+
 
 ;

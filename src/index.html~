@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <ng-include src="'partials/notifications.tpl.html'"></ng-include>
   <head>
     <title ng-bind="pageTitle"></title>
 
@@ -25,7 +26,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	
+ 
+      
+      <!-- Translation -->
+<script src="./app/translation.js"></script>
+
+
     <!-- it's stupid to have to load it here, but this is for the +1 button -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
       { "parsetags": "explicit" }
@@ -36,20 +42,30 @@
         <div class="banniere_haut">
             <div class="zone_logo">
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
+                <div id="langues">
+                    <!--
+                    <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="38" height="25" style="margin-right: 10px;"></a>
+                    <a href="#"><img src="./assets/images/drapeau_anglais.jpg" width="38" height="25"></a>
+                    -->
+                    <button ng-click="changeLanguage('fr')" translate="BUTTON_TEXT_FR">Français</button>
+                    <button ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN">Anglais</button>
+                </div>	
             </div>
+            
+
             <div class="zone_client">
                 <div id="mon-espace">
 					<nav class="navtext">
 						<ul class="social">
-							<li><a href="#/useconditions"/>Mon espace</a></li>
+							<li><a href="#/userspace" translate="MONESPACE"/>Mon espace</a></li>
 						</ul>
 					</nav>
 				</div>
-				<div id="signin">
-					<a href="#/login_register"><img src="./assets/images/signin.png" alt="signin" style="width:180px;"></a>
+				<div style="float:left; font-style:italic;">
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" translate="SECONNECTER">Se connecter</a>
 				</div>
 				<div id="panier">
-					<a href="#/login_register"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
+					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
 				</div>
 			</div>
 
@@ -60,19 +76,11 @@
             <div class="navigationbar" style="float:left">
                 <nav class="navtext">
                     <ul class="social">
-<<<<<<< HEAD
-                        <li style="margin-left:30px"><a href="#/useconditions"/>Offres</a></li>
-                        <li style="margin-left:30px"><a href="#/userspace"/>Mon espace</a></li>
-                        <li style="margin-left:30px"><a href="#/products"/>Item3</a></li>
-                        <li style="margin-left:30px"><a href="#/infoslivraison"/>Item4</a></li>
-                        <li style="margin-left:30px"><a href="#/livraison"/>Item5</a></li>
-=======
                         <li style="margin-left:30px"><a href="#/offres"/>Offres</a></li>
                         <li style="margin-left:30px"><a href="#/bracelets"/>Bracelets</a></li>
                         <li style="margin-left:30px"><a href="#/colliers"/>Colliers</a></li>
-                        <li style="margin-left:30px"><a href="#/echarpes"/>Echarpes</a></li>
-						<li style="margin-left:30px"><a href="#/chaussettes"/>Chaussettes</a></li>
->>>>>>> 011f90d7aee43d3238b6907b97d9eef81ef5f731
+                        <li style="margin-left:30px"><a href="#/productpage"/>Echarpes</a></li>
+			             <li style="margin-left:30px"><a href="#/userspace"/>Chaussettes</a></li>
                     </ul>
                 </nav>
         </div> 
@@ -84,16 +92,16 @@
 						<input type="image" id="go" src="./assets/images/Search_bar_btn.png" alt="Search" title="Search" style="width: 23px; height: 22px;"/> 
 					</form>
                 </div>                                                                                                                         
-				<nav class="navtext">
+				<nav class="navtext" style="margin-left: -30px;">
 					<ul class="social">
-						 <li><a href="#">Recherche avancée</a></li>
+						 <li><a href="#/infoslivraison">Recherche avancée</a></li>
 					</ul>    
 				</nav>
     	   </div>
             
              <div class="line"></div>
         </div>
-
+	
     <div class="container" ui-view="main"></div>
 
 	<footer class="footer">

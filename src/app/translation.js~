@@ -1,0 +1,20 @@
+angular.module('myApp', ['pascalprecht.translate']);    
+    
+.config(function($translateProvider) {
+  $translateProvider.translations('fr', {
+    BUTTON_TEXT_FR: 'Français',
+    MONESPACE: 'Mon espace',
+    SECONNECTER: 'Se connecter'
+  })
+  .translations('en', {
+    BUTTON_TEXT_EN: 'English',
+    MONESPACE: 'My space',
+    SECONNECTER: 'Sign in'
+  });
+});
+
+translationapp.controller('TranslateController', function($translate, $scope) {
+  $scope.changeLanguage = function (langKey) {
+    $translate.use(langKey);
+  };
+});
