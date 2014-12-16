@@ -25,6 +25,8 @@ angular.module( 'ngBoilerplate.login_register', [
 			if ($scope.ConnectForm.$valid) {
 				var url = $scope.email;
 				console.log("Connect Form Valid ");
+				//console.log(url);
+				//console.log($scope.mdp);
 				
 				var res = checkMail(url, $scope.mdp,UserService,ServiceLog, notification);
 				
@@ -52,9 +54,10 @@ angular.module( 'ngBoilerplate.login_register', [
 
 
 .factory('UserService', function ($http) {
-	var url = "users/sign";
+	var url = "https://localhost:8181/ecom/users/sign";
 	return {
 		get: function(ur,mdp) {
+			console.log(ur+"   "+mdp);
 			return $http.get(url+"/"+ur+"/"+mdp);
 		},
 		getUserExist : function(ur){
@@ -67,10 +70,10 @@ angular.module( 'ngBoilerplate.login_register', [
 	})
 	
 .factory('UserService2', function ($resource) {
-	return $resource('http://localhost:8080/ecom/users/sign/:mail', {}, {
+	return $resource('https://localhost:8181/ecom/users/sign/:mail', {}, {
 		get: { method: 'GET', params: {mail: '@mail'} },
 		update: { method: 'PUT', params: {mail: '@mail'} },
-		post: { method: 'POST' },
+		post: { method: 'POST' }, 
 		del: { method: 'DELETE', params: {mail: '@mail'} }
     });
 });
@@ -79,6 +82,7 @@ function checkMail(url, mdp, service, ServiceLog, notification){
 	service.get(url,mdp).
 		success(function(data) {
 			var res = angular.toJson(data); 
+			//console.log(res);
 			if (res.localeCompare("\"true\"") === 0)
 				{
 					console.log("MAIL + MDP ACCORDING");
@@ -86,13 +90,14 @@ function checkMail(url, mdp, service, ServiceLog, notification){
 					notification.add("Logged IN", 5);
 					return 1;
 				}
-			else
+			else 
 				{	console.log("MAIL + MDP NOT ACCORDING");
 					return 0;
 				}  
 		}).
 		error(function(data, status, headers, config) {
-			return -1;
+			console.log("Error get http checkMail");
+			return -1; 
 		});
 }
 

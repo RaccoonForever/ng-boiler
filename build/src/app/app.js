@@ -27,11 +27,12 @@ angular.module( 'ngBoilerplate', [
 
 .run( function run ($rootScope, $location, ServiceLog) {
 	$rootScope.$on('$routeChangeStart', function (event) {
+	console.log("routechange");
 	if (!ServiceLog.isLoggedIn()) {
 			console.log('DENY');
 			event.preventDefault();
 			$location.path('/login_register');
-		}
+		} 
 		else {
 			console.log('ALLOW');
 			$location.path('/home');
@@ -47,7 +48,7 @@ angular.module( 'ngBoilerplate', [
     }
   });
   
-	$scope.$watch(ServiceLog.isLoggedIn, function (value, oldValue) {
+	$scope.$watch(ServiceLog.isLoggedIn, function (value, oldValue ) {
 
 	if(!value && oldValue) {
 		console.log("Disconnect");
@@ -57,7 +58,8 @@ angular.module( 'ngBoilerplate', [
 		console.log("Connect");
 		//Do something when the user is connected
 		console.log("You did it");
-		//$location.path('/home');
+		
+		$location.path('/home');
 	}
 
 	}, true);
