@@ -25,13 +25,17 @@
     <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="vendor/angular/angular-resource.js"></script>
     <script type="text/javascript" src="src/app/about/about.js"></script>
+    <script type="text/javascript" src="src/app/advance_research/advance_research.js"></script>
     <script type="text/javascript" src="src/app/app.js"></script>
     <script type="text/javascript" src="src/app/bracelets/bracelets.js"></script>
     <script type="text/javascript" src="src/app/chaussettes/chaussettes.js"></script>
     <script type="text/javascript" src="src/app/colliers/colliers.js"></script>
+    <script type="text/javascript" src="src/app/contactus/contactus.js"></script>
     <script type="text/javascript" src="src/app/echarpes/echarpes.js"></script>
+    <script type="text/javascript" src="src/app/expeditionconditions/expeditionconditions.js"></script>
     <script type="text/javascript" src="src/app/home/home.js"></script>
     <script type="text/javascript" src="src/app/infoslivraison/infoslivraison.js"></script>
+    <script type="text/javascript" src="src/app/legalinformation/legalinformation.js"></script>
     <script type="text/javascript" src="src/app/livraison/livraison.js"></script>
     <script type="text/javascript" src="src/app/login_register/login_register.js"></script>
     <script type="text/javascript" src="src/app/offres/offres.js"></script>
@@ -39,6 +43,7 @@
     <script type="text/javascript" src="src/app/productpage/productpage.js"></script>
     <script type="text/javascript" src="src/app/products/products.js"></script>
     <script type="text/javascript" src="src/app/productupload/productupload.js"></script>
+    <script type="text/javascript" src="src/app/search_result/search_result.js"></script>
     <script type="text/javascript" src="src/app/translation/translation.js"></script>
     <script type="text/javascript" src="src/app/useconditions/useconditions.js"></script>
     <script type="text/javascript" src="src/app/userprofile_edit/userprofile_edit.js"></script>
@@ -69,12 +74,13 @@
             <div class="zone_logo">
                 <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
                 <div id="langues">
-                    <!--
                     <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="38" height="25" style="margin-right: 10px;"></a>
+                   <!-- <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="32" height="22" style="margin-right: 10px;"></a> -->
                     <a href="#"><img src="./assets/images/drapeau_anglais.jpg" width="38" height="25"></a>
-                    -->
+                    <!--
                     <button ng-click="changeLanguage('fr')" translate="BUTTON_TEXT_FR">Français</button>
                     <button ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN">Anglais</button>
+                    -->
                 </div>	
             </div>
             
@@ -114,13 +120,13 @@
             <div id="secnav">
                 <div id="search_box">
 					<form id="search_form" method="post" action="#"> 
-						<input type="text" id="s" value="Search" class="swap_value" /> 
+						<input type="text" id="s" placeholder="Search" class="swap_value" /> 
 						<input type="image" id="go" src="./assets/images/Search_bar_btn.png" alt="Search" title="Search" style="width: 23px; height: 22px;"/> 
 					</form>
                 </div>                                                                                                                         
 				<nav class="navtext" style="margin-left: -30px;">
 					<ul class="social">
-						 <li><a href="#/infoslivraison">Recherche avancée</a></li>
+						 <li><a href="#/advance_research">Recherche avancée</a></li>
 					</ul>    
 				</nav>
     	   </div>
@@ -134,10 +140,10 @@
 	  <div class="container">
 		<div class="footer-inner">
 		  <ul class="social">
-			<li><a target="_blank" href="http://gplus.to/joshdmiller">Conditions d'expédition</a></li>
-			<li><a target="_blank" href="http://twitter.com/joshdmiller">Conditions d'utilisation</a></li>
-			<li><a target="_blank" href="http://linkedin.com/in/joshdmiller">Mentions légales</a></li>
-			<li><a target="_blank" href="http://github.com/ngbp/ngbp">Nous contacter</a></li>
+			<li><a target="_blank" href="#/expeditionconditions">Conditions d'expédition</a></li>
+			<li><a target="_blank" href="#/useconditions">Conditions d'utilisation</a></li>
+			<li><a target="_blank" href="#/legalinformation">Mentions légales</a></li>
+			<li><a target="_blank" href="#/contactus">Nous contacter</a></li>
 		  </ul>
 		  
 		  <div style="clear:both; text-align:center; margin-top:50px;">

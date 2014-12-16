@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'echarpes/echarpes.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -268,6 +268,76 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "</div>\n" +
     "\n" +
     "");
+}]);
+
+angular.module("advance_research/advance_research.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("advance_research/advance_research.tpl.html",
+    "<div class=\"container\">\n" +
+    " <div class=\"row\">\n" +
+    " \n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form name=\"ConnectForm\" role=\"form\" ng-controller=\"LoginCtrl\">\n" +
+    "        <h2 class=\"pagetitle\">Recherche Avancée</h2>\n" +
+    "        <hr class=\"colorgraph\"> </hr>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"form-group\">\n" +
+    "            <div class=\"research-field\">\n" +
+    "			<!--<input placeholder=\"- Mots clés -\" class=\"form-control\">-->\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Type d'article - </option>\n" +
+    "				<option value=\"\"> - Bracelet - </option>\n" +
+    "				<option value=\"\"> - Collier - </option>\n" +
+    "				<option value=\"\"> - Chaussette - </option>\n" +
+    "				<option value=\"\"> - Echarpe - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Intervalle de prix - </option>\n" +
+    "				<option value=\"\"> -  0 - 10 euros - </option>\n" +
+    "				<option value=\"\"> - 10 - 20 euros - </option>\n" +
+    "				<option value=\"\"> - 20 - 50 euros - </option>\n" +
+    "				<option value=\"\"> - plus de 50 euros - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Trier par couleur - </option>\n" +
+    "				<option value=\"\"> - Rouge - </option>\n" +
+    "				<option value=\"\"> - Vert - </option>\n" +
+    "				<option value=\"\"> - Bleu - </option>\n" +
+    "				<option value=\"\"> - Autre - </option>\n" +
+    "			</select>\n" +
+    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
+    "				<option value=\"\"> - Type de vendeur - </option>\n" +
+    "				<option value=\"\"> - Particulier - </option>\n" +
+    "				<option value=\"\"> - Professionel - </option>\n" +
+    "			</select>            \n" +
+    "			\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\">\n" +
+    "		  <input type=\"submit\" value=\"Rechercher!\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%; margin-top:30px;\n" +
+    "              background: rgb(25, 176, 25);border: none;\" ng-click=\"loginClick()\">\n" +
+    "		  </div>\n" +
+    "        </div>    \n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "  \n" +
+    "\n" +
+    "</div>\n" +
+    "</div>");
 }]);
 
 angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -659,6 +729,34 @@ angular.module("colliers/colliers.tpl.html", []).run(["$templateCache", function
     "</div>");
 }]);
 
+angular.module("contactus/contactus.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("contactus/contactus.tpl.html",
+    "\n" +
+    "<div class=\"row\">\n" +
+    "  <h2 class=\"pagetitle\">\n" +
+    "	Nous contacter </h2>\n" +
+    "	<hr class=\"colorgraph\"> </hr>\n" +
+    "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
+    "<div class=\"contactus\">\n" +
+    "<div class=\"inside\">\n" +
+    "	<h3>Informations</h3>\n" +
+    "		<p style=\"margin-left:40px;\">Siège social: Polytech' Grenoble</p>\n" +
+    "		<p style=\"margin-left:40px;\">Mail: ricm5-groupe2@polytech.fr</p>\n" +
+    "	<h3>Equipe</h3>\n" +
+    "		<p style=\"margin-left:40px;\">Arthur CLERC-GHERARDI</p>\n" +
+    "		<p style=\"margin-left:40px;\">Rodolphe FREBY</p>\n" +
+    "		<p style=\"margin-left:40px;\">Malick FALLE</p>\n" +
+    "		<p style=\"margin-left:40px;\">Pièrre-Henry GINOUX</p>\n" +
+    "		<p style=\"margin-left:40px;\">Tianming GUO</p>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "");
+}]);
+
 angular.module("echarpes/echarpes.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("echarpes/echarpes.tpl.html",
     "<div class=\"productsbody\">\n" +
@@ -783,6 +881,21 @@ angular.module("echarpes/echarpes.tpl.html", []).run(["$templateCache", function
     "    <!-- Bootstrap Core JavaScript -->\n" +
     "    <script src=\"js/bootstrap.min.js\"></script>\n" +
     "</div>");
+}]);
+
+angular.module("expeditionconditions/expeditionconditions.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("expeditionconditions/expeditionconditions.tpl.html",
+    "\n" +
+    "<div class=\"row\">\n" +
+    "  <h2 class=\"pagetitle\">\n" +
+    "	Conditions d'expedition </h2>\n" +
+    "	<hr class=\"colorgraph\"> </hr>	\n" +
+    "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -949,6 +1062,21 @@ angular.module("infoslivraison/infoslivraison.tpl.html", []).run(["$templateCach
     "  </div>\n" +
     "  <!-- /.modal -->\n" +
     "</div>\n" +
+    "");
+}]);
+
+angular.module("legalinformation/legalinformation.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("legalinformation/legalinformation.tpl.html",
+    "\n" +
+    "<div class=\"row\">\n" +
+    "  <h2 class=\"pagetitle\">\n" +
+    "	Mentions légales</h2>\n" +
+    "	<hr class=\"colorgraph\"> </hr>\n" +
+    "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
     "");
 }]);
 
@@ -1166,6 +1294,7 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
   $templateCache.put("offres/offres.tpl.html",
     "<div class=\"productsbody\">\n" +
     "<div class=\"container\">\n" +
+    "	<div id=\"wrapper\">\n" +
     "        <div class=\"row\">\n" +
     "            <div class=\"col-md-3\">\n" +
     "				<p style=\"font-family:Edwardian Script;\n" +
@@ -1320,7 +1449,7 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "    </div>\n" +
     "    <!-- /.container -->\n" +
-    "\n" +
+    "</div>\n" +
     "</div>\n" +
     "\n" +
     "");
@@ -1400,7 +1529,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "					<span class=\"col\">31 avis</span>\n" +
     "				</div>\n" +
     "				<div class=\"usercommentaire\">\n" +
-    "					\n" +
+    "					<span class=\"username\"> Malick </span>\n" +
     "					<div class=\"ratings\">\n" +
     "						<p>\n" +
     "							<span class=\"glyphicon glyphicon-star\"></span>\n" +
@@ -1410,6 +1539,8 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "							<span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
     "						</p>\n" +
     "					</div>\n" +
+    "					<span> 16/12/2014 </span>\n" +
+    "					<p>Oh! That's good!.</p>\n" +
     "				</div>\n" +
     "			</div>\n" +
     "        </div>\n" +
@@ -1619,12 +1750,177 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "");
 }]);
 
+angular.module("search_result/search_result.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("search_result/search_result.tpl.html",
+    "<div class=\"productsbody\">\n" +
+    "<div class=\"container\">\n" +
+    "	<div id=\"wrapper\">\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "				<div class=\"resultat-recherche\">\n" +
+    "					<span> 3 </span>\n" +
+    "					<span>résultats pour: </span>\n" +
+    "					<span class=\"resultat-param\"> chaussures princesse </span>\n" +
+    "				</div>	\n" +
+    "                <div class=\"list-group\">\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par promotion- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "					\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Trier par prix- </option>\n" +
+    "						<option value=\"\"> low to high </option>\n" +
+    "						<option value=\"\"> high to low </option>\n" +
+    "					</select>\n" +
+    "	\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Type de vendeur - </option>\n" +
+    "						<option value=\"\"> Particulier </option>\n" +
+    "						<option value=\"\"> Professionel </option>\n" +
+    "					</select>\n" +
+    "			\n" +
+    "					<select class=\"list-group-item\" style=\"width:260px;\">\n" +
+    "						<option value=\"\"> - Couleur - </option>\n" +
+    "						<option value=\"\"> Rouge </option>\n" +
+    "						<option value=\"\"> Vert </option>\n" +
+    "					</select>\n" +
+    "					\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-md-9\">\n" +
+    "\n" +
+    "                <div class=\"row carousel-holder\">\n" +
+    "\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+    "                            <ol class=\"carousel-indicators\">\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n" +
+    "                                <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n" +
+    "                            </ol>\n" +
+    "                            <div class=\"carousel-inner\">\n" +
+    "                                <div class=\"item active\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                                <div class=\"item\">\n" +
+    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
+    "                            </a>\n" +
+    "                            <a class=\"right carousel-control\" href=\"#carousel-example-generic\" data-slide=\"next\">\n" +
+    "                                <span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">31 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">6 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
+    "                        <div class=\"thumbnail\">\n" +
+    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <div class=\"caption\">\n" +
+    "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
+    "                                <h4><a href=\"#\">Produit X</a>\n" +
+    "                                </h4>\n" +
+    "                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
+    "								<div class=\"myButton\">\n" +
+    "									<a href=\"#\" class=\"myButton\">Ajouter au panier</a>\n" +
+    "								</div>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"ratings\">\n" +
+    "                                <p class=\"pull-right\">8 avis</p>\n" +
+    "                                <p>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star\"></span>\n" +
+    "                                    <span class=\"glyphicon glyphicon-star-empty\"></span>\n" +
+    "                                </p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                   \n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    <!-- /.container -->\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "");
+}]);
+
 angular.module("useconditions/useconditions.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("useconditions/useconditions.tpl.html",
     "\n" +
     "<div class=\"row\">\n" +
-    "  <h1 class=\"page-header\">\n" +
-    "	Conditions </h1>\n" +
+    "  <h2 class=\"pagetitle\">\n" +
+    "	Conditions d'utilisation</h2>\n" +
+    "	<hr class=\"colorgraph\"> </hr>\n" +
     "<p>Praesent aliquam, justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam ante ac quam. Maecenas urna purus, fermentum id, molestie in, commodo porttitor, felis. Nam blandit quam ut lacus. Quisque ornare risus quis ligula. Phasellus tristique purus a augue condimentum adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti. Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>\n" +
     "</div>\n" +
     "\n" +
