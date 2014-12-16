@@ -282,7 +282,7 @@ angular.module("advance_research/advance_research.tpl.html", []).run(["$template
     "        <div class=\"row\">\n" +
     "          <div class=\"form-group\">\n" +
     "            <div class=\"research-field\">\n" +
-    "			<input placeholder=\"- Mots clés -\" class=\"form-control\">\n" +
+    "			<!--<input placeholder=\"- Mots clés -\" class=\"form-control\">-->\n" +
     "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
     "				<option value=\"\"> - Type d'article - </option>\n" +
     "				<option value=\"\"> - Bracelet - </option>\n" +
@@ -291,24 +291,17 @@ angular.module("advance_research/advance_research.tpl.html", []).run(["$template
     "				<option value=\"\"> - Echarpe - </option>\n" +
     "			</select>\n" +
     "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
-    "				<option value=\"\"> - Trier par promotion - </option>\n" +
-    "				<option value=\"\"> - Avec offre - </option>\n" +
-    "				<option value=\"\"> - Sans offre - </option>\n" +
-    "				<option value=\"\"> - Tous - </option>\n" +
-    "			</select>\n" +
-    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
     "				<option value=\"\"> - Intervalle de prix - </option>\n" +
     "				<option value=\"\"> -  0 - 10 euros - </option>\n" +
     "				<option value=\"\"> - 10 - 20 euros - </option>\n" +
     "				<option value=\"\"> - 20 - 50 euros - </option>\n" +
-    "				<option value=\"\"> - plus que 50 euros - </option>\n" +
+    "				<option value=\"\"> - plus de 50 euros - </option>\n" +
     "			</select>\n" +
     "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
-    "				<option value=\"\"> - Trier par color - </option>\n" +
+    "				<option value=\"\"> - Trier par couleur - </option>\n" +
     "				<option value=\"\"> - Rouge - </option>\n" +
     "				<option value=\"\"> - Vert - </option>\n" +
     "				<option value=\"\"> - Bleu - </option>\n" +
-    "				<option value=\"\"> - Jeune - </option>\n" +
     "				<option value=\"\"> - Autre - </option>\n" +
     "			</select>\n" +
     "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
@@ -1561,13 +1554,18 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
 
 angular.module("partials/notifications.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("partials/notifications.tpl.html",
-    "<div id=\"notifications\" ng-controller=\"NotificationsCtrl\">\n" +
-    "    <ul>\n" +
+    "\n" +
+    "<div class=\"bs-example\">\n" +
+    "    <div class=\"alert alert-success\" ng-controller=\"NotificationsCtrl\">\n" +
+    "	<ul class=\"alert_ul\">\n" +
     "        <li ng-repeat=\"notif in notifications\">\n" +
-    "            <span ng-bind=\"notif.text\"></span>\n" +
-    "        </li>\n" +
-    "    </ul>\n" +
-    "</div>");
+    "        <a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>\n" +
+    "        <span ng-bind=\"notif.text\">TEXTE</span>\n" +
+    "	</li>\n" +
+    "	</ul>\n" +
+    "    </div>\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -1582,7 +1580,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
     "			</div>\n" +
     "			<div class=\"productintro\">\n" +
-    "				<h1>Product name</h1>\n" +
+    "				<h1>{{product_name}}</h1>\n" +
     "				<div class=\"ratings\">\n" +
     "					<p class=\"pull-right\" style=\"margin-right:320px;\">31 avis</p>\n" +
     "					<p>\n" +
@@ -1595,24 +1593,25 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
     "					<span>Prix :</span>\n" +
-    "					<span class=\"importantinfo\">14.99€</span>\n" +
+    "					<span class=\"importantinfo\">{{prix}}</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Information de livraison :</span>\n" +
-    "					<span class=\"importantinfo\">Gratuit</span>\n" +
+    "					<span>Nom du vendeur :</span>\n" +
+    "					<span class=\"importantinfo\">{{sellername}}</span>\n" +
     "				</div>\n" +
     "				<div class=\"priceinfo\">\n" +
-    "					<span>Nom de vendeur :</span>\n" +
-    "					<span class=\"importantinfo\">Malick</span>\n" +
+    "					<span>Type du vendeur :</span>\n" +
+    "					<span class=\"importantinfo\">{{sellertype}}</span>\n" +
     "				</div>\n" +
-    "				<div class=\"priceinfo\">\n" +
-    "					<span>Type de vendeur :</span>\n" +
-    "					<span class=\"importantinfo\">Particulier</span>\n" +
-    "				</div>\n" +
-    "				<div>\n" +
+    "               <div class=\"priceinfo\">\n" +
+    "                    <span>Couleurs :</span>\n" +
+    "					<span class=\"importantinfo\">bleu,rouge,vert</span>\n" +
+    "                </div>\n" +
+    "				 <!--<div>\n" +
     "				<span>Quantité :</span>\n" +
     "				<input type=\"text\" style=\"width:20px; text-align:center;\" value=\"1\"/>\n" +
     "				</div>\n" +
+    "                -->\n" +
     "				<a href=\"#\" style=\"margin:10px 0 0 0; font-size:20px; padding:5px 15px;\" class=\"myButton\">Ajouter au panier</a>\n" +
     "			</div>\n" +
     "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
@@ -1801,7 +1800,7 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Nom :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"Arthur\" type=\"text\">\n" +
+    "            <input class=\"form-control\" value=\"\" type=\"text\">\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
@@ -1813,7 +1812,24 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Prix :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
-    "            <input class=\"form-control\" value=\"Rynn69270\" type=\"text\">\n" +
+    "            <input class=\"form-control\" value=\"\" type=\"text\">\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "         <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Couleurs :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "            <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"bleu\">Bleu\n" +
+    "        </label>\n" +
+    "        <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"rouge\">Rouge\n" +
+    "        </label>\n" +
+    "        <label class=\"btn btn-default active\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"vert\" checked=\"\">Vert\n" +
+    "        </label>\n" +
+    "           <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"other\">Multicolore ou autre\n" +
+    "        </label>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
@@ -2026,7 +2042,15 @@ angular.module("userprofile_edit/userprofile_edit.tpl.html", []).run(["$template
     "      </div>\n" +
     "    -->\n" +
     "      <h3 class=\"formtitle\">Informations personnelles</h3>\n" +
+    "     \n" +
     "      <form class=\"form-horizontal\" role=\"form\">\n" +
+    "        <div class=\"form-group\">\n" +
+    "          <label class=\"col-lg-3 control-label\">Statut :</label>\n" +
+    "          <div class=\"col-lg-8\">\n" +
+    "                <input type=\"radio\" name=\"group1\" value=\"Particulier\" checked> Particulier<br>\n" +
+    "                <input type=\"radio\" name=\"group1\" value=\"Professionnel\"> Professionnel <br>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
     "        <div class=\"form-group\">\n" +
     "          <label class=\"col-lg-3 control-label\">Prénom :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
@@ -2099,7 +2123,14 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "<br>\n" +
     "        <table class=\"table table-striped\">\n" +
     "            \n" +
-    "            <tbody><tr>\n" +
+    "            <tbody>\n" +
+    "            \n" +
+    "            <tr>\n" +
+    "                <td>Statut </td>\n" +
+    "                <td><i class=\"\"></i> <a>{{statut}}</a></td>\n" +
+    "            </tr>  \n" +
+    "                \n" +
+    "            <tr>\n" +
     "                <td>Nom </td>\n" +
     "                <td><i class=\"\"></i> <a>{{firstname}}</a></td>\n" +
     "            </tr>\n" +
@@ -2123,6 +2154,8 @@ angular.module("userspace/userspace.tpl.html", []).run(["$templateCache", functi
     "                <td><i class=\"fa fa-home\"></i> <a>{{adress}}</a></td>\n" +
     "            </tr>\n" +
     "        </tbody></table>\n" +
+    "        \n" +
+    "        <button type=\"button\" class=\"btn btn-danger\" style=\"margin-bottom: 15px;\">Supprimer votre compte</button>\n" +
     "\n" +
     "</div></div>\n" +
     "<div class=\"span5\">\n" +

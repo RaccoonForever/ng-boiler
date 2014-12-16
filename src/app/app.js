@@ -19,6 +19,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.offres',
   'ngBoilerplate.productpage',
   'ngBoilerplate.userprofile_edit',
+  /*'ngBoilerplate.translation',*/
   'ngBoilerplate.productupload',
   'ngBoilerplate.advance_research',
   'ngBoilerplate.search_result',
@@ -27,9 +28,12 @@ angular.module( 'ngBoilerplate', [
   'ui.router'
 ])
 
-.config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
+.config( function myAppConfig ( $stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise( '/home' );
+    
 })
+
+
 
 .run( function run ($rootScope, $location, ServiceLog) {
 	$rootScope.$on('$routeChangeStart', function (event) {
