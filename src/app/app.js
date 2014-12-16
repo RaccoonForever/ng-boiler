@@ -23,6 +23,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.productupload',
   'ngBoilerplate.advance_research',
   'ngBoilerplate.search_result',
+  'ngBoilerplate.panier',
   'notif',
   'ui.router'
 ])
