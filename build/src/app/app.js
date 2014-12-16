@@ -5,6 +5,9 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.about',
   'ngBoilerplate.products',
   'ngBoilerplate.useconditions',
+  'ngBoilerplate.expeditionconditions',
+  'ngBoilerplate.legalinformation',
+  'ngBoilerplate.contactus',
   'ngBoilerplate.login_register',
   'ngBoilerplate.userspace',
   'ngBoilerplate.livraison',
@@ -18,6 +21,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.userprofile_edit',
   'ngBoilerplate.productupload',
   'ngBoilerplate.advance_research',
+  'ngBoilerplate.search_result',
   'notif',
   'ui.router'
 ])
