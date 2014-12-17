@@ -38,7 +38,8 @@ module.exports = {
    */
   test_files: {
     js: [
-      'vendor/angular-mocks/angular-mocks.js'
+      'vendor/angular-mocks/angular-mocks.js',
+	  'vendor/angular-validation-match/build/angular-input-match.js'
     ]
   },
 
@@ -67,7 +68,8 @@ module.exports = {
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
-	  'vendor/angular/angular-resource.js'
+	  'vendor/angular/angular-resource.js',
+	  'vendor/angular-validation-match/build/angular-input-match.js'
     ],
     css: [
     ],

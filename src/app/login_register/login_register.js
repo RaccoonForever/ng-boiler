@@ -2,7 +2,8 @@ angular.module( 'ngBoilerplate.login_register', [
   'ui.router',
   'placeholders',
   'ui.bootstrap',
-  'ngResource'
+  'ngResource',
+  'validation.match'
 ])
 
 .config(function config( $stateProvider ) {
@@ -25,6 +26,8 @@ angular.module( 'ngBoilerplate.login_register', [
 			if ($scope.ConnectForm.$valid) {
 				var url = $scope.email;
 				console.log("Connect Form Valid ");
+				//console.log(url);
+				//console.log($scope.mdp);
 				
 				var res = checkMail(url, $scope.mdp,UserService,ServiceLog, notification);
 				
@@ -41,8 +44,10 @@ angular.module( 'ngBoilerplate.login_register', [
 .controller( 'SignCtrl', function ( $scope, UserService, UserService2, ServiceLog ) {
 
 		console.log("SignCtrl Instancié");
+		
 		$scope.UserService = UserService;
 		$scope.signClick = function() {
+			
 			if ($scope.SignForm.$valid) {
 				console.log($scope.users.mailU);
 				signIn($scope.users.mailU, $scope.users, UserService, UserService2);
@@ -52,9 +57,10 @@ angular.module( 'ngBoilerplate.login_register', [
 
 
 .factory('UserService', function ($http) {
-	var url = "users/sign";
+	var url = "https://localhost:8181/ecom/users/sign";
 	return {
 		get: function(ur,mdp) {
+			console.log(ur+"   "+mdp);
 			return $http.get(url+"/"+ur+"/"+mdp);
 		},
 		getUserExist : function(ur){
@@ -66,11 +72,14 @@ angular.module( 'ngBoilerplate.login_register', [
 		};
 	})
 	
+	
+
+	
 .factory('UserService2', function ($resource) {
-	return $resource('http://localhost:8080/ecom/users/sign/:mail', {}, {
+	return $resource('https://localhost:8181/ecom/users/sign/:mail', {}, {
 		get: { method: 'GET', params: {mail: '@mail'} },
 		update: { method: 'PUT', params: {mail: '@mail'} },
-		post: { method: 'POST' },
+		post: { method: 'POST' }, 
 		del: { method: 'DELETE', params: {mail: '@mail'} }
     });
 });
@@ -79,20 +88,23 @@ function checkMail(url, mdp, service, ServiceLog, notification){
 	service.get(url,mdp).
 		success(function(data) {
 			var res = angular.toJson(data); 
+			//console.log(res);
 			if (res.localeCompare("\"true\"") === 0)
 				{
 					console.log("MAIL + MDP ACCORDING");
 					ServiceLog.setUser(url);
 					notification.add("Logged IN", 5);
+					console.log("loggedin :" + ServiceLog.isLoggedIn());
 					return 1;
 				}
-			else
+			else 
 				{	console.log("MAIL + MDP NOT ACCORDING");
 					return 0;
 				}  
 		}).
 		error(function(data, status, headers, config) {
-			return -1;
+			console.log("Error get http checkMail");
+			return -1; 
 		});
 }
 
@@ -100,7 +112,6 @@ function signIn(url, users, serviceHTTP, serviceRessource){
 	serviceHTTP.getUserExist(url).
 		success(function(data) {
 			var res = angular.toJson(data);
-			console.log("Resultat comparaison : " +res);
 			if (res.localeCompare("\"true\"") === 0) {
 				// User already exists
 				return -1;

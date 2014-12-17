@@ -1,9 +1,16 @@
-.bs-example{
-		margin: 20px;
-		width: 45%;
-		float:right;
-	}
+.ulnotif {
+list-style: none;
+}
 
-.alert_ul {
-		list-style:none;
+
+.notification {
+background: rgb(135, 213, 135);
+width: 15%;
+height: 10%;
+border-radius: 10px;
+float: right;
+text-align: left;
+padding-top: 15px;
+padding-left: 20px;
+
 }

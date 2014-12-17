@@ -28,7 +28,7 @@ angular.module( 'ngBoilerplate.productpage', [
 
 
 
-.factory('UserService', function ($http) {
+.factory('ProductService', function ($http) {
 	var url = "users/sign";
 	return {
 		get: function(ur) {

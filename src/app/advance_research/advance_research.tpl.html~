@@ -1,0 +1,83 @@
+<div ng-app class="container row" >            
+            <form role="form">
+                <div class="form-group" ng-controller="ResearchCtrl" >
+                    
+                    <div class="col-md-4">
+                        <select class="form-control"                                                    
+                            ng-model="selectedParentItem"                        
+                            ng-options="p.displayName for p in parentItems">                        
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control"                                                    
+                            ng-model="selectedChildItem"                     
+                            ng-options="c.displayName for c in filteredArray | filter:{parentId: selectedParentItem.id}">                        
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control"                                                    
+                            ng-model="selectedGrandChildItem"                        
+                            ng-options="g.displayName for g in grandChildItems | filter:{parentId: selectedChildItem.parentId}">                        
+                        </select>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+<!--
+<div class="container">
+ <div class="row">
+ 
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form name="ConnectForm" role="form" ng-controller="LoginCtrl">
+        <h2 class="pagetitle">Recherche Avancée</h2>
+        <hr class="colorgraph"> </hr>
+        <div class="row">
+          <div class="form-group" ng-controller="dropdownCtrl">
+            <div class="research-field">
+			<select name="s1" onchange="chg(document.f1.s1,document.f1.s2)" style="margin-top:20px;" class="form-control">
+				<option value=""> - Type d'article - </option>
+				<option value=""> - Bracelet - </option>
+				<option value=""> - Collier - </option>
+				<option value=""> - Chaussette - </option>
+				<option value=""> - Echarpe - </option>
+			</select>
+			<select name="s2" class="form-control" style="margin-top:20px;">
+				<option value="default"> - Taille d'article - </option>
+			</select>
+			<select style="margin-top:20px;" class="form-control">
+				<option value=""> - Intervalle de prix - </option>
+				<option value=""> -  0 - 10 euros - </option>
+				<option value=""> - 10 - 20 euros - </option>
+				<option value=""> - 20 - 50 euros - </option>
+				<option value=""> - plus de 50 euros - </option>
+			</select>
+			<select style="margin-top:20px;" class="form-control">
+				<option value=""> - Trier par couleur - </option>
+				<option value=""> - Rouge - </option>
+				<option value=""> - Vert - </option>
+				<option value=""> - Bleu - </option>
+				<option value=""> - Autre - </option>
+			</select>
+			<select style="margin-top:20px;" class="form-control">
+				<option value=""> - Type de vendeur - </option>
+				<option value=""> - Particulier - </option>
+				<option value=""> - Professionel - </option>
+			</select>            
+			
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+		  <input type="submit" value="Rechercher!" class="btn btn-primary btn-block btn-lg" tabindex="7"  style="margin-left: 50%; margin-top:30px;
+              background: rgb(25, 176, 25);border: none;" ng-click="loginClick()">
+		  </div>
+        </div>    
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+-->

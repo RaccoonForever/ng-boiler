@@ -6,15 +6,15 @@
         <h2 class="pagetitle">Recherche Avancée</h2>
         <hr class="colorgraph"> </hr>
         <div class="row">
-          <div class="form-group">
+          <div class="form-group" ng-controller="ResearchCtrl">
             <div class="research-field">
-			<!--<input placeholder="- Mots clés -" class="form-control">-->
-			<select style="margin-top:20px;" class="form-control">
-				<option value=""> - Type d'article - </option>
-				<option value=""> - Bracelet - </option>
-				<option value=""> - Collier - </option>
-				<option value=""> - Chaussette - </option>
-				<option value=""> - Echarpe - </option>
+			<select name="s1" style="margin-top:20px;" class="form-control"
+				ng-model="selectedParentItem"                        
+                ng-options="p.displayName for p in parentItems">  
+			</select>
+			<select name="s2" class="form-control" style="margin-top:20px;"
+				ng-model="selectedChildItem"                     
+                ng-options="c.displayName for c in filteredArray | filter:{parentId: selectedParentItem.id}">
 			</select>
 			<select style="margin-top:20px;" class="form-control">
 				<option value=""> - Intervalle de prix - </option>
@@ -47,20 +47,7 @@
       </form>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+</div>
+</div>
 
-</div>
-</div>
+

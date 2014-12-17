@@ -23,8 +23,10 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.productupload',
   'ngBoilerplate.advance_research',
   'ngBoilerplate.search_result',
+  'ngBoilerplate.lost_password',
   'ngBoilerplate.panier',
   'notif',
+  'validation.match',
   'ui.router'
 ])
 
@@ -37,11 +39,12 @@ angular.module( 'ngBoilerplate', [
 
 .run( function run ($rootScope, $location, ServiceLog) {
 	$rootScope.$on('$routeChangeStart', function (event) {
+	console.log("routechange");
 	if (!ServiceLog.isLoggedIn()) {
 			console.log('DENY');
 			event.preventDefault();
 			$location.path('/login_register');
-		}
+		} 
 		else {
 			console.log('ALLOW');
 			$location.path('/home');
@@ -57,7 +60,9 @@ angular.module( 'ngBoilerplate', [
     }
   });
   
-	$scope.$watch(ServiceLog.isLoggedIn, function (value, oldValue) {
+	$scope.ServiceLog = ServiceLog;
+  
+	$scope.$watch(ServiceLog.isLoggedIn, function (value, oldValue ) {
 
 	if(!value && oldValue) {
 		console.log("Disconnect");
@@ -67,10 +72,42 @@ angular.module( 'ngBoilerplate', [
 		console.log("Connect");
 		//Do something when the user is connected
 		console.log("You did it");
-		//$location.path('/home');
+		
+		$location.path('/home');
 	}
 
 	}, true);
+})
+
+.directive('equals', function () {
+	return {
+	restrict: 'A', // only activate on element attribute
+	require: '?ngModel', // get a hold of NgModelController
+	link: function(scope, elem, attrs, ngModel) {
+		if(!ngModel) {return;} // do nothing if no ng-model
+
+      // watch own value and re-validate on change
+		scope.$watch(attrs.ngModel, function() {
+			validate();
+	});
+
+      // observe the other value and re-validate on change
+		attrs.$observe('equals', function (val) {
+			validate();
+	});
+
+		var validate = function() {
+        // values
+		var val1 = ngModel.$viewValue;
+		var val2 = attrs.equals;
+
+        // set validity
+		ngModel.$setValidity('equals', ! val1 || ! val2 || val1 === val2);
+		
+
+      };
+    }
+  };
 })
 
  .factory('ServiceLog', function(){

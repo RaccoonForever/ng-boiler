@@ -1,0 +1,63 @@
+function obj(aData,aValue,aText){
+	this.Data=aData;
+	this.Value=aValue;
+	this.Text=aText;
+}
+//设置选项数据数组，可以添加多个参数为"源地址,选择值，选择文本"
+var Set_data=new Array(
+	new obj('chaussette','chaussette','- Taille et Modèle de mobile -'),
+	new obj('chaussette','3.5','3.5 pouce pour Iphone4/4s'),
+	new obj('chaussette','4.5','4.5 pouce pour Iphone5/5s'),
+	new obj('chaussette','5.5','5.5 pouce pour Galaxy S5'),
+	new obj('chaussette','6.5','6.5 pouce pour Galaxy NOTE'),
+	new obj('chaussette','7','7 pouce pour Galaxy TAB'),
+	new obj('bracelet','bracelet','- Taille bracelet -'),
+	new obj('bracelet','S','S'),
+	new obj('bracelet','M','M'),
+	new obj('bracelet','L','L'),
+	new obj('bracelet','XL','XL'),
+	new obj('bracelet','XXL','XXL'),
+	new obj('écharpe','écharpe','- Taille écharpe -'),
+	new obj('écharpe','S','S'),
+	new obj('écharpe','M','M'),
+	new obj('écharpe','L','L'),
+	new obj('écharpe','XL','XL'),
+	new obj('écharpe','XXL','XXL'),
+	new obj('collier','collier','- Taille collier -'),
+	new obj('collier','S','S'),
+	new obj('collier','M','M'),
+	new obj('collier','L','L'),
+	new obj('collier','XL','XL'),
+	new obj('collier','XXL','XXL')
+	
+	
+	);
+//该函数接受两个参数——两个下拉菜单
+function chg(parent,child){
+	//以父菜单的选中选项的值，子菜单，和选项数数据组为参数调用chg函数
+	chgComitem(parent.options[parent.selectedIndex].value,child,Set_data);
+}
+function chgComitem(parentValue,child,objs){ //改变子菜单
+	//1.以子菜单为参数调用函数
+	DelAllComitem(child);
+	//2.遍历所有的选项数据
+	for(i=0;i<objs.length;i++){
+		//如果选项数据的Data与父菜单选中值一样的话
+		if (objs[i].Data==parentValue)
+			//3.以子菜单，选项数据的值，选项数据的文本作为参数调用AddComitem
+			AddComitem(child,objs[i].Value,objs[i].Text);		
+	}
+}
+//1.删除子菜单的所有元素
+function DelAllComitem(aList){   
+	//传入的是select元素，让options全为null
+	for(i=aList.options.length-1;i>=0;i--)
+	aList.options[i]=null;
+}
+//3.添加子菜单的元素
+function AddComitem(aList,aValue,aText){
+	//用传入的文本和值来创建option
+	var aOption=new Option(aText,aValue);
+	//插入option（注：length属性比最大下标大1）
+	aList.options[aList.options.length]=aOption;
+}
