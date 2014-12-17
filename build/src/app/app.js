@@ -24,6 +24,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.advance_research',
   'ngBoilerplate.search_result',
   'ngBoilerplate.lost_password',
+  'ngBoilerplate.panier',
   'notif',
   'validation.match',
   'ui.router'

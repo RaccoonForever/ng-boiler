@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'lost_password/lost_password.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'lost_password/lost_password.tpl.html', 'offres/offres.tpl.html', 'panier/panier.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -280,15 +280,15 @@ angular.module("advance_research/advance_research.tpl.html", []).run(["$template
     "        <h2 class=\"pagetitle\">Recherche Avancée</h2>\n" +
     "        <hr class=\"colorgraph\"> </hr>\n" +
     "        <div class=\"row\">\n" +
-    "          <div class=\"form-group\">\n" +
+    "          <div class=\"form-group\" ng-controller=\"ResearchCtrl\">\n" +
     "            <div class=\"research-field\">\n" +
-    "			<!--<input placeholder=\"- Mots clés -\" class=\"form-control\">-->\n" +
-    "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
-    "				<option value=\"\"> - Type d'article - </option>\n" +
-    "				<option value=\"\"> - Bracelet - </option>\n" +
-    "				<option value=\"\"> - Collier - </option>\n" +
-    "				<option value=\"\"> - Chaussette - </option>\n" +
-    "				<option value=\"\"> - Echarpe - </option>\n" +
+    "			<select name=\"s1\" style=\"margin-top:20px;\" class=\"form-control\"\n" +
+    "				ng-model=\"selectedParentItem\"                        \n" +
+    "                ng-options=\"p.displayName for p in parentItems\">  \n" +
+    "			</select>\n" +
+    "			<select name=\"s2\" class=\"form-control\" style=\"margin-top:20px;\"\n" +
+    "				ng-model=\"selectedChildItem\"                     \n" +
+    "                ng-options=\"c.displayName for c in filteredArray | filter:{parentId: selectedParentItem.id}\">\n" +
     "			</select>\n" +
     "			<select style=\"margin-top:20px;\" class=\"form-control\">\n" +
     "				<option value=\"\"> - Intervalle de prix - </option>\n" +
@@ -321,23 +321,11 @@ angular.module("advance_research/advance_research.tpl.html", []).run(["$template
     "      </form>\n" +
     "    </div>\n" +
     "  </div>\n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "  \n" +
-    "\n" +
     "</div>\n" +
-    "</div>");
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("bracelets/bracelets.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -1489,18 +1477,112 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "");
 }]);
 
+angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("panier/panier.tpl.html",
+    "<div class=\"container\">\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-sm-12 col-md-10 col-md-offset-1\">\n" +
+    "            <table class=\"table table-hover\">\n" +
+    "                <thead>\n" +
+    "                    <tr>\n" +
+    "                        <th>Product</th>\n" +
+    "                        <th>Quantity</th>\n" +
+    "                        <th class=\"text-center\">Price</th>\n" +
+    "                        <th class=\"text-center\">Total</th>\n" +
+    "                        <th> </th>\n" +
+    "                    </tr>\n" +
+    "                </thead>\n" +
+    "                <tbody>\n" +
+    "                    <tr>\n" +
+    "                        <td class=\"col-sm-8 col-md-6\">\n" +
+    "                        <div class=\"media\">\n" +
+    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png\" style=\"width: 72px; height: 72px;\"> </a>\n" +
+    "                            <div class=\"media-body\">\n" +
+    "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
+    "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
+    "                                <span>Status: </span><span class=\"text-success\"><strong>In Stock</strong></span>\n" +
+    "                            </div>\n" +
+    "                        </div></td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1\" style=\"text-align: center\">\n" +
+    "                        <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" value=\"3\">\n" +
+    "                        </td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1 text-center\"><strong>$4.87</strong></td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1 text-center\"><strong>$14.61</strong></td>\n" +
+    "                        <td class=\"col-sm-1 col-md-1\">\n" +
+    "                        <button type=\"button\" class=\"btn btn-danger\">\n" +
+    "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "                        </button></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td class=\"col-md-6\">\n" +
+    "                        <div class=\"media\">\n" +
+    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png\" style=\"width: 72px; height: 72px;\"> </a>\n" +
+    "                            <div class=\"media-body\">\n" +
+    "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
+    "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
+    "                                <span>Status: </span><span class=\"text-warning\"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>\n" +
+    "                            </div>\n" +
+    "                        </div></td>\n" +
+    "                        <td class=\"col-md-1\" style=\"text-align: center\">\n" +
+    "                        <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" value=\"2\">\n" +
+    "                        </td>\n" +
+    "                        <td class=\"col-md-1 text-center\"><strong>$4.99</strong></td>\n" +
+    "                        <td class=\"col-md-1 text-center\"><strong>$9.98</strong></td>\n" +
+    "                        <td class=\"col-md-1\">\n" +
+    "                        <button type=\"button\" class=\"btn btn-danger\">\n" +
+    "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "                        </button></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td><h5>Subtotal</h5></td>\n" +
+    "                        <td class=\"text-right\"><h5><strong>$24.59</strong></h5></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td><h5>Estimated shipping</h5></td>\n" +
+    "                        <td class=\"text-right\"><h5><strong>$6.94</strong></h5></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td><h3>Total</h3></td>\n" +
+    "                        <td class=\"text-right\"><h3><strong>$31.53</strong></h3></td>\n" +
+    "                    </tr>\n" +
+    "                    <tr>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>   </td>\n" +
+    "                        <td>\n" +
+    "                        <button type=\"button\" class=\"btn btn-default\">\n" +
+    "                            <span class=\"glyphicon glyphicon-shopping-cart\"></span> Continue Shopping\n" +
+    "                        </button></td>\n" +
+    "                        <td>\n" +
+    "                        <button type=\"button\" class=\"btn btn-success\">\n" +
+    "                            Checkout <span class=\"glyphicon glyphicon-play\"></span>\n" +
+    "                        </button></td>\n" +
+    "                    </tr>\n" +
+    "                </tbody>\n" +
+    "            </table>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>");
+}]);
+
 angular.module("partials/notifications.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("partials/notifications.tpl.html",
-    "\n" +
-    "<div class=\"bs-example\">\n" +
-    "    <div class=\"alert alert-success\" ng-controller=\"NotificationsCtrl\">\n" +
-    "	<ul class=\"alert_ul\">\n" +
+    "<div id=\"notifications\" ng-controller=\"NotificationsCtrl\" >\n" +
+    "   <ul class=\"ulnotif\">\n" +
     "        <li ng-repeat=\"notif in notifications\">\n" +
-    "        <a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>\n" +
-    "        <span ng-bind=\"notif.text\">TEXTE</span>\n" +
-    "	</li>\n" +
-    "	</ul>\n" +
-    "    </div>\n" +
+    "            <p class=\"notification\" ng-bind=\"notif.text\">texte</p>\n" +
+    "        </li>\n" +
+    "    </ul>\n" +
+    "</div>\n" +
     "\n" +
     "");
 }]);
@@ -1543,6 +1625,10 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "               <div class=\"priceinfo\">\n" +
     "                    <span>Couleurs :</span>\n" +
     "					<span class=\"importantinfo\">bleu,rouge,vert</span>\n" +
+    "                </div>\n" +
+    "                <div class=\"priceinfo\">\n" +
+    "                    <span>Taille :</span>\n" +
+    "					<span class=\"importantinfo\">S,M,L,</span>\n" +
     "                </div>\n" +
     "				 <!--<div>\n" +
     "				<span>Quantité :</span>\n" +
@@ -1756,13 +1842,13 @@ angular.module("productupload/productupload.tpl.html", []).run(["$templateCache"
     "          <label class=\"col-lg-3 control-label\">Couleurs :</label>\n" +
     "          <div class=\"col-lg-8\">\n" +
     "            <label class=\"btn btn-default\">\n" +
-    "            <input type=\"radio\" name=\"year\" value=\"bleu\">Bleu\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"bleu\" checked=\"\">Bleu\n" +
     "        </label>\n" +
     "        <label class=\"btn btn-default\">\n" +
     "            <input type=\"radio\" name=\"year\" value=\"rouge\">Rouge\n" +
     "        </label>\n" +
-    "        <label class=\"btn btn-default active\">\n" +
-    "            <input type=\"radio\" name=\"year\" value=\"vert\" checked=\"\">Vert\n" +
+    "        <label class=\"btn btn-default\">\n" +
+    "            <input type=\"radio\" name=\"year\" value=\"vert\">Vert\n" +
     "        </label>\n" +
     "           <label class=\"btn btn-default\">\n" +
     "            <input type=\"radio\" name=\"year\" value=\"other\">Multicolore ou autre\n" +

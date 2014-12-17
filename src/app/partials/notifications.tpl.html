@@ -1,11 +1,8 @@
-
-<div class="bs-example">
-    <div class="alert alert-success" ng-controller="NotificationsCtrl">
-	<ul class="alert_ul">
+<div id="notifications" ng-controller="NotificationsCtrl" >
+   <ul class="ulnotif">
         <li ng-repeat="notif in notifications">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <span ng-bind="notif.text">TEXTE</span>
-	</li>
-	</ul>
-    </div>
+            <p class="notification" ng-bind="notif.text">texte</p>
+        </li>
+    </ul>
+</div>
 
