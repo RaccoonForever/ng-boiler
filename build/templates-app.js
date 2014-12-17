@@ -1479,7 +1479,7 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
 
 angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("panier/panier.tpl.html",
-    "<div class=\"container\">\n" +
+    "<div class=\"container\" style=\"font-family:Calibri Light;\">\n" +
     "    <div class=\"row\">\n" +
     "        <div class=\"col-sm-12 col-md-10 col-md-offset-1\">\n" +
     "            <table class=\"table table-hover\">\n" +
@@ -1494,42 +1494,43 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "                </thead>\n" +
     "                <tbody>\n" +
     "                    <tr>\n" +
-    "                        <td class=\"col-sm-8 col-md-6\">\n" +
-    "                        <div class=\"media\">\n" +
-    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png\" style=\"width: 72px; height: 72px;\"> </a>\n" +
+    "                        <td class=\"col-sm-8 col-md-6\" >\n" +
+    "                        <div class=\"media\" style=\"margin-top:15px;\">\n" +
+    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://placehold.it/160x80\" style=\"width: 160px; height: 80px;\"> </a>\n" +
     "                            <div class=\"media-body\">\n" +
     "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
     "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
     "                                <span>Status: </span><span class=\"text-success\"><strong>In Stock</strong></span>\n" +
     "                            </div>\n" +
     "                        </div></td>\n" +
-    "                        <td class=\"col-sm-1 col-md-1\" style=\"text-align: center\">\n" +
-    "                        <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" value=\"3\">\n" +
-    "                        </td>\n" +
-    "                        <td class=\"col-sm-1 col-md-1 text-center\"><strong>$4.87</strong></td>\n" +
-    "                        <td class=\"col-sm-1 col-md-1 text-center\"><strong>$14.61</strong></td>\n" +
-    "                        <td class=\"col-sm-1 col-md-1\">\n" +
-    "                        <button type=\"button\" class=\"btn btn-danger\">\n" +
-    "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
-    "                        </button></td>\n" +
+    "						\n" +
+    "							<td id=\"panierinfo\" class=\"col-sm-1 col-md-1\" style=\"text-align: center;\">\n" +
+    "							<input type=\"email\" class=\"form-control\" value=\"3\">\n" +
+    "							</td>\n" +
+    "							<td id=\"panierinfo\" class=\"col-sm-1 col-md-1 text-center\"><strong>$4.87</strong></td>\n" +
+    "							<td id=\"panierinfo\" class=\"col-sm-1 col-md-1 text-center\"><strong>$14.61</strong></td>\n" +
+    "							<td id=\"panierinfo\" class=\"col-sm-1 col-md-1\">\n" +
+    "							<button id=\"panierinfo\" type=\"button\" class=\"btn btn-danger\">\n" +
+    "								<span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "							</button></td>\n" +
     "                    </tr>\n" +
     "                    <tr>\n" +
     "                        <td class=\"col-md-6\">\n" +
-    "                        <div class=\"media\">\n" +
-    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png\" style=\"width: 72px; height: 72px;\"> </a>\n" +
+    "                        <div class=\"media\" style=\"margin-top:15px;\">\n" +
+    "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://placehold.it/160x80\" style=\"width: 160px; height: 80px;\"> </a>\n" +
     "                            <div class=\"media-body\">\n" +
     "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
     "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
     "                                <span>Status: </span><span class=\"text-warning\"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>\n" +
     "                            </div>\n" +
     "                        </div></td>\n" +
-    "                        <td class=\"col-md-1\" style=\"text-align: center\">\n" +
+    "                        <td id=\"panierinfo\" class=\"col-md-1\" style=\"text-align: center\">\n" +
     "                        <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" value=\"2\">\n" +
     "                        </td>\n" +
-    "                        <td class=\"col-md-1 text-center\"><strong>$4.99</strong></td>\n" +
-    "                        <td class=\"col-md-1 text-center\"><strong>$9.98</strong></td>\n" +
-    "                        <td class=\"col-md-1\">\n" +
-    "                        <button type=\"button\" class=\"btn btn-danger\">\n" +
+    "                        <td id=\"panierinfo\" class=\"col-md-1 text-center\"><strong>$4.99</strong></td>\n" +
+    "                        <td id=\"panierinfo\" class=\"col-md-1 text-center\"><strong>$9.98</strong></td>\n" +
+    "                        <td id=\"panierinfo\" class=\"col-md-1\">\n" +
+    "                        <button id=\"panierinfo\" type=\"button\" class=\"btn btn-danger\">\n" +
     "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
     "                        </button></td>\n" +
     "                    </tr>\n" +
