@@ -2,7 +2,8 @@ angular.module( 'ngBoilerplate.login_register', [
   'ui.router',
   'placeholders',
   'ui.bootstrap',
-  'ngResource'
+  'ngResource',
+  'validation.match'
 ])
 
 .config(function config( $stateProvider ) {
@@ -43,8 +44,10 @@ angular.module( 'ngBoilerplate.login_register', [
 .controller( 'SignCtrl', function ( $scope, UserService, UserService2, ServiceLog ) {
 
 		console.log("SignCtrl Instancié");
+		
 		$scope.UserService = UserService;
 		$scope.signClick = function() {
+			
 			if ($scope.SignForm.$valid) {
 				console.log($scope.users.mailU);
 				signIn($scope.users.mailU, $scope.users, UserService, UserService2);
@@ -69,6 +72,9 @@ angular.module( 'ngBoilerplate.login_register', [
 		};
 	})
 	
+	
+
+	
 .factory('UserService2', function ($resource) {
 	return $resource('https://localhost:8181/ecom/users/sign/:mail', {}, {
 		get: { method: 'GET', params: {mail: '@mail'} },
@@ -88,6 +94,7 @@ function checkMail(url, mdp, service, ServiceLog, notification){
 					console.log("MAIL + MDP ACCORDING");
 					ServiceLog.setUser(url);
 					notification.add("Logged IN", 5);
+					console.log("loggedin :" + ServiceLog.isLoggedIn());
 					return 1;
 				}
 			else 
@@ -105,7 +112,6 @@ function signIn(url, users, serviceHTTP, serviceRessource){
 	serviceHTTP.getUserExist(url).
 		success(function(data) {
 			var res = angular.toJson(data);
-			console.log("Resultat comparaison : " +res);
 			if (res.localeCompare("\"true\"") === 0) {
 				// User already exists
 				return -1;

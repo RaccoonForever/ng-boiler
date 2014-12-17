@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'advance_research/advance_research.tpl.html', 'bracelets/bracelets.tpl.html', 'chaussettes/chaussettes.tpl.html', 'colliers/colliers.tpl.html', 'contactus/contactus.tpl.html', 'echarpes/echarpes.tpl.html', 'expeditionconditions/expeditionconditions.tpl.html', 'home/home.tpl.html', 'infoslivraison/infoslivraison.tpl.html', 'legalinformation/legalinformation.tpl.html', 'livraison/livraison.tpl.html', 'login_register/login_register.tpl.html', 'lost_password/lost_password.tpl.html', 'offres/offres.tpl.html', 'partials/notifications.tpl.html', 'productpage/productpage.tpl.html', 'products/products.tpl.html', 'productupload/productupload.tpl.html', 'search_result/search_result.tpl.html', 'useconditions/useconditions.tpl.html', 'userprofile_edit/userprofile_edit.tpl.html', 'userspace/userspace.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -1193,7 +1193,7 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "              <input type=\"password\" name=\"inputmdp\" class=\"form-control\" id=\"exampleInputPassword1\"\n" +
     "                placeholder=\"Mot de passe\" ng-model=\"mdp\" required>\n" +
     "            </div>\n" +
-    "            <a href=\"#\" class=\"pull-right small\">Mot de passe perdu ?</a>\n" +
+    "            <a href=\"#/lost_password\" class=\"pull-right small\">Mot de passe perdu ?</a>\n" +
     "          </div>\n" +
     "            \n" +
     "        <div class=\"checkbox\">\n" +
@@ -1221,30 +1221,31 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"text\" name=\"fNameU\" id=\"first_name\" ng-model=\"users.fNameU\" class=\"form-control input-lg\" placeholder=\"Prenom\" tabindex=\"1\" required>\n" +
+    "              <input type=\"text\" name=\"fNameU\" id=\"first_name\" ng-model=\"users.fNameU\" class=\"form-control input-lg\" placeholder=\"Prenom\" tabindex=\"1\" required/>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"text\" name=\"lNameU\" id=\"last_name\" ng-model=\"users.lNameU\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\" required>\n" +
+    "              <input type=\"text\" name=\"lNameU\" id=\"last_name\" ng-model=\"users.lNameU\" class=\"form-control input-lg\" placeholder=\"Nom\" tabindex=\"2\" required />\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "          <input type=\"email\" name=\"mailU\" id=\"email\" ng-model=\"users.mailU\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\" required>\n" +
+    "          <input type=\"email\" name=\"mailU\" id=\"email\" ng-model=\"users.mailU\" class=\"form-control input-lg\" placeholder=\"Addresse mail\" tabindex=\"4\" required/>\n" +
     "        </div>\n" +
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"password\" name=\"passwordU\" id=\"password\" ng-model=\"users.passwordU\" class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\" required>\n" +
+    "              <input type=\"password\" name=\"users.passwordU\" id=\"users.passwordU\" ng-model=\"users.passwordU\"  class=\"form-control input-lg\" placeholder=\"Mot de passe\" tabindex=\"5\" required />\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
-    "              <input type=\"password\" name=\"password_confirmation\" id=\"password_confirmation\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\" required>\n" +
-    "            </div>\n" +
-    "          </div>\n" +
-    "        </div>\n" +
+    "              <input type=\"password\" name=\"passwordU2\" id=\"users.passwordU2\" ng-model=\"users.passwordU2\" data-match=\"users.passwordU\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\" required />\n" +
+    "				<div ng-show=\"SignForm.passwordU2.$error.match\">Fields do not match!</div>\n" +
+    "			</div>\n" +
+    "		</div>\n" +
+    "		</div>\n" +
     "        <div class=\"row\">\n" +
     "          <div class=\"col-xs-12 .col-sm-6 .col-md-8\" id=\"buttonstyle\">\n" +
     "            En cliquant sur <strong class=\"label label-primary\">S'inscrire</strong>, Vous acceptez les <a href=\"#/useconditions\" data-toggle=\"modal\" data-target=\"#t_and_c_m\">  Conditions Générales d'utilisation</a> du site\n" +
@@ -1286,6 +1287,39 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "    <!-- /.modal-dialog -->\n" +
     "  </div>\n" +
     "  <!-- /.modal -->\n" +
+    "</div>\n" +
+    "</div>");
+}]);
+
+angular.module("lost_password/lost_password.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("lost_password/lost_password.tpl.html",
+    "<div class=\"container\">\n" +
+    " <div class=\"row\">\n" +
+    " \n" +
+    "    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n" +
+    "      <form name=\"RecupForm\" role=\"form\" ng-controller=\"LostPswdCtrl\">\n" +
+    "        <h2 class=\"pagetitle\">Récupérer mot de passe</h2>\n" +
+    "        <hr class=\"colorgraph\">\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"form-group\">\n" +
+    "            <label for=\"exampleInputEmail1\" class=\"sr-only\">Adresse email</label>\n" +
+    "            <div class=\"input-group\">\n" +
+    "              <span class=\"input-group-addon\"><i class=\"fa fa-user fa-fw\"></i></span>\n" +
+    "              <input type=\"email\" name=\"inputemail\" class=\"form-control\" id=\"exampleInputEmail1\"\n" +
+    "                placeholder=\"Adresse mail\" ng-model=\"email\" required>\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "		<p>Tout mot de passe perdu ne pourras pas être récupéré. Dans ce cas, nous vous enverrons par mail un nouveau mot de passe et vous pourrez le changer plus tard dans votre profil.</p>\n" +
+    "\n" +
+    "        <div class=\"row\">\n" +
+    "          <div class=\"col-xs-6 col-md-6\">\n" +
+    "		  <input type=\"submit\" value=\"Envoyer !\" class=\"btn btn-primary btn-block btn-lg\" tabindex=\"7\"  style=\"margin-left: 50%;\n" +
+    "              background: rgb(25, 176, 25);border: none;\" ng-click=\"send()\">\n" +
+    "		  </div>\n" +
+    "        </div>    \n" +
+    "      </form>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
     "</div>\n" +
     "</div>");
 }]);

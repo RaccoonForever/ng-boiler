@@ -24,6 +24,7 @@
     <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
     <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="vendor/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="vendor/angular-validation-match/build/angular-input-match.js"></script>
     <script type="text/javascript" src="src/app/about/about.js"></script>
     <script type="text/javascript" src="src/app/advance_research/advance_research.js"></script>
     <script type="text/javascript" src="src/app/app.js"></script>
@@ -38,6 +39,7 @@
     <script type="text/javascript" src="src/app/legalinformation/legalinformation.js"></script>
     <script type="text/javascript" src="src/app/livraison/livraison.js"></script>
     <script type="text/javascript" src="src/app/login_register/login_register.js"></script>
+    <script type="text/javascript" src="src/app/lost_password/lost_password.js"></script>
     <script type="text/javascript" src="src/app/offres/offres.js"></script>
     <script type="text/javascript" src="src/app/partials/notif.js"></script>
     <script type="text/javascript" src="src/app/productpage/productpage.js"></script>
@@ -89,12 +91,15 @@
                 <div id="mon-espace">
 					<nav class="navtext">
 						<ul class="social">
-							<li><a href="#/userspace" translate="MONESPACE"/>Mon espace</a></li>
+							<li><a href="#/userspace" translate="MONESPACE" ng-show="ServiceLog.isLoggedIn()"/>Mon espace</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div style="float:left; font-style:italic;">
-					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" ng-show="!isLoggedIn" translate="SECONNECTER">Se connecter</a>
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" ng-show="!ServiceLog.isLoggedIn()" translate="SECONNECTER">Se connecter</a>
+				</div>
+				<div style="float:left; font-style:italic;">
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" ng-show="ServiceLog.isLoggedIn()" translate="SEDECONNECTER">Logout</a>
 				</div>
 				<div id="panier">
 					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
