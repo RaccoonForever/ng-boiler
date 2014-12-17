@@ -1366,13 +1366,13 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "                            </ol>\n" +
     "                            <div class=\"carousel-inner\">\n" +
     "                                <div class=\"item active\">\n" +
-    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                    <img class=\"slide-image\" src=\"./assets/images/Offre1.jpg\" alt=\"\">\n" +
     "                                </div>\n" +
     "                                <div class=\"item\">\n" +
-    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                    <img class=\"slide-image\" src=\"./assets/images/Offre2.jpg\" alt=\"\">\n" +
     "                                </div>\n" +
     "                                <div class=\"item\">\n" +
-    "                                    <img class=\"slide-image\" src=\"http://placehold.it/800x300\" alt=\"\">\n" +
+    "                                    <img class=\"slide-image\" src=\"./assets/images/Offre3.jpg\" alt=\"\">\n" +
     "                                </div>\n" +
     "                            </div>\n" +
     "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n" +
@@ -1389,7 +1389,7 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "                <div class=\"row\">\n" +
     "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
     "                        <div class=\"thumbnail\">\n" +
-    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <img src=\"./assets/images/small1.jpg\" alt=\"\">\n" +
     "                            <div class=\"caption\">\n" +
     "                                <h4 class=\"pull-right\">17.99€</h4>\n" +
     "                                <h4><a href=\"#\">Produit X</a>\n" +
@@ -1414,7 +1414,7 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
     "                        <div class=\"thumbnail\">\n" +
-    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <img src=\"./assets/images/small2.jpg\" alt=\"\">\n" +
     "                            <div class=\"caption\">\n" +
     "                                <h4 class=\"pull-right\">8.99€</h4>\n" +
     "                                <h4><a href=\"#\">Produit X</a>\n" +
@@ -1439,7 +1439,7 @@ angular.module("offres/offres.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "                    <div class=\"col-sm-4 col-lg-4 col-md-4\">\n" +
     "                        <div class=\"thumbnail\">\n" +
-    "                            <img src=\"http://placehold.it/320x150\" alt=\"\">\n" +
+    "                            <img src=\"./assets/images/small3.jpg\" alt=\"\">\n" +
     "                            <div class=\"caption\">\n" +
     "                                <h4 class=\"pull-right\">14.99€</h4>\n" +
     "                                <h4><a href=\"#\">Produit X</a>\n" +
@@ -1511,7 +1511,7 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "							<td id=\"panierinfo\" class=\"col-sm-1 col-md-1 text-center\"><strong>$14.61</strong></td>\n" +
     "							<td id=\"panierinfo\" class=\"col-sm-1 col-md-1\">\n" +
     "							<button id=\"panierinfo\" type=\"button\" class=\"btn btn-danger\">\n" +
-    "								<span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "								<span class=\"glyphicon glyphicon-trash\"> </span>\n" +
     "							</button></td>\n" +
     "                    </tr>\n" +
     "                    <tr>\n" +
@@ -1531,7 +1531,7 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "                        <td id=\"panierinfo\" class=\"col-md-1 text-center\"><strong>$9.98</strong></td>\n" +
     "                        <td id=\"panierinfo\" class=\"col-md-1\">\n" +
     "                        <button id=\"panierinfo\" type=\"button\" class=\"btn btn-danger\">\n" +
-    "                            <span class=\"glyphicon glyphicon-remove\"></span> Remove\n" +
+    "                            <span class=\"glyphicon glyphicon-trash\"> </span>\n" +
     "                        </button></td>\n" +
     "                    </tr>\n" +
     "                    <tr>\n" +
