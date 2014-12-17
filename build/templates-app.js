@@ -1230,7 +1230,7 @@ angular.module("login_register/login_register.tpl.html", []).run(["$templateCach
     "          <div class=\"col-xs-6 col-sm-6 col-md-6\">\n" +
     "            <div class=\"form-group\">\n" +
     "              <input type=\"password\" name=\"passwordU2\" id=\"users.passwordU2\" ng-model=\"users.passwordU2\" data-match=\"users.passwordU\" class=\"form-control input-lg\" placeholder=\"Confirmer le mot de passe\" tabindex=\"6\" required />\n" +
-    "				<div ng-show=\"SignForm.passwordU2.$error.match\">Fields do not match!</div>\n" +
+    "				<div ng-show=\"SignForm.passwordU2.$error.match\">Les mots de passes ne se correspondent pas !</div>\n" +
     "			</div>\n" +
     "		</div>\n" +
     "		</div>\n" +

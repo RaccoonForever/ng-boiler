@@ -32,11 +32,11 @@ angular.module( 'ngBoilerplate.advance_research', [
         {
             "id": 2,
             "displayName": "Bracelet"
-        }
+        },
         {
             "id": 3,
             "displayName": "Collier"
-        }
+        },
         {
             "id": 4,
             "displayName": "Echarpe"
