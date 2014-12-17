@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <ng-include src="'partials/notifications.tpl.html'"></ng-include>
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta property="og:title" content="ngBoilerplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bit.ly/ngBoilerplate" />
+    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
+    <meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/ngbp-0.3.2.css" />
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="src/app/about/about.js"></script>
+    <script type="text/javascript" src="src/app/advance_research/advance_research.js"></script>
+    <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/bracelets/bracelets.js"></script>
+    <script type="text/javascript" src="src/app/chaussettes/chaussettes.js"></script>
+    <script type="text/javascript" src="src/app/colliers/colliers.js"></script>
+    <script type="text/javascript" src="src/app/contactus/contactus.js"></script>
+    <script type="text/javascript" src="src/app/echarpes/echarpes.js"></script>
+    <script type="text/javascript" src="src/app/expeditionconditions/expeditionconditions.js"></script>
+    <script type="text/javascript" src="src/app/home/home.js"></script>
+    <script type="text/javascript" src="src/app/infoslivraison/infoslivraison.js"></script>
+    <script type="text/javascript" src="src/app/legalinformation/legalinformation.js"></script>
+    <script type="text/javascript" src="src/app/livraison/livraison.js"></script>
+    <script type="text/javascript" src="src/app/login_register/login_register.js"></script>
+    <script type="text/javascript" src="src/app/offres/offres.js"></script>
+    <script type="text/javascript" src="src/app/panier/panier.js"></script>
+    <script type="text/javascript" src="src/app/partials/notif.js"></script>
+    <script type="text/javascript" src="src/app/productpage/productpage.js"></script>
+    <script type="text/javascript" src="src/app/products/products.js"></script>
+    <script type="text/javascript" src="src/app/productupload/productupload.js"></script>
+    <script type="text/javascript" src="src/app/search_result/search_result.js"></script>
+    <script type="text/javascript" src="src/app/translation/translation.js"></script>
+    <script type="text/javascript" src="src/app/useconditions/useconditions.js"></script>
+    <script type="text/javascript" src="src/app/userprofile_edit/userprofile_edit.js"></script>
+    <script type="text/javascript" src="src/app/userspace/userspace.js"></script>
+    <script type="text/javascript" src="src/common/plusOne/plusOne.js"></script>
+    <script type="text/javascript" src="templates-common.js"></script>
+    <script type="text/javascript" src="templates-app.js"></script>
+      
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ 
+      
+      <!-- Translation -->
+<script src="./app/translation.js"></script>
+
+
+    <!-- it's stupid to have to load it here, but this is for the +1 button -->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      { "parsetags": "explicit" }
+    </script>
+  </head>
+  <body>
+      <div id="wrapper">
+        <div class="banniere_haut">
+            <div class="zone_logo">
+                <a href="#"><img src="./assets/images/logo.png" width="378" height="96.5"></a>
+                <div id="langues">
+                    <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="38" height="25" style="margin-right: 10px;"></a>
+                   <!-- <a href="#"><img src="./assets/images/drapeaufrancais.jpg" width="32" height="22" style="margin-right: 10px;"></a> -->
+                    <a href="#"><img src="./assets/images/drapeau_anglais.jpg" width="38" height="25"></a>
+                    <!--
+                    <button ng-click="changeLanguage('fr')" translate="BUTTON_TEXT_FR">Fran?ais</button>
+                    <button ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN">Anglais</button>
+                    -->
+                </div>	
+            </div>
+            
+
+            <div class="zone_client">
+                <div id="mon-espace">
+					<nav class="navtext">
+						<ul class="social">
+							<li><a href="#/userspace" translate="MONESPACE"/>Mon espace</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div style="float:left; font-style:italic;">
+					<a href="#/login_register" style="margin:10px 10px 0 10px; font-size:20px; padding:5px 15px;" class="myButton" translate="SECONNECTER">Se connecter</a>
+				</div>
+				<div id="panier">
+					<a href="#/livraison"><img src="./assets/images/panier.png" alt="signin" style="width:50px;"></a>	
+				</div>
+			</div>
+
+                
+        </div>
+        <div class="items">
+           <div class="line" style="margin-top:17px";></div>
+            <div class="navigationbar" style="float:left">
+                <nav class="navtext">
+                    <ul class="social">
+                        <li style="margin-left:30px"><a href="#/offres"/>Offres</a></li>
+                        <li style="margin-left:30px"><a href="#/bracelets"/>Bracelets</a></li>
+                        <li style="margin-left:30px"><a href="#/colliers"/>Colliers</a></li>
+                        <li style="margin-left:30px"><a href="#/productpage"/>Echarpes</a></li>
+			             <li style="margin-left:30px"><a href="#/userspace"/>Chaussettes</a></li>
+                    </ul>
+                </nav>
+        </div> 
+            
+            <div id="secnav">
+                <div id="search_box">
+					<form id="search_form" method="post" action="#"> 
+						<input type="text" id="s" placeholder="Search" class="swap_value" /> 
+						<input type="image" id="go" src="./assets/images/Search_bar_btn.png" alt="Search" title="Search" style="width: 23px; height: 22px;"/> 
+					</form>
+                </div>                                                                                                                         
+				<nav class="navtext" style="margin-left: -30px;">
+					<ul class="social">
+						 <li><a href="#/advance_research">Recherche avanc?e</a></li>
+					</ul>    
+				</nav>
+    	   </div>
+            
+             <div class="line"></div>
+        </div>
+	
+    <div class="container" ui-view="main"></div>
+
+	<footer class="footer">
+	  <div class="container">
+		<div class="footer-inner">
+		  <ul class="social">
+			<li><a target="_blank" href="#/expeditionconditions">Conditions d'exp?dition</a></li>
+			<li><a target="_blank" href="#/useconditions">Conditions d'utilisation</a></li>
+			<li><a target="_blank" href="#/legalinformation">Mentions l?gales</a></li>
+			<li><a target="_blank" href="#/contactus">Nous contacter</a></li>
+		  </ul>
+		  
+		  <div style="clear:both; text-align:center; margin-top:50px;">
+			  <p>
+				(c) 2014 Projet E-COM Polytech' Grenoble par FREBY, FALL, GUO, GINOUX et CLERC-GHERARDI.      
+			  </p>
+		  </div>
+		</div>
+	  </div>
+	</footer>
+	</div>
+  </body>
+</html>

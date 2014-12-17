@@ -18,17 +18,6 @@ angular.module( 'ngBoilerplate.advance_research', [
 })
 
 .controller( 'ProductsCtrl', function ProductsCtrl( $scope ) {
-
-
-
-
-
-
-
-
-
-
-
 })
 
 ;
