@@ -6194,7 +6194,8 @@ img.normaldelivery {
 }
 .mainproductimage {
   float: left;
-  margin: 10px 10px 0 10px;
+  padding: 480x270
+	margin:10px 10px 0 10px;
 }
 .subproductimage {
   margin: 20px 0 20px 0;
@@ -6242,6 +6243,9 @@ typedevendeur {
 .commentaire {
   margin: 20px 0 0 0;
   font-family: Calibri Light;
+}
+.commentaire .usercommentaire {
+  width: 800px;
 }
 .commentaire .usercommentaire .username {
   font-style: bold;

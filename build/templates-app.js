@@ -1485,9 +1485,9 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "            <table class=\"table table-hover\">\n" +
     "                <thead>\n" +
     "                    <tr>\n" +
-    "                        <th>Product</th>\n" +
-    "                        <th>Quantity</th>\n" +
-    "                        <th class=\"text-center\">Price</th>\n" +
+    "                        <th>Description</th>\n" +
+    "                        <th>Quantité</th>\n" +
+    "                        <th class=\"text-center\">Prix</th>\n" +
     "                        <th class=\"text-center\">Total</th>\n" +
     "                        <th> </th>\n" +
     "                    </tr>\n" +
@@ -1497,10 +1497,9 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "                        <td class=\"col-sm-8 col-md-6\" >\n" +
     "                        <div class=\"media\" style=\"margin-top:15px;\">\n" +
     "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://placehold.it/160x80\" style=\"width: 160px; height: 80px;\"> </a>\n" +
-    "                            <div class=\"media-body\">\n" +
-    "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
-    "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
-    "                                <span>Status: </span><span class=\"text-success\"><strong>In Stock</strong></span>\n" +
+    "                            <div class=\"media-body\"  style=\"margin-top:15px;\">\n" +
+    "                                <h4 class=\"media-heading\"><a href=\"#\">Nom d'article</a></h4>\n" +
+    "                                <h5 class=\"media-heading\"> Vendeur <a href=\"#\">FALL</a></h5>\n" +
     "                            </div>\n" +
     "                        </div></td>\n" +
     "						\n" +
@@ -1518,10 +1517,9 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "                        <td class=\"col-md-6\">\n" +
     "                        <div class=\"media\" style=\"margin-top:15px;\">\n" +
     "                            <a class=\"thumbnail pull-left\" href=\"#\"> <img class=\"media-object\" src=\"http://placehold.it/160x80\" style=\"width: 160px; height: 80px;\"> </a>\n" +
-    "                            <div class=\"media-body\">\n" +
-    "                                <h4 class=\"media-heading\"><a href=\"#\">Product name</a></h4>\n" +
-    "                                <h5 class=\"media-heading\"> by <a href=\"#\">Brand name</a></h5>\n" +
-    "                                <span>Status: </span><span class=\"text-warning\"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>\n" +
+    "                            <div class=\"media-body\"  style=\"margin-top:15px;\">\n" +
+    "                                <h4 class=\"media-heading\"><a href=\"#\">Nom d'article</a></h4>\n" +
+    "                                <h5 class=\"media-heading\"> Vendeur <a href=\"#\">Brand name</a></h5>\n" +
     "                            </div>\n" +
     "                        </div></td>\n" +
     "                        <td id=\"panierinfo\" class=\"col-md-1\" style=\"text-align: center\">\n" +
@@ -1545,7 +1543,7 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "                        <td>   </td>\n" +
     "                        <td>   </td>\n" +
     "                        <td>   </td>\n" +
-    "                        <td><h5>Estimated shipping</h5></td>\n" +
+    "                        <td><h5>Frais de livraison</h5></td>\n" +
     "                        <td class=\"text-right\"><h5><strong>$6.94</strong></h5></td>\n" +
     "                    </tr>\n" +
     "                    <tr>\n" +
@@ -1564,8 +1562,8 @@ angular.module("panier/panier.tpl.html", []).run(["$templateCache", function($te
     "                            <span class=\"glyphicon glyphicon-shopping-cart\"></span> Continue Shopping\n" +
     "                        </button></td>\n" +
     "                        <td>\n" +
-    "                        <button type=\"button\" class=\"btn btn-success\">\n" +
-    "                            Checkout <span class=\"glyphicon glyphicon-play\"></span>\n" +
+    "                        <button type=\"button\" class=\"btn btn-success\" style=\"padding-left:25px; padding-right:25px;\">\n" +
+    "                            Payer <span class=\"glyphicon glyphicon-play\"></span>\n" +
     "                        </button></td>\n" +
     "                    </tr>\n" +
     "                </tbody>\n" +
@@ -1594,10 +1592,10 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "<div class=\"container\">\n" +
     "        <div class=\"row\">\n" +
     "			<div class=\"productimages\">\n" +
-    "				<img class=\"mainproductimage\" src=\"http://placehold.it/480x270\" alt=\"\">\n" +
-    "				<img class=\"subproductimage\" style=\"margin-left:10px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
-    "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
-    "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"http://placehold.it/144x81\" alt=\"\">\n" +
+    "				<img class=\"mainproductimage\" src=\"./assets/images/E1.jpg\" alt=\"\">\n" +
+    "				<img class=\"subproductimage\" style=\"margin-left:10px;\" src=\"./assets/images/E1s.jpg\" alt=\"\">\n" +
+    "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"./assets/images/E2s.jpg\" alt=\"\">\n" +
+    "				<img class=\"subproductimage\" style=\"margin-left:24px;\" src=\"./assets/images/E3s.jpg\" alt=\"\">\n" +
     "			</div>\n" +
     "			<div class=\"productintro\">\n" +
     "				<h1>{{product_name}}</h1>\n" +
@@ -1640,7 +1638,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "			</div>\n" +
     "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
     "			<div class=\"productinfos\">\n" +
-    "				<h2>Product information</h2>\n" +
+    "				<h2>Information</h2>\n" +
     "				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
     "			</div>\n" +
     "			<div class=\"line\" style=\"width:1100px;\"></div>\n" +
@@ -1650,7 +1648,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "					<span class=\"col\">31 avis</span>\n" +
     "				</div>\n" +
     "				<div class=\"usercommentaire\">\n" +
-    "					<span class=\"username\"> Malick </span>\n" +
+    "					<p class=\"username\"><strong> Malick </strong></p>\n" +
     "					<div class=\"ratings\">\n" +
     "						<p>\n" +
     "							<span class=\"glyphicon glyphicon-star\"></span>\n" +
@@ -1661,7 +1659,7 @@ angular.module("productpage/productpage.tpl.html", []).run(["$templateCache", fu
     "						</p>\n" +
     "					</div>\n" +
     "					<span> 16/12/2014 </span>\n" +
-    "					<p>Oh! That's good!.</p>\n" +
+    "					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n" +
     "				</div>\n" +
     "			</div>\n" +
     "        </div>\n" +

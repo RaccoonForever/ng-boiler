@@ -20,7 +20,7 @@ angular.module( 'ngBoilerplate.productpage', [
 .controller( 'ProductsPageCtrl', function ProductsPageCtrl( $scope ) {
   console.log("UseSpaceCtrl Instancié");
         //$scope.UserService = UserService;
-        $scope.product_name="Product name";
+        $scope.product_name="Nom d'article - Lorem ipsum dolor";
         $scope.prix = "16.99€";
         $scope.sellername = "Clerc-Gherardi";
         $scope.sellertype = "Particulier";
